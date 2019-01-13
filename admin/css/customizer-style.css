@@ -1,0 +1,57 @@
+/*CHOSEN*/
+
+.chosen-container-single .chosen-single {
+    border-radius: 0px;
+    height: 28px;
+    background: #FFF;
+    border-color: #DDDDDD;
+    line-height: 28px;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+.chosen-container-single .chosen-single div b {
+    background-position: 0px 4px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 4px;
+}
+
+.chosen-container-multi .chosen-choices li {
+    float: none;
+}
+
+.chosen-container .chosen-drop {
+    position: relative;
+}
+
+
+
+/* Radio Image */
+
+.image label {
+    position: relative;
+    margin: 0 3% 3% 0;
+    display: inline-block;
+    width: 46%;
+}
+
+.image input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image img {
+    display: block;
+    border: 2px solid #F6F6F6;
+}
+
+.image input:checked+img {
+    border: 2px solid #ff627d;
+}

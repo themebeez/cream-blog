@@ -1,0 +1,24 @@
+/* Widget Style */
+
+.wp-core-ui p .custom_media_button,
+.custom_media_url {
+
+    margin-top: 10px;
+}
+
+.wp-core-ui p label {
+
+    margin-bottom: 5px;
+}
+
+
+/*
+Widget at Apperence > widgets 
+*/
+
+.widgets-holder-wrap [id*="cream-blog"] .widget-top {
+
+    background: #ffc9b8;
+    box-shadow: none !important;
+    border: none !important;
+}

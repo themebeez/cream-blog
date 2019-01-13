@@ -1,0 +1,865 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cream Blog\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-11 05:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. 1: list of categories.
+#: inc/theme-functions.php:168 inc/theme-functions.php:190
+#, php-format
+msgid " %1$s"
+msgstr ""
+
+#. 1: Copyright Text 2: Theme name, 3: Theme author.
+#: inc/custom-hooks.php:590
+#, php-format
+msgid "%1$s %2$s by %3$s"
+msgstr ""
+
+#. 1: Theme name, 2: Theme author.
+#: inc/custom-hooks.php:593
+#, php-format
+msgid "%1$s by %2$s."
+msgstr ""
+
+#. %1$s: comments number
+#: inc/theme-functions.php:136
+#, php-format
+msgid "%1$s Comment"
+msgstr ""
+
+#. %1$s: comments number
+#: inc/theme-functions.php:133
+#, php-format
+msgid "%1$s Comments"
+msgstr ""
+
+#. number of items in the mini cart.
+#: inc/woocommerce/woocommerce-template-functions.php:196
+#, php-format
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/widget/class-cream-blog-author-widget.php:132
+msgid "&mdash; Select Page &mdash;"
+msgstr ""
+
+#: 404.php:18
+msgid "404 error page"
+msgstr ""
+
+#: inc/breadcrumbs.php:267
+msgid "404 Not Found"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:77
+#: inc/widget/class-cream-blog-widget-init.php:87
+#: inc/widget/class-cream-blog-widget-init.php:97
+#: inc/widget/class-cream-blog-widget-init.php:127
+#: inc/widget/class-cream-blog-widget-init.php:138
+msgid "Add widgets here."
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:107
+msgid "Advance Customization"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:198
+msgid "Archive Page"
+msgstr ""
+
+#: inc/breadcrumbs.php:268
+msgid "Archives"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:211
+msgid "ASC"
+msgstr ""
+
+#: inc/widget/class-cream-blog-author-widget.php:125
+msgid "Author Page"
+msgstr ""
+
+#: inc/widget/class-cream-blog-author-widget.php:158
+msgid "Author Page Link Title"
+msgstr ""
+
+#: inc/widget/class-cream-blog-author-widget.php:140
+msgid "Author Signature"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:152
+msgid "Banner/Slider"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:679
+msgid "Banner/Slider Post Categories"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:690
+msgid "Banner/Slider Posts Number"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:97
+msgid "Basic Customization"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:162
+msgid "Blog Posts"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:253
+msgid "Breadcrumb"
+msgstr ""
+
+#: inc/breadcrumbs.php:265
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/breadcrumbs.php:264
+msgid "Browse:"
+msgstr ""
+
+#. Base ID
+#: inc/widget/class-cream-blog-author-widget.php:18
+msgid "CB: Author Widget"
+msgstr ""
+
+#. Base ID
+#: inc/widget/class-cream-blog-post-widget.php:18
+msgid "CB: Posts Widget"
+msgstr ""
+
+#. Base ID
+#: inc/widget/class-cream-blog-social-widget.php:18
+msgid "CB: Social Widget"
+msgstr ""
+
+#. Base ID
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:18
+msgid "CB: Woocommerce Products"
+msgstr ""
+
+#: inc/metabox/class-cream-blog-post-meta.php:79
+msgid "checked"
+msgstr ""
+
+#. %s is the page number.
+#: inc/breadcrumbs.php:274
+#, php-format
+msgid "Comment Page %s"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/widget/class-cream-blog-social-widget.php:72
+msgid "Connect"
+msgstr ""
+
+#: template-parts/layout/layout-list-two-columns.php:29
+msgid "Continue Reading"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:808
+msgid "Copyright & Credit Text"
+msgstr ""
+
+#. Name of the theme
+msgid "Cream Blog"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:108
+msgid ""
+"Cream Blog Advance Customization. Set Options For Advance Theme "
+"Customization."
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:98
+msgid ""
+"Cream Blog Basic Customization. Set Options For Basic Theme Customization."
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:88
+msgid ""
+"Cream Blog Homepage Customization. Set Options For Homepage Customization."
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Cream Blog is 100% responsive, cross browser compatible, clean &amp; trendy "
+"WordPress theme designed beautifully and developed with respect to WordPress "
+"standards. Cream blog fulfills the needs of those who want to build blog to "
+"publish online contents, write blog posts on travel, food, technology, "
+"fashion etc. Cream blog supports Woocommerce in case one is in need of "
+"setting up their own online store. Cream blog comes with tons of handy "
+"options that you can be trigged from WordPress live customizer. Build your "
+"blog with no hassale &amp; let us know when you really need a hand by simply "
+"creating a support ticket from https://themebeez.com/support/."
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:140
+msgid "Cream Blog Pro"
+msgstr ""
+
+#: inc/breadcrumbs.php:790 inc/breadcrumbs.php:1219
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:167
+msgid "Date"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:212
+msgid "DESC"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:238
+msgid "Display Best Selling Products"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:252
+msgid "Display Featured Products"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:231
+msgid "Display On Sale Products"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:245
+msgid "Display Top Rated Products"
+msgstr ""
+
+#: inc/widget/class-cream-blog-author-widget.php:21
+msgid "Displays Brief Author Description."
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:21
+msgid "Displays links to social sites."
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:21
+msgid "Displays Recent, Most Commented or Editor Picked Posts."
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:21
+msgid "Displays Woocommerce Products."
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:30
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:856
+msgid "Enable Author Section"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:668
+msgid "Enable Banner/Slider"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1028
+msgid "Enable Breadcrumb"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:798
+msgid "Enable Footer Social Links"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:898
+msgid "Enable Post Author Meta"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:928
+msgid "Enable Post Categories Meta"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:918
+msgid "Enable Post Comments Number Meta"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:938
+msgid "Enable Post Tags Meta"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:908
+msgid "Enable Posted Date Meta"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:866
+msgid "Enable Related Posts Section"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:818
+msgid "Enable Scroll Top Button"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:774
+msgid "Enable Search Button"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:764
+msgid "Enable Sidebar Toggle Button"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:743
+msgid "Enable Sticky Menu Bar"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1038
+msgid "Enable Sticky Sidebar"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:753
+msgid "Enable Top Header"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:948
+msgid "Excerpt Length"
+msgstr ""
+
+#: inc/custom-hooks.php:500
+msgid "Facebook"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:958
+msgid "Facebook Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:129
+msgid "Facebook Link:"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:58
+#: inc/widget/class-cream-blog-social-widget.php:65
+#: inc/widget/class-cream-blog-social-widget.php:79
+#: inc/widget/class-cream-blog-social-widget.php:86
+#: inc/widget/class-cream-blog-social-widget.php:93
+msgid "Follow"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:189
+#: inc/widget/class-cream-blog-widget-init.php:85
+msgid "Footer"
+msgstr ""
+
+#: 404.php:25
+msgid "Go Homepage"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:998
+msgid "Google Plus Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:143
+msgid "Google Plus Link:"
+msgstr ""
+
+#: inc/custom-hooks.php:536
+msgid "Google+"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:180
+msgid "Header"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:95
+msgid "Header Advertisement"
+msgstr ""
+
+#: inc/breadcrumbs.php:266
+msgid "Home"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:115
+msgid "Home Widget Area Bottom"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:105
+msgid "Home Widget Area Top"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:87
+msgid "Homepage Customization"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:171
+msgid "Homepage Sidebar"
+msgstr ""
+
+#: inc/breadcrumbs.php:772
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://themebeez.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://themebeez.com/themes/cream-blog/"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:168
+msgid "ID"
+msgstr ""
+
+#: inc/custom-hooks.php:512
+msgid "Instagram"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:978
+msgid "Instagram Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:150
+msgid "Instagram Link:"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:106
+msgid "Install and activate Woocommerce. Then add products."
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: inc/metabox/class-cream-blog-post-meta.php:67
+msgid "Left"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:51
+msgid "Like"
+msgstr ""
+
+#: inc/custom-hooks.php:518
+msgid "Linkedin"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1008
+msgid "Linkedin Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:157
+msgid "linkedin Link:"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:201
+msgid "List product category slugs seperated by comma."
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:193
+msgid "List product SKUs seperated by comma."
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:169
+msgid "Menu Order"
+msgstr ""
+
+#. Minute archive title. %s is the minute time format.
+#: inc/breadcrumbs.php:276
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: inc/breadcrumbs.php:738
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: inc/breadcrumbs.php:755
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:262
+msgid "Miscellaneous"
+msgstr ""
+
+#: inc/breadcrumbs.php:789 inc/breadcrumbs.php:845 inc/breadcrumbs.php:1215
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:134
+msgid "Most Commented"
+msgstr ""
+
+#: inc/custom-hooks.php:384
+msgid "Next"
+msgstr ""
+
+#: inc/custom-hooks.php:404
+msgid "Next Post"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:153
+msgid "No of Columns"
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:152
+msgid "No of Posts"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:145
+msgid "No of Products"
+msgstr ""
+
+#: inc/metabox/class-cream-blog-post-meta.php:68
+msgid "None"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:17
+msgid ""
+"Nothing was found at this location. Try adjusting your keyword & search "
+"again."
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:125
+msgid "Off Canvas Sidebar"
+msgstr ""
+
+#. 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:206
+msgid "Order"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:161
+msgid "Orderby"
+msgstr ""
+
+#. %s is the page number.
+#: inc/breadcrumbs.php:272
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: 404.php:21
+msgid "Page Not Found!"
+msgstr ""
+
+#: template-parts/content-page.php:22
+#: template-parts/single/content-single.php:27
+msgid "Pages:"
+msgstr ""
+
+#: inc/custom-hooks.php:524
+msgid "Pinterest"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1018
+msgid "Pinterest Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:171
+msgid "Pinterest Link:"
+msgstr ""
+
+#. If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
+#: inc/helper-functions.php:136
+msgctxt "Poppins font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:170
+msgid "Popularity"
+msgstr ""
+
+#. %1$s: span tag open, %2$s: span tag close, %3$s: post author.
+#: inc/theme-functions.php:100
+#, php-format
+msgctxt "post author"
+msgid "%1$s Posted by %2$s %3$s"
+msgstr ""
+
+#. %1$s: span tag open, %2$s: span tag close, %3$s: post date.
+#: inc/theme-functions.php:116
+#, php-format
+msgctxt "post date"
+msgid "%1$s on %1$s %3$s"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:234
+msgid "Post Excerpt"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:235
+msgid ""
+"Post Excerpt is the number of words of content which are displayed instead "
+"of full content. You can control the number of words to be displyed in this "
+"section."
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:225
+msgid "Post Meta"
+msgstr ""
+
+#: inc/custom-hooks.php:383
+msgid "Prev"
+msgstr ""
+
+#: inc/custom-hooks.php:403
+msgid "Prev Post"
+msgstr ""
+
+#: inc/class-cream-blog.php:87
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:198
+msgid "Product Categories"
+msgstr ""
+
+#. If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
+#: inc/helper-functions.php:143
+msgctxt "Raleway font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:171
+msgid "Random"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:172
+msgid "Rating"
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:133
+msgid "Recent Posts"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:876
+msgid "Related Posts Section Title"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:887
+msgid "Related Section Posts Number"
+msgstr ""
+
+#: inc/metabox/class-cream-blog-post-meta.php:66
+msgid "Right"
+msgstr ""
+
+#: inc/class-cream-blog.php:344
+msgid "Search"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:207
+msgid "Search Page"
+msgstr ""
+
+#. %s: search query.
+#: search.php:45
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#. %s is the search query.
+#: inc/breadcrumbs.php:270
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: inc/customizer/controls/class-cream-blog-dropdown-taxonomies.php:45
+msgid "Select"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:703
+msgid "Select Banner/Slider Layout"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:786
+msgid "Select Header Layout"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:717
+msgid "Select Post Listing Layout"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:830
+#: inc/customizer/class-cream-blog-customize.php:844
+#: inc/customizer/class-cream-blog-customize.php:1052
+msgid "Select Sidebar Position"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:153
+msgid "Set and select options to configure banner/slider section."
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:156
+msgid "Set no of columns to be displayed"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:148
+msgid "Set no of products to be displayed"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:75
+msgid "Sidebar"
+msgstr ""
+
+#: inc/metabox/class-cream-blog-post-meta.php:45
+#: inc/customizer/class-cream-blog-customize.php:731
+msgid "Sidebar Position"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:216
+msgid "Single Post"
+msgstr ""
+
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:190
+msgid "SKUS"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:244
+msgid "Social Links"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:657
+msgid "Theme Color"
+msgstr ""
+
+#: inc/custom-hooks.php:590 inc/custom-hooks.php:593
+msgid "Themebeez"
+msgstr ""
+
+#. Author of the theme
+msgid "themebeez"
+msgstr ""
+
+#: inc/helper-functions.php:263
+msgid "Themebeez Toolkit"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:107
+msgid ""
+"This widget area will be displayed below the banner and above the blog post "
+"list section."
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:117
+msgid ""
+"This widget area will be displayed below the blog post list section and "
+"above the footer."
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:121
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:138
+#: inc/widget/class-cream-blog-woocommerce-product-widget.php:166
+#: inc/widget/class-cream-blog-author-widget.php:119
+msgid "Title"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:122
+msgid "Title: "
+msgstr ""
+
+#: inc/class-cream-blog.php:88
+msgid "Top Header Menu"
+msgstr ""
+
+#: inc/custom-hooks.php:506
+msgid "Twitter"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:968
+msgid "Twitter Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:136
+msgid "Twitter Link:"
+msgstr ""
+
+#: inc/widget/class-cream-blog-post-widget.php:128
+msgid "Type of Posts:"
+msgstr ""
+
+#: inc/class-cream-blog.php:344
+msgid "Type Something"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:141
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/widget/class-cream-blog-author-widget.php:153
+msgid "Upload"
+msgstr ""
+
+#: inc/woocommerce/woocommerce-template-functions.php:192
+msgid "View your shopping cart"
+msgstr ""
+
+#. Weekly archive title. %s is the week date format.
+#: inc/breadcrumbs.php:278
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: inc/breadcrumbs.php:818
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: inc/widget/class-cream-blog-widget-init.php:136
+msgid "Woocommerce Sidebar"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:272
+msgid "Woocoomerce Sidebar"
+msgstr ""
+
+#: inc/breadcrumbs.php:788 inc/breadcrumbs.php:817 inc/breadcrumbs.php:844
+#: inc/breadcrumbs.php:871 inc/breadcrumbs.php:1211
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: inc/custom-hooks.php:530
+msgid "Youtube"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:988
+msgid "Youtube Link"
+msgstr ""
+
+#: inc/widget/class-cream-blog-social-widget.php:164
+msgid "Youtube Link:"
+msgstr ""

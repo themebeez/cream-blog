@@ -13,7 +13,6 @@
             <div class="cb-container">
                 <div class="headertop-entry">
                     <div class="cb-row">
-
                         <div class="cb-col left-col">
                             <div class="secondary-nav">
                                 <?php
@@ -79,6 +78,11 @@
         <div <?php if( !empty( $sticky_menu_id ) ) { ?>id="<?php echo esc_attr( $sticky_menu_id ); ?>"<?php } ?> class="cb-navigation-main-outer">
             <div class="cb-container">
                 <div class="primary-menu-wrap">
+                    <div class="menu-toggle">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </div><!-- .menu-toggle -->
                     <div class="main-navigation" id="main-nav">
                         <?php
                         /**

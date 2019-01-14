@@ -5,15 +5,15 @@
     jQuery(document).ready(function() {
 
 
-         /* 
+        /* 
         =============================
         = Init retina js  
         ================================
         */
-        
+
 
         $('select').niceSelect();
-        
+
 
         /* 
         =============================
@@ -23,29 +23,48 @@
 
         retinajs();
 
-        /* 
-         =============================
-         = Init primary navigation  
-         ================================
-         */
+        /*
+        ===========================
+        = Main navigation
+        ====================================
+        */
 
-        var primary_nav = jQuery('#main-nav');
-        primary_nav.stellarNav({
 
-            theme: 'plain',
-            breakpoint: 1050,
-            closeBtn: true,
-            menuLabel: 'Menu',
-            scrollbarFix: false,
-            sticky: false,
-            openingSpeed: 250,
-            closingDelay: 0,
+        $('.menu-toggle').on('click', function(e) {
+
+            $('.main-navigation').slideToggle('medium');
+
+            $('body').toggleClass('menu-toggle-active'); // add class to body
+
         });
 
-        jQuery("body").on('click', '.close-menu', function(e) {
+        $('.main-navigation .menu-item-has-children').append('<span class="sub-toggle"> <i class="fa fa-caret-down" aria-hidden="true"></i> </span>');
 
-            e.preventDefault();
+        $('.main-navigation .page_item_has_children').append('<span class="sub-toggle"> <i class="fa fa-caret-down" aria-hidden="true"></i> </span>');
 
+
+        $('.main-navigation .sub-toggle').on('click', function() {
+
+            $(this).toggleClass('active-submenu');
+
+            $(this).parent('.menu-item-has-children').children('ul.sub-menu').first().slideToggle('medium');
+
+            $(this).parent('.page_item_has_children').children('ul.children').first().slideToggle('medium');
+
+            if ($(this).hasClass('active-submenu')) {
+
+                $(this).find('.fa').removeClass('fa-caret-down').addClass('fa-caret-up');
+
+            } else {
+
+                $(this).find('.fa').removeClass('fa-caret-up').addClass('fa-caret-down');
+            }
+
+        });
+
+        $('.menu-item a[href="#"]').on('click', function(e) {
+
+            e.preventDefault(); // prevent empty links clicks
         });
 
 
@@ -70,9 +89,9 @@
         */
 
 
-        var $CanvasRevelBtn     = jQuery('#canvas-toggle');
-        var $CanvasAside        = jQuery('#canvas-aside');
-        var $SideCanvasMask     = jQuery('#canvas-aside-mask');
+        var $CanvasRevelBtn = jQuery('#canvas-toggle');
+        var $CanvasAside = jQuery('#canvas-aside');
+        var $SideCanvasMask = jQuery('#canvas-aside-mask');
 
         $CanvasRevelBtn.on('click', function() {
 
@@ -121,9 +140,9 @@
         //         e.target.parentNode.classList.add('image-loaded');
         //         jQuery( '.lazyloading' ).removeClass( 'lazyloading' );
 
-                /*
-                    Initialization of masonry
-                */
+        /*
+            Initialization of masonry
+        */
         //         var container = jQuery( '#bricks-row' );
         //         container.imagesLoaded().progress( function() {
         //             container.masonry({
@@ -136,11 +155,13 @@
         // lazy();
 
 
-         var lazy = function lazy() {
+        var lazy = function lazy() {
             document.addEventListener('lazyloaded', function(e) {
                 e.target.parentNode.classList.add('image-loaded');
-                $.when().done(function(){var cloele = $('.thumb');
-            cloele.removeClass('lazyloading');});
+                $.when().done(function() {
+                    var cloele = $('.thumb');
+                    cloele.removeClass('lazyloading');
+                });
 
                 // e.target.parentNode.classList.add('image-loaded');
                 // e.target.parentNode.classList.remove('lazyloading');
@@ -210,7 +231,7 @@
         */
 
         jQuery('body').append('<div id="toTop" class="btn-general"><i class="feather icon-arrow-up"></i></div>');
-        
+
         jQuery(window).on('scroll', function() {
             if (jQuery(this).scrollTop() != 0) {
                 jQuery('#toTop').fadeIn();

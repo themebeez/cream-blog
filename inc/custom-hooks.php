@@ -275,7 +275,7 @@ if( ! function_exists( 'cream_blog_sidebar_toggle_button_action' ) ) :
  		if( is_active_sidebar( 'off-canvas-sidebar' ) ) {
 	 		?>
 	 		<a id="canvas-toggle" href="javascript:;">
-	 			<i class="feather icon-list"></i>
+	 			<i class="feather icon-menu"></i>
 	 		</a><!-- #canvas-toogle -->
 	 		<?php
 	 	}

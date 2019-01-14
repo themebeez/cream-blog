@@ -990,8 +990,8 @@ aside#secondary {
     
     line-height:60px;
     height:60px;
-    font-size: 22px;
-    padding: 0 2px;
+    font-size: 24px;
+    padding:0;
 }
 
 
@@ -1120,6 +1120,12 @@ ul#menu-primary-menu>li:last-child>ul.sub-menu {
     transform: translateX(100%);
 }
 
+#canvas-toggle,
+#search-toggle {
+
+    color:$white;
+}
+
 
 // If there is admin-bar 
 
@@ -1195,140 +1201,6 @@ body.logged-in #canvas-aside {
     justify-content:flex-end;
     text-align:right;
 } 
-
-
-
-/*
-===================================================
-=
-=  Header style 1 
-=
-=====================================================================
-*/
-
-
-// Header style  1 at homepage
-
-body.home .header-style-1 {
-
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    width: 100%;
-    max-width:100%;
-    background-color: transparent;
-    margin-bottom:0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-    margin-bottom:0;
-}
-
-
-// Header style 1 in inner pages
-
-
-.header-style-1 {
-
-    position: relative;
-    left: unset;
-    top: unset;
-    width: 100%;
-    z-index: 999;
-    width: 100%;
-    max-width:100%;
-    background-color: $secondary_color;
-    margin-bottom:50px;
-} 
-
-
-
-.header-style-1 .header-inner {
-
-    max-height: 60px;
-    @include transation_delay();
-}
-
-.is-sticky #cb-stickhead {
-
-    position:fixed;
-    z-index:999999999 !important;
-    -webkit-transform: translate3d(0,0,0); // Ios z-index fix
-    background:$secondary_color;
-    border-bottom:none;
-    @include drop_shadow();
-    
-}
-
-.header-style-1 .header-inner .row {
-
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-}
-
-
-// Site logo
-
-.header-style-1 .site-branding img {
-
-    max-height: 60px;
-    object-fit: cover;
-    object-position: center center;
-    display: inline-block;
-}
-
-.site-branding a {
-
-    display:inline-block;
-} 
-
-.header-style-1 .site-title {
-
-    font-size:22px;
-    font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
-    font-weight:900;
-    letter-spacing:0;
-    text-transform:uppercase;
-}
-
-.header-style-1 .site-title a {
-
-    color:$white;
-}
-
-
-.header-style-1 .site-description {
-
-    display:none;
-}
-
-
-// Main primary menu
-
-.main-navigation ul {
-
-    text-align:right;
-} 
-
-.header-style-1 .main-navigation>ul>li>a {
-
-    line-height:60px;
-    padding:0 10px;
-    color:$white;
-}
-
-
-// Nav extra 
-
-.general-header .nav-extraa a {
-
-    color:$white;
-    font-weight:normal;
-}
-
 
 
 /*
@@ -1458,16 +1330,15 @@ body.home .header-style-1 {
     background:rgba(0,0,0,0);
 }
 
+.header-style-3 .main-navigation>ul {
+
+    text-align: left;
+}
+
 .header-style-3 .main-navigation>ul>li>a {
 
     padding:0 20px 0 0;
 }
-
-.header-style-3 .main-navigation>ul {
-
-    text-align:left;
-}
-
 
 
 /*

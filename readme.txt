@@ -5,8 +5,8 @@ Contributors: themebeez
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
 
 Requires at least: 4.8
-Tested up to: 5.0.2
-Stable tag: 2.0.0
+Tested up to: 5.0.3
+Stable tag: 2.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -88,6 +88,11 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
+== 2.0.1 - january 14, 2019 ==
+
+- Changed: Primary navigation js from staller nav to wp default
+- Fix: Issue with primary navigation for ios devices [Charlie]
+- Fix: Few design issue
 
 
 == 2.0.0 - january 05, 2019 ==

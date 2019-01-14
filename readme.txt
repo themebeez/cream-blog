@@ -38,8 +38,6 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 * Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2/, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
 
-* Stellarnav https://github.com/vinnymoreira/stellarnav, Copyright (c) 2016 Vinny Moreira, [MIT](http://opensource.org/licenses/MIT)
-
 * Retina https://github.com/strues/retinajs, Copyright (c) 2013-2017 Steven Truesdell, John Newman, Ben Atkin, and other contributors, [MIT](http://opensource.org/licenses/MIT)
 
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar, Copyright (c) 2014 Liviu Cristian Mirea Ghiban, [MIT](http://opensource.org/licenses/MIT)

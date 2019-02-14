@@ -6,7 +6,7 @@ Tags: custom-background, custom-header, custom-logo, custom-menu, featured-image
 
 Requires at least: 4.8
 Tested up to: 5.0.3
-Stable tag: 2.0.1
+Stable tag: 2.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,7 +86,13 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
-== 2.0.1 - january 14, 2019 ==
+== 2.0.3 - febuary 14, 2019 ==
+
+- Fix: image size for the editor
+- Fix: alignment issue for editor
+
+
+== 2.0.2 - january 14, 2019 ==
 
 - Changed: Primary navigation js from staller nav to wp default
 - Fix: Issue with primary navigation for ios devices [Charlie]

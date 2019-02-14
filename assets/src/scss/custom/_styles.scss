@@ -377,6 +377,56 @@ html {
 }
 
 
+
+// Clearing
+
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.cb-container:after,
+.cb-container:before,
+.dropcap:before,
+.dropcap:after,
+.alignleft:before,
+.alignright:before,
+.cb-editor-contents-entry:before {
+
+    content: '';
+    display: table;
+}
+
+.clearfix:after,
+.row:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.cb-container:after,
+.alignleft:after,
+.alignright:after,
+.cb-editor-contents-entry:after {
+
+    clear: both;
+}
+
+.clear {
+
+    clear: both;
+}
+
+
 /*
 ***************************************************************
 *
@@ -4771,15 +4821,14 @@ footer .custom-html-widget .cb-newsleter {
 
 .cb-editor-contents-entry {
 
-
     // typography
 
 
     a {
 
-        color:$secondary_color;
-        text-decoration:none;
-        font-weight:400;
+        color: $secondary_color;
+        text-decoration: none;
+        font-weight: 400;
     }
 
     b,
@@ -4829,16 +4878,16 @@ footer .custom-html-widget .cb-newsleter {
     h4,
     h5,
     h6 {
-        
+
         color: #222222;
-        margin: 0 0 1em 0;
-        font-weight: 900;
+        margin: 0 0 0.7em 0;
         line-height: 1.2;
+        font-weight:bold;
     }
 
     p {
-       margin: 0 0 1em 0;
-       line-height:1.8;
+        margin: 0 0 1em 0;
+        line-height: 1.8;
     }
 
     dfn,
@@ -4880,15 +4929,15 @@ footer .custom-html-widget .cb-newsleter {
         color:#9c9c9c;
     }
 
-    .wp-block-quote.is-large, 
+    .wp-block-quote.is-large,
     .wp-block-quote.is-style-large {
 
         font-size: 17px;
-        margin:0;
+        margin: 0;
         margin-bottom: 2em
     }
 
-    .wp-block-quote.is-large p, 
+    .wp-block-quote.is-large p,
     .wp-block-quote.is-style-large p {
 
         font-size: 24px;
@@ -4916,29 +4965,178 @@ footer .custom-html-widget .cb-newsleter {
     }
 
 
-    // aligments
+    figure {
 
-    
+        position: relative;
+        text-align: left;
+    }
+
+    code,
+    kbd,
+    samp {
+
+        font-family: monospace, monospace;
+    }
+
+    fieldset {
+
+        border: 1px solid #eeeeee;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em;
+    }
+
+    q {
+        font-style: italic;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    legend {
+
+        border: 0;
+        padding: 0;
+    }
+
+    textarea {
+
+        overflow: auto;
+    }
+
+    optgroup {
+
+        font-weight: bold;
+    }
+
+    table {
+
+        border-collapse: collapse;
+        border-spacing: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    td,
+    th,
+    td,
+    th,
+    .mce-item-table,
+    .mce-item-table td,
+    .mce-item-table th,
+    .mce-item-table caption {
+
+        padding: 10px 15px;
+        border: 1px solid #eeeeee;
+        text-align: left;
+    }
+
+    address {
+
+        margin: 0 0 1em;
+    }
+
+    abbr,
+    acronym {
+
+        border-bottom: 1px dotted #eeeeee;
+        cursor: help;
+    }
+
+    mark,
+    ins {
+
+        background: #f5f5f5;
+        text-decoration: none;
+    }
+
+    big {
+
+        font-size: 125%;
+    }
+
+    hr {
+
+        background-color: #eeeeee;
+        border: 0;
+        height: 1px;
+        padding: 0;
+        margin: 0;
+        clear: both;
+    }
+
+    ul,
+    ol {
+
+        margin: 0 0 1em 0;
+        padding: 0 0 0 40px;
+    }
+
+    ul {
+
+        list-style: disc;
+    }
+
+    ol {
+
+        list-style: decimal;
+    }
+
+    ol li,
+    ul li {
+
+        padding: 7px 0;
+    }
+
+    li>ul,
+    li>ol {
+
+        margin-bottom: 0;
+        margin-left: 15px;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin: 0 15px 15px;
+    }
+
+    img {
+
+        height: auto; /* Make sure images are scaled correctly. */
+        max-width: 100%; /* Adhere to container width. */
+        vertical-align: middle;
+    }
+
+
+    // aligment 
+
+
     .alignleft {
 
         display: block;
         float: left;
-        clear:both;
+        width:auto;
+        margin-right: 15px;
+        clear: both;
     }
 
     .alignright {
 
         display: block;
         float: right;
-        clear:both;
+        width:auto;
+        margin-left: 15px;
+        clear: both;
     }
 
     .aligncenter {
 
-        display: block;
-        margin:0 auto;
-        text-align: center;
         clear: both;
+        display: block;
+        width:auto;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .text-alignleft {
@@ -5099,13 +5297,33 @@ footer .custom-html-widget .cb-newsleter {
     img {
 
         height: auto;
-        width:100%; 
+        width:inherit; 
         max-width: 100%; 
         vertical-align: middle;
     }
 
-
     // gutenberg
+
+    .wp-block-gallery figure {
+
+        position: relative;
+    }
+
+    .wp-block-image figcaption {
+
+        margin:10px 0;
+        font-size:15px;
+    }
+
+    .wp-block-image .aligncenter>figcaption, 
+    .wp-block-image .alignleft>figcaption, 
+    .wp-block-image .alignright>figcaption, 
+    .wp-block-image.is-resized>figcaption {
+        
+        display:block;
+        text-align:center;
+        caption-side: inherit;
+    }
 
     .wp-block-pullquote {
 

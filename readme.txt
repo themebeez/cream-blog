@@ -88,8 +88,8 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 == 2.0.3 - febuary 14, 2019 ==
 
-- Fix: image size for editor
-- Fix: aligment issue for editor
+- Fix: image size for the editor
+- Fix: alignment issue for editor
 
 
 == 2.0.2 - january 14, 2019 ==

@@ -5,8 +5,8 @@ Contributors: themebeez
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
 
 Requires at least: 4.8
-Tested up to: 5.0.3
-Stable tag: 2.0.3
+Tested up to: 5.1.1
+Stable tag: 2.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -48,8 +48,6 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 * Lazysize https://github.com/aFarkas/lazysizes, Copyright (c) 2015 Alexander Farkas, [MIT](http://opensource.org/licenses/MIT)
 
-* Smoothscroll https://github.com/galambalazs/smoothscroll-for-websites, Copyright (c) 2010-2015 Balazs Galambosi, [MIT](http://opensource.org/licenses/MIT)
-
 * Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
 
 * Jquery Nice Select https://github.com/h1dd3nsn1p3r/jquery-nice-select, [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -85,6 +83,12 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
 ==== Change logs ====
+
+== 2.0.4 - 2 April, 2019 ==
+
+- Fix: Mouse wheel scroll issue
+- Fix: Safari browser layout issue
+
 
 == 2.0.3 - febuary 14, 2019 ==
 

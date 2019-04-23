@@ -899,13 +899,13 @@ footer .widget-title h3::after {
 // header sticky 
 
 
-.cb-stickhead {
+#cb-stickhead {
     
     position:relative;
     @include transation_delay();
 }
 
-.is-sticky .cb-stickhead {
+.is-sticky #cb-stickhead {
 
     position:fixed;
     z-index: 9999 !important;
@@ -1555,7 +1555,7 @@ body.logged-in #canvas-aside {
 .header-style-5 .site-identity .site-title {
 
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
-    font-size:28px;
+    font-size: 28px;
     font-weight:900;
 }
 
@@ -1750,6 +1750,10 @@ body.logged-in #canvas-aside {
 #cb-banner-style-2 .thumb {
 
     padding-bottom:0;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #cb-banner-style-2 .thumb img {

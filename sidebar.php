@@ -16,5 +16,5 @@ $sidebar_class = cream_blog_sidebar_class();
 <div class="<?php echo esc_attr( $sidebar_class ); ?>">
 	<aside class="secondary">
 		<?php dynamic_sidebar( 'sidebar' ); ?>
-	</aside><!-- #secondary -->
+	</aside><!-- #secondary --> 
 </div><!-- .col.sticky_portion -->

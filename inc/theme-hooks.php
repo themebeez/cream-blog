@@ -1,6 +1,6 @@
 <?php
 /**
- * Default wordpress filters and hooks modification.
+ * Default WordPress filters and hooks modification.
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *

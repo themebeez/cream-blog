@@ -1,14 +1,13 @@
 === Cream Blog ===
 
 Contributors: themebeez
-
-Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
-
+Requires PHP: 5.6
 Requires at least: 4.8
 Tested up to: 5.1.1
-Stable tag: 2.0.4
+Stable tag: 2.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
 
 == Description ==
 
@@ -17,8 +16,9 @@ Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPres
 
 == Copyright and License ==
 
-Cream Blog WordPress Theme, Copyright (C) 2018, themebeez.
+Cream Blog WordPress Theme, Copyright (C) 2019, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
+
 
 == Credits ==
 
@@ -52,9 +52,10 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 * Jquery Nice Select https://github.com/h1dd3nsn1p3r/jquery-nice-select, [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
+* Images included in theme, banner_1.png, banner_2.png, header_1.png, header_2.png, list_1.png, list_2.png, sidebar_left.png, sidebar_right.png, sidebar_none.png and selected.png self created GPLv2 
 
-Images used in screenshot
 
+== Screenshots ==
 
 https://pixabay.com/en/photographer-photo-woman-outdoors-865295/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
 https://pixabay.com/en/girls-woman-hat-stomach-jeans-1149908/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
@@ -63,16 +64,12 @@ https://pixabay.com/en/e-mail-aerial-afternoon-tea-3239670/ (http://creativecomm
 https://pixabay.com/en/laptop-computer-business-table-3317007/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
 
 
-Other Images
-
-banner_1.png, banner_2.png, header_1.png, header_2.png, list_1.png, list_2.png, sidebar_left.png, sidebar_right.png, sidebar_none.png and selected.png self created GPLv2 
-
-
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
+
 
 == Frequently Asked Questions ==
 
@@ -81,8 +78,17 @@ banner_1.png, banner_2.png, header_1.png, header_2.png, list_1.png, list_2.png, 
 Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
-
 ==== Change logs ====
+
+== 2.0.5 - 21 April, 2019 ==
+
+- Screenshot changed
+- Option for lazy image loading added in customizer
+- Active callback function added for banner/slider in customizer
+- Removed links and options for google plus
+- Other fixes
+- CSS updates
+
 
 == 2.0.4 - 2 April, 2019 ==
 
@@ -90,20 +96,20 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 - Fix: Safari browser layout issue
 
 
-== 2.0.3 - febuary 14, 2019 ==
+== 2.0.3 - 14 Febuary, 2019 ==
 
 - Fix: image size for the editor
 - Fix: alignment issue for editor
 
 
-== 2.0.2 - january 14, 2019 ==
+== 2.0.2 - 14 January, 2019 ==
 
 - Changed: Primary navigation js from staller nav to wp default
 - Fix: Issue with primary navigation for ios devices [Charlie]
 - Fix: Few design issue
 
 
-== 2.0.0 - january 05, 2019 ==
+== 2.0.0 - 05 January, 2019 ==
 
 - Added : Editor styles
 - Changes: Screenshot updated

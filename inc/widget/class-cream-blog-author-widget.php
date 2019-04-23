@@ -61,11 +61,21 @@ class Cream_Blog_Author_Widget extends WP_Widget {
                         if( has_post_thumbnail() ) {
                             $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-blog-thumbnail-three' );
                             ?>
-                            <div class="thumb lazyloading">
-                                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-                                <noscript>
-                                    <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-                                </noscript>
+                            <div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
+                                <?php
+                                if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+                                    ?>
+                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                    <noscript>
+                                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
+                                    </noscript>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                    <?php
+                                }
+                                ?>
                             </div><!-- .thumb.lazyloading -->
                             <?php
                         }

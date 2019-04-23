@@ -250,12 +250,6 @@ if( ! function_exists( 'cream_blog_social_links_action' ) ) :
                 	<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="feather icon-youtube"></i></a></li>
                 	<?php
 	 			}
-	 			$google_plus_link = cream_blog_get_option( 'cream_blog_google_plus_link' );
-	 			if( !empty( $google_plus_link ) ) {
-	 				?> 
-                	<li><a href="<?php echo esc_url( $google_plus_link ); ?>"><i class="fab fa-google-plus-g"></i></a></li>
-                	<?php
-                }
                 ?>
             </ul><!-- .social-icons-list -->
         </div><!-- .social-icons -->
@@ -532,12 +526,6 @@ if( ! function_exists( 'cream_blog_footer_top_action' ) ) :
 		                    <li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="fab fa-youtube"></i> <?php esc_html_e( 'Youtube', 'cream-blog' ); ?></a></li>
 		                    <?php
 			 			}
-			 			$google_plus_link = cream_blog_get_option( 'cream_blog_google_plus_link' );
-			 			if( !empty( $google_plus_link ) ) {
-			 				?> 
-	                    	<li><a href="<?php echo esc_url( $google_plus_link ); ?>"><i class="fab fa-google-plus-g"></i>  <?php esc_html_e( 'Google+', 'cream-blog' ); ?></a></li>
-	                    	<?php
-	                    }
 	                    ?>
 	                </ul><!-- .social-icons-list -->
 	            </div><!-- .social-icons -->

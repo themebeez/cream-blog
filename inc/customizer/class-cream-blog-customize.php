@@ -45,7 +45,7 @@ class Cream_Blog_Customize {
 		add_action( 'customize_register', array( $this, 'register_settings' ) );
 		add_action( 'customize_register', array( $this, 'register_controls' ) );
 		add_action( 'customize_register', array( $this, 'add_partials' ) );
-		add_action( 'wp_head', array( $this, 'dynamic_style' ) );
+		// add_action( 'wp_head', array( $this, 'dynamic_style' ) );
 
 		// Register scripts and styles for the controls.
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_scripts' ), 0 );
@@ -251,6 +251,16 @@ class Cream_Blog_Customize {
 			'cream_blog_breadcrumb_options', 
 			array(
 				'title'			=> esc_html__( 'Breadcrumb', 'cream-blog' ),
+				'panel'			=> 'cream_blog_advance_customization',
+			) 
+		);
+
+		// Image Options
+		$wp_customize->add_section( 
+			'cream_blog_image_options', 
+			array(
+				'title'			=> esc_html__( 'Image', 'cream-blog' ),
+				'description'	=> esc_html__( 'For site optimization and fast page load, enable image lazy load.', 'cream-blog' ),
 				'panel'			=> 'cream_blog_advance_customization',
 			) 
 		);
@@ -574,15 +584,6 @@ class Cream_Blog_Customize {
 			) 
 		);
 
-		// Social Link - Google Plus
-		$wp_customize->add_setting( 
-			'cream_blog_google_plus_link', 
-			array(
-				'sanitize_callback'		=> 'esc_url_raw',
-				'default'				=> $defaults['cream_blog_google_plus_link'], 
-			) 
-		);
-
 		// Social Link - Linkedin
 		$wp_customize->add_setting( 
 			'cream_blog_linkedin_link', 
@@ -607,6 +608,15 @@ class Cream_Blog_Customize {
 			array(
 				'sanitize_callback'	=> 'wp_validate_boolean',
 				'default'			=> $defaults['cream_blog_enable_breadcrumb'],
+			) 
+		);
+
+		// Enable Image Lazyload
+		$wp_customize->add_setting( 
+			'cream_blog_enable_lazyload', 
+			array(
+				'sanitize_callback'	=> 'wp_validate_boolean',
+				'default'			=> $defaults['cream_blog_enable_lazyload'],
 			) 
 		);
 
@@ -679,6 +689,7 @@ class Cream_Blog_Customize {
 					'label'	=> esc_html__( 'Banner/Slider Post Categories', 'cream-blog' ),
 					'section' => 'cream_blog_banner_options',
 					'choices' => $this->get_category_taxonomies(),
+					'active_callback' => 'cream_blog_is_banner_active',
 				) 
 			) 
 		);
@@ -690,7 +701,7 @@ class Cream_Blog_Customize {
 				'label' => esc_html__( 'Banner/Slider Posts Number', 'cream-blog' ),
 				'section' => 'cream_blog_banner_options',
 				'type' => 'number',
-				'active_callback' => 'cream_blog_is_not_active_banner_six',
+				'active_callback' => 'cream_blog_is_banner_active',
 			) 
 		);
 
@@ -704,6 +715,7 @@ class Cream_Blog_Customize {
 					'section'			=> 'cream_blog_banner_options',
 					'type'				=> 'radio',
 					'choices'			=> $this->get_banner_layouts(), 
+					'active_callback' => 'cream_blog_is_banner_active',
 				) 
 			) 
 		);
@@ -991,16 +1003,6 @@ class Cream_Blog_Customize {
 			) 
 		);
 
-		// Social Links - Google Plus
-		$wp_customize->add_control( 
-			'cream_blog_google_plus_link', 
-			array(
-				'label' => esc_html__( 'Google Plus Link', 'cream-blog' ),
-				'section' => 'cream_blog_social_links_options',
-				'type' => 'url',
-			) 
-		);
-
 		// Social Links - Linkedin
 		$wp_customize->add_control( 
 			'cream_blog_linkedin_link', 
@@ -1027,6 +1029,16 @@ class Cream_Blog_Customize {
 			array(
 				'label'				=> esc_html__( 'Enable Breadcrumb', 'cream-blog' ),
 				'section'			=> 'cream_blog_breadcrumb_options',
+				'type'				=> 'checkbox' 
+			) 
+		);
+
+		// Enable Lazy Image Load
+		$wp_customize->add_control( 
+			'cream_blog_enable_lazyload', 
+			array(
+				'label'				=> esc_html__( 'Enable Image Lazy Load', 'cream-blog' ),
+				'section'			=> 'cream_blog_image_options',
 				'type'				=> 'checkbox' 
 			) 
 		);

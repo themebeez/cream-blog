@@ -384,16 +384,6 @@ html {
 .clearfix:after,
 .entry-content:before,
 .entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after,
-.cb-container:after,
-.cb-container:before,
 .dropcap:before,
 .dropcap:after,
 .alignleft:before,
@@ -406,11 +396,6 @@ html {
 
 .clearfix:after,
 .entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after,
-.cb-container:after,
 .alignleft:after,
 .alignright:after,
 .cb-editor-contents-entry:after {
@@ -439,6 +424,7 @@ html {
 a.btn-general {
 
     position: relative;
+    z-index: 5;
     display:inline-block;
     padding:12px 30px;
     border-radius:0;
@@ -596,12 +582,6 @@ aside .cb-col,
 }
 
 
-.imghover:hover img  {
-
-  
-}
-
-
 // Post Metas
 
 
@@ -621,7 +601,6 @@ aside .cb-col,
         position: relative;
         display:inline-block;
         color: $secondary_color;        
-        padding-right:5px;
         font-size:12px;
         text-transform:uppercase;
         line-height:1;
@@ -745,11 +724,19 @@ ul.post-categories {
 
 .section-title {
 
-    padding-bottom: 80px;
-    padding-top: 30px;
+    margin-bottom: 40px;
+    padding-left: 15px;
+    border-left: 4px solid $secondary_color;
 }
 
-.section-title h2,
+.section-title h2 {
+    
+    position:relative;
+    font-size: 24px;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
 footer .widget-title h3 {
 
     position:relative;
@@ -759,7 +746,6 @@ footer .widget-title h3 {
     text-transform:uppercase;    
 }
 
-.section-title h2::after,
 footer .widget-title h3::after {
 
     content:'';
@@ -817,7 +803,7 @@ footer .widget-title h3::after {
 .post-title h4 {
 
     position:relative;
-    font-weight:900;
+    font-weight:800;
     font-size: 32px;
     text-transform:uppercase;
     margin-bottom:20px;
@@ -908,7 +894,7 @@ footer .widget-title h3::after {
 .is-sticky #cb-stickhead {
 
     position:fixed;
-    z-index: 9999 !important;
+    z-index: 9999999999 !important;
 }
 
 
@@ -1101,7 +1087,7 @@ ul#menu-primary-menu>li:last-child>ul.sub-menu {
 #header-search input[type="search"] {
         
     float:left;
-    width: calc(100% - 80px);
+    width: calc(100% - 110px);
     border-top: 1px solid $border_color;
     border-bottom: 1px solid $border_color;
     border-left: 1px solid $border_color;
@@ -1119,8 +1105,9 @@ ul#menu-primary-menu>li:last-child>ul.sub-menu {
     float: right;
     background: $secondary_color;
     color: $white;
-    width: 80px;
+    width: 110px;
     font-weight: 400;
+    font-size: 14px;
     line-height: inherit;
     padding: 0 15px;
     border-radius: 0;
@@ -1261,7 +1248,7 @@ body.logged-in #canvas-aside {
 
 .header-style-2 {
 
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .header-style-2 .sticky-wrapper {
@@ -1302,7 +1289,7 @@ body.logged-in #canvas-aside {
 
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
     font-size:32px;
-    font-weight:900;
+    font-weight:800;
     letter-spacing:0
 }
 
@@ -1341,14 +1328,14 @@ body.logged-in #canvas-aside {
     z-index:10;
     text-align:center;
     vertical-align:middle;
-    padding: 130px 0;
+    padding: 90px 0;
 }
 
 .header-style-3 .site-identity .site-title {
     
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
     font-size:42px;
-    font-weight:900;
+    font-weight:800;
     letter-spacing:0;
     line-height:1;
     padding-bottom:10px;
@@ -1484,10 +1471,10 @@ body.logged-in #canvas-aside {
     
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
     font-size:32px;
-    font-weight:900;
+    font-weight:800;
     letter-spacing:0;
     line-height:1;
-    padding-bottom:10px;
+    padding-bottom:5px;
 }
 
 .header-style-4 .site-identity .site-title a {
@@ -1556,7 +1543,7 @@ body.logged-in #canvas-aside {
 
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
     font-size: 28px;
-    font-weight:900;
+    font-weight:800;
 }
 
 .header-style-5 .site-identity .site-title a {
@@ -1595,7 +1582,7 @@ body.logged-in #canvas-aside {
 
     font-family:'Helvetica Neue','Arial','Halvetica', sans-serif;
     font-size:42px;
-    font-weight:900;
+    font-weight:800;
 }
 
 .header-style-6 .site-identity .site-title a {
@@ -1750,37 +1737,31 @@ body.logged-in #canvas-aside {
 #cb-banner-style-2 .thumb {
 
     padding-bottom:0;
-    height: 500px;
+    height: 550px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-#cb-banner-style-2 .thumb img {
-
-    position:relative;
-    left:unset;
-    right:unset;
-    bottom:unset;
-    top:unset;
-    object-fit: cover;
-    object-position: center center;
-}
-
 #cb-banner-style-2 .item .mask {
 
-    z-index:7;
-    background: rgba(0,0,0,0);    
+    display:none;
 }
 
 #cb-banner-style-2 .item:hover .mask {
     
-    background: rgba(0,0,0,0.6);
+    display:none;
 }
 
 #cb-banner-style-2 .post-contents {
 
-    @include position_absolute(85%,unset,0,0);
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:60px 30px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,0.5)),to(#000));
+    background-image: linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.5) 40%,#000 100%);
     z-index:8;
 }
 
@@ -2168,7 +2149,7 @@ body.logged-in #canvas-aside {
 
 .cb-banner-style-6 .thumb {
 
-    height:400px;
+    height:450px;
     background-position:center center;
     background-size:cover;
     background-repeat:no-repeat;
@@ -2177,18 +2158,23 @@ body.logged-in #canvas-aside {
 
 .cb-banner-style-6 .mask {
 
-    background:rgba(0,0,0,0);
+    display:none;
 }
 
 .cb-banner-style-6 .thumb:hover .mask {
 
-    background:rgba(0,0,0,0.7);
+    display:none;
 }
 
 .cb-banner-style-6 .post-contents {
 
-    @include position_absolute(80%,unset,0,0);
-    padding:0 15px;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:30px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,0.5)),to(#000));
+    background-image: linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.5) 40%,#000 100%);
 }
 
 .cb-banner-style-6 .post-contents .post-title h2 {
@@ -2227,11 +2213,11 @@ body.logged-in #canvas-aside {
     background:$white;
 }
 
+
 // Right gutter slider 
 
 #cb-slider-style-6 .post-contents {
 
-    top:75%;
 }
 
 #cb-slider-style-6 .post-contents .post-title h2 {
@@ -2927,7 +2913,7 @@ footer form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
 
 .cb-post-bricks .post-title h3 {
 
-    font-size:24px;
+    font-size:20px;
 }
 
 .cb-post-bricks .excerpt p {
@@ -4009,7 +3995,7 @@ footer .custom-html-widget .cb-newsleter {
 .search-box input[type="submit"],
 .widget_product_search button {
 
-    font-size:16px;
+    font-size:14px;
 }
 
 
@@ -4797,7 +4783,7 @@ footer .custom-html-widget .cb-newsleter {
     
     position:relative;
     margin-bottom:30px;
-    font-weight:900;
+    font-weight:800;
     font-size:36px;
     text-transform:uppercase;
 }
@@ -5405,7 +5391,7 @@ footer .custom-html-widget .cb-newsleter {
 
     .has-drop-cap:first-child:first-letter {
     
-        font-weight:900;
+        font-weight:800;
         padding-top: 0;
         padding-left: 0;
     }
@@ -5846,7 +5832,7 @@ footer .custom-html-widget .cb-newsleter {
 
 .author-box .author-name h3 {
 
-    font-size:27px;
+    font-size:24px;
     text-transform:capitalize;
     color:$secondary_color;
 }
@@ -6541,9 +6527,9 @@ footer .custom-html-widget .cb-newsleter {
 .widget_product_categories ul,
 .woocommerce-widget-layered-nav ul {
 
-    list-style: disc;
+    list-style: none;
     margin: 0;
-    padding-left:20px;
+    padding-left:0;
     overflow:hidden;
 }
 
@@ -6573,7 +6559,6 @@ footer .custom-html-widget .cb-newsleter {
     border-bottom: 1px solid $border_color;
     padding: 15px 0;
     margin: 0;
-    //text-align:right;
 }
 
 
@@ -6851,12 +6836,13 @@ footer .custom-html-widget .cb-newsleter {
 
 .widget_search form input[type="submit"] {
 
-    width:100px;
+    width:110px;
+    font-size: 14px;
 }
 
 .widget_search form input[type="search"] {
 
-    width:calc( 100% - 100px);
+    width:calc( 100% - 110px);
 }
 
 

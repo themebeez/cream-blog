@@ -6,12 +6,12 @@
  */
 
 /*
- *	Active Callback Functions for Top Header
+ *	Active Callback Functions Banner/Slider
  */
-if( ! function_exists( 'cream_blog_is_active_header_four_five' ) ) {
+if( ! function_exists( 'cream_blog_is_banner_active' ) ) {
 
-	function cream_blog_is_active_header_four_five( $control ) {
-		if( $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_5' || $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_4') {
+	function cream_blog_is_banner_active( $control ) {
+		if( $control->manager->get_setting( 'cream_blog_enable_banner' )->value() == true ) {
 			return true;
 		} else {
 			return false;
@@ -21,12 +21,12 @@ if( ! function_exists( 'cream_blog_is_active_header_four_five' ) ) {
 
 
 /*
- *	Active Callback Functions for Banner Six
+ *	Active Callback Functions for Top Header
  */
-if( ! function_exists( 'cream_blog_is_not_active_banner_six' ) ) {
+if( ! function_exists( 'cream_blog_is_active_header_four_five' ) ) {
 
-	function cream_blog_is_not_active_banner_six( $control ) {
-		if( $control->manager->get_setting( 'cream_blog_select_banner_layout' )->value() != 'banner_6' ) {
+	function cream_blog_is_active_header_four_five( $control ) {
+		if( $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_5' || $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_4') {
 			return true;
 		} else {
 			return false;

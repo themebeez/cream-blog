@@ -103,6 +103,8 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 
         $defaults['cream_blog_enable_breadcrumb'] = true;
 
+        $defaults['cream_blog_enable_lazyload'] = true;
+
         $defaults['cream_blog_enable_sticky_sidebar'] = true; 
 
         if( class_exists( 'Woocommerce' ) ) {

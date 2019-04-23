@@ -164,8 +164,11 @@ if( ! function_exists( 'cream_blog_post_categories_meta' ) ) {
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list();
 				if ( $categories_list ) {
-					/* translators: 1: list of categories. */
-					printf( '<div class="entry-cats">' . esc_html__( ' %1$s', 'cream-blog' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+					?>
+					<div class="entry-cats">
+						<?php echo $categories_list; // WPCS: XSS OK. ?>
+					</div><!-- entry-cats -->
+					<?php
 				}
 			}
 		}
@@ -186,8 +189,13 @@ if( ! function_exists( 'cream_blog_post_tags_meta' ) ) {
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list();
 				if ( $tags_list ) {
-					/* translators: 1: list of categories. */
-					printf( '<div class="entry-tags"><div class="post-tags">' . esc_html__( ' %1$s', 'cream-blog' ) . '</div></div>', $tags_list ); // WPCS: XSS OK.
+					?>
+					<div class="entry-tags">
+						<div class="post-tags">
+							<?php echo $tags_list; // WPCS: XSS OK.  ?>
+						</div><!-- .post-tags -->
+					</div><!-- .entry-tags -->
+					<?php
 				}
 			}
 		}
@@ -333,7 +341,7 @@ if ( ! function_exists( 'cream_blog_post_thumbnail' ) ) {
 
 				$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail );
 				?>
-				<div class="thumb lazyloading">
+				<div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
 					<?php
 			
 					if( $blog_list_layout == 'list_5' ) {
@@ -345,11 +353,20 @@ if ( ! function_exists( 'cream_blog_post_thumbnail' ) ) {
 						<a href="<?php the_permalink(); ?>">
 						<?php
 					}
-					?>
+
+					if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+						?>
 			            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
 			            <noscript>
 			                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
 			            </noscript>
+			            <?php
+			        } else {
+			        	?>
+			        	<img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+			        	<?php
+			        }
+			        ?>
 			        </a>
 			    </div>
 				<?php
@@ -364,12 +381,22 @@ if ( ! function_exists( 'cream_blog_post_thumbnail' ) ) {
 
 				$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail );			
 				?>
-				<div class="thumb lazyloading">
+				<div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
 					<a href="<?php the_permalink(); ?>">
-			            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-			            <noscript>
-			                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-			            </noscript>
+						<?php
+						if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+							?>
+				            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+				            <noscript>
+				                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
+				            </noscript>
+				            <?php
+				        } else {
+				        	?>
+				        	<img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+				        	<?php
+				        }
+				        ?>
 			        </a>
 			    </div>
 				<?php
@@ -381,12 +408,22 @@ if ( ! function_exists( 'cream_blog_post_thumbnail' ) ) {
 			if( has_post_thumbnail() ) {
 				$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
 				?>
-				<div class="thumb lazyloading">
+				<div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
 					<a href="<?php the_permalink(); ?>">
-			            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-			            <noscript>
-			                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-			            </noscript>
+						<?php
+						if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+							?>
+				            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+				            <noscript>
+				                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
+				            </noscript>
+				            <?php
+				        } else {
+				        	?>
+				        	<img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+				        	<?php
+				        }
+				        ?>
 			        </a>
 			    </div>
 				<?php
@@ -404,6 +441,48 @@ if ( ! function_exists( 'cream_blog_post_thumbnail' ) ) {
 			}
 		}
 	}
+}
+
+
+/**
+ * Function to define element lazyload class
+ */
+if( ! function_exists( 'cream_blog_lazyload_class' ) ) {
+
+	function cream_blog_lazyload_class() {
+
+		$lazyload_class = '';
+
+		if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+			$lazyload_class = 'lazyload';
+		}
+
+		if( !empty( $lazyload_class ) ) {
+
+			echo esc_attr( $lazyload_class );
+		}
+	} 
+}
+
+
+/**
+ * Function to define parent element lazyload class
+ */
+if( ! function_exists( 'cream_blog_parent_lazyload_class' ) ) {
+
+	function cream_blog_parent_lazyload_class() {
+
+		$parent_lazyload_class = '';
+
+		if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+			$parent_lazyload_class = 'lazyloading';
+		}
+
+		if( !empty( $parent_lazyload_class ) ) {
+
+			echo esc_attr( $parent_lazyload_class );
+		}
+	} 
 }
 
 
@@ -436,7 +515,7 @@ if( ! function_exists( 'cream_blog_woocommerce_sidebar' ) ) {
 			if( is_active_sidebar( 'woocommerce-sidebar' ) ) {
 				$sidebar_class = cream_blog_sidebar_class();
 				?>
-				<div class="<?php echo esc_attr( $sidebar_class ); ?>">
+				<div class="<?php echo esc_attr( $sidebar_class ); ?> woocommerce-sidebar">
 					<aside class="secondary">
 						<?php dynamic_sidebar( 'woocommerce-sidebar' ); ?>
 					</aside><!-- #secondary -->

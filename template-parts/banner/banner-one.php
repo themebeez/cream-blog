@@ -22,11 +22,17 @@ if( $banner_query->have_posts() ) {
                 			if( !empty( $thumbnail_url ) ) {
                 				?>
                 				<div class="item">
-			                        <div class="thumb lazyloading">
-			                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-							            <noscript>
-							                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-							            </noscript>
+                                    <?php
+                                    if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+                                        ?>
+                                        <div class="thumb lazyload" data-bg="<?php echo esc_url( $thumbnail_url ); ?>" style="background-image: url(<?php echo esc_url( $thumbnail_url ); ?>);">
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <div class="thumb" style="background-image: url(<?php echo esc_url( $thumbnail_url ); ?>);">
+                                        <?php
+                                    }
+                                    ?>
 			                            <div class="post-contents">
 			                                <?php cream_blog_post_categories_meta(); ?>
 			                                <div class="post-title">

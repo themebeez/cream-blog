@@ -81,12 +81,22 @@ if( $related_posts->have_posts() && $enable_related_posts == true ) {
                                 if( has_post_thumbnail() ) {
                                     $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), $thumbnail );
                                     ?>
-                                    <div class="thumb">
-                                        <a class="lazyloading" href="<?php the_permalink(); ?>">
-                                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-                                            <noscript>
-                                                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-                                            </noscript>
+                                    <div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php
+                                            if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+                                                ?>
+                                                <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                                <noscript>
+                                                    <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
+                                                </noscript>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                                <?php
+                                            }
+                                            ?>
                                         </a>
                                     </div><!-- .thumb.lazyloading -->
                                     <?php

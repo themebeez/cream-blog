@@ -54,52 +54,66 @@ class Cream_Blog_Post_Widget extends WP_Widget {
 			echo $args[ 'before_title' ];
 				echo esc_html( $title );
 			echo $args[ 'after_title' ];
-
-            while( $post_query->have_posts() ) {
-                $post_query->the_post();
-                ?>
-                <div class="cb-post-box">
-                    <div class="cb-col">
-                        <?php
-                        $thumbnail_url = '';
-                        if( has_post_thumbnail() ) {
-                            $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-blog-thumbnail-two' );
-                        }
-                        if( !empty( $thumbnail_url ) ) {
-                            ?>
-                            <div class="thumb">
-                                <a class="lazyloading" href="<?php the_permalink(); ?>">
-                                    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
-                                    <noscript>
-                                        <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
-                                    </noscript>    
-                                </a>
-                            </div>
+            ?>
+            <div class="post-widget-container">
+                <?php
+                while( $post_query->have_posts() ) {
+                    $post_query->the_post();
+                    ?>
+                    <div class="cb-post-box">
+                        <div class="cb-col">
                             <?php
-                        }
-                        ?>
-                    </div><!-- .cb-col -->
-                    <div class="cb-col">
-                        <div class="post-contents">
-                            <div class="post-title">
-                                <h4>
-                                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </h4>
-                            </div><!-- .post-title -->
-                            <?php 
-                            if( $post_choice == 'recent' ) {
-                                cream_blog_post_meta( true, false, false );
-                            } else {
-                                cream_blog_post_meta( false, false, true );
+                            $thumbnail_url = '';
+                            if( has_post_thumbnail() ) {
+                                $thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-blog-thumbnail-two' );
+                            }
+                            if( !empty( $thumbnail_url ) ) {
+                                ?>
+                                <div class="thumb <?php cream_blog_parent_lazyload_class(); ?>">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        if( cream_blog_get_option( 'cream_blog_enable_lazyload' ) == true ) {
+                                            ?>
+                                            <img class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo esc_url( $thumbnail_url ); ?>" data-srcset="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                            <noscript>
+                                                <img src="<?php echo esc_url( $thumbnail_url ); ?>" srcset="<?php echo esc_url( $thumbnail_url ); ?>" class="image-fallback" alt="<?php the_title_attribute(); ?>">
+                                            </noscript>
+                                            <?php
+                                        } else {
+                                            ?>
+                                            <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title_attribute(); ?>">
+                                            <?php
+                                        }
+                                        ?>    
+                                    </a>
+                                </div>
+                                <?php
                             }
                             ?>
-                        </div><!-- .post-contents -->
-                    </div><!-- .cb-col -->
-                </div><!-- .cb-post-box -->
-                <?php
-            }
-            wp_reset_postdata();
-            
+                        </div><!-- .cb-col -->
+                        <div class="cb-col">
+                            <div class="post-contents">
+                                <div class="post-title">
+                                    <h4>
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                    </h4>
+                                </div><!-- .post-title -->
+                                <?php 
+                                if( $post_choice == 'recent' ) {
+                                    cream_blog_post_meta( true, false, false );
+                                } else {
+                                    cream_blog_post_meta( false, false, true );
+                                }
+                                ?>
+                            </div><!-- .post-contents -->
+                        </div><!-- .cb-col -->
+                    </div><!-- .cb-post-box -->
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
+            </div><!-- .post-widget-container -->
+            <?php            
 		}
 			
 		echo $args[ 'after_widget' ]; 

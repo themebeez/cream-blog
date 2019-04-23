@@ -24,7 +24,7 @@ if( $banner_query->have_posts() ) {
 	                			$thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'cream-blog-thumbnail-four' );
 	                			?>
 	                			<div class="col-lg-8 col-md-8 col-sm-12 left-gutter">
-			                        <div class="thumb lazyload lazyloading" data-bg="<?php echo esc_url( $thumbnail_url ); ?>" style="background-image: url(<?php echo esc_url( $thumbnail_url ); ?>);">
+			                        <div class="thumb lazyload" data-bg="<?php echo esc_url( $thumbnail_url ); ?>" style="background-image: url(<?php echo esc_url( $thumbnail_url ); ?>);">
 			                            <div class="post-contents">
 			                                <?php cream_blog_post_categories_meta(); ?>
 	                                        <div class="post-title">

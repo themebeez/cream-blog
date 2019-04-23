@@ -80,14 +80,15 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
+
 == 2.0.5 - 21 April, 2019 ==
 
-- Screenshot changed
-- Option for lazy image loading added in customizer
-- Active callback function added for banner/slider in customizer
-- Removed links and options for google plus
-- Other fixes
-- CSS updates
+- Chnaged: Screenshot changed
+- Added: Option for lazy image loading added in customizer
+- Added: Active callback function added for banner/slider in customizer
+- Removed: Removed links and options for google plus
+- Fix: Other fixes
+- Fix: CSS updates
 
 
 == 2.0.4 - 2 April, 2019 ==

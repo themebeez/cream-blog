@@ -73,7 +73,6 @@ body.woocommerce {
     font-size:16px;
 }
 
-
 .woocommerce-error strong {
 
     font-weight:600;
@@ -203,7 +202,7 @@ body.woocommerce {
 .woocommerce-info, 
 .woocommerce-message {
 
-    margin: 10px 0 50px 0;
+    margin: 10px 0 40px 0;
     border-top-color:$woo-secondary-color;
     color:$woo-body-color;
 }
@@ -222,6 +221,14 @@ body.woocommerce {
 }
 
 
+.woocommerce-error:before, 
+.woocommerce-info:before, 
+.woocommerce-message:before {
+
+
+}
+
+
 /*
 ***************************************************************
 *
@@ -237,7 +244,7 @@ body.woocommerce {
 
 .woocommerce nav.woocommerce-pagination {
 
-    margin-bottom:50px;
+    margin-bottom:40px;
     text-align:left;
 }
 
@@ -479,7 +486,7 @@ body.home .woocommerce ul.products li {
 .woocommerce .quantity .qty {
     
     display:inline-block;
-    width: 50px;
+    width: 40px;
     padding: 0;
     line-height: 1;
     height:36px;
@@ -622,7 +629,7 @@ body.home .woocommerce ul.products li {
 
 .woocommerce #reviews #comments {
 
-    margin:50px 0;
+    margin:40px 0;
 }
 
 .woocommerce #reviews #comments ol.commentlist li img.avatar {
@@ -642,7 +649,7 @@ body.home .woocommerce ul.products li {
 
 .woocommerce .related.products h2 {
 
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 
@@ -671,7 +678,7 @@ body.home .woocommerce ul.products li {
 .woocommerce .woocommerce-cart-form table.shop_table {
 
     border-color:$woo-border-color;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     max-width: 100%;
     width:100%;
 }
@@ -767,7 +774,7 @@ body.home .woocommerce ul.products li {
 .woocommerce form.checkout_coupon {
 
     margin-top:0;
-    margin-bottom:50px;
+    margin-bottom:40px;
     background:$woo-section-bg-color;
     padding:30px;
     border-radius:0;
@@ -800,7 +807,7 @@ body.home .woocommerce ul.products li {
 
 .woocommerce-page form.checkout.woocommerce-checkout {
 
-    margin-top:50px;
+    margin-top:40px;
 }
 
 .woocommerce-page form.checkout .col2-set, 
@@ -835,7 +842,7 @@ body.home .woocommerce ul.products li {
 
 .woocommerce-page form.checkout .col-2 {
 
-    margin:50px 0;
+    margin:40px 0;
 }
 
 .woocommerce-checkout #customer_details .col-2 h3#ship-to-different-address {

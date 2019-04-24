@@ -958,6 +958,13 @@
 		font-size:31px;
 	}
 
+	.post-title h2, 
+	.post-title h3, 
+	.post-title h4 {
+
+		font-size: 22px;
+	}
+
 
 	// Common spacing, section titles, archives titles, pages titles
 	
@@ -989,7 +996,7 @@
 		margin-bottom:30px;
 	}
 
-	.section-title h2::after, footer .widget-title h3::after {
+	footer .widget-title h3::after {
 
 		content:'';
 		left: -10px;
@@ -998,15 +1005,9 @@
     	width: 50px;
 	}
 
-	.section-title {
-
-		padding-bottom: 50px;
-		padding-top: 20px;
-	}
-
 	.cb-fp-mid-wrap {
 
-		margin-bottom:30px;
+		margin-bottom:0;
 	}
 
 
@@ -1292,7 +1293,7 @@
 
 	#cb-banner-style-2 .item .thumb {
 
-		height: 400px;
+		height: 350px;
 	}
 
 	#cb-banner-style-2 .post-title h3 {
@@ -1735,7 +1736,7 @@
 
 	#cb-banner-style-2 .post-contents {
 
-		padding:30px;
+		padding:30px 20px;
 	}
 
 	#cb-slider-carousel-4 .post-title h2 {

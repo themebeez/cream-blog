@@ -73,9 +73,9 @@ body.woocommerce {
     font-size:16px;
 }
 
-.woocommerce-error strong {
+body.woocommerce-page strong {
 
-    font-weight:600;
+    font-weight:500;
 }
 
 
@@ -295,7 +295,6 @@ body.woocommerce {
 
 
 
-
 /*
 ***************************************************************
 *
@@ -303,7 +302,6 @@ body.woocommerce {
 *
 ***************************************************************
 */
-
 
 
 .cb-woocommerce-products {
@@ -836,6 +834,24 @@ body.home .woocommerce ul.products li {
     background:$woo-section-bg-color;
 }
 
+.select2-container--default .select2-selection--single {
+
+    height:43px;
+    border:none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+
+    line-height:43px;
+    padding-left: 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+
+    height:43px;
+    padding-right: 20px;
+}
+
 
 // Shippping details 
 
@@ -847,12 +863,11 @@ body.home .woocommerce ul.products li {
 
 .woocommerce-checkout #customer_details .col-2 h3#ship-to-different-address {
     
-    font-family: 'Helvetica Neue','Helvetica',"Arial",sans-serif; 
+    font-family: $secondary_font_family;
     font-size:16px;
     font-weight:normal;
     line-height:1;
 }
-
 
 .woocommerce-page.woocommerce-checkout #customer_details textarea {
 
@@ -864,8 +879,13 @@ body.home .woocommerce ul.products li {
 }
 
 
-// Your order review 
+// Your order review
+ 
 
+.woocommerce ul#shipping_method .amount {
+
+    font-weight:500;
+}
 
 
 // Payment option 
@@ -980,7 +1000,7 @@ body.home .woocommerce ul.products li {
 .woocommerce table.shop_table tfoot th {
 
     border-color:$woo-border-color;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 

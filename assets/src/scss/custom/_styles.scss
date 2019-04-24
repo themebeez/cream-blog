@@ -4098,6 +4098,11 @@ footer .custom-html-widget .cb-newsleter {
     margin-bottom:30px;
 }
 
+.cb-post-widget .post-widget-container .cb-post-box:last-child {
+
+    margin-bottom: 0;
+} 
+
 .cb-post-widget .cb-post-box .thumb {
 
     padding-bottom:75%;
@@ -6433,10 +6438,16 @@ footer .custom-html-widget .cb-newsleter {
 
     content: '\f121';
     font-family: "Font Awesome 5 Free";
+    font-weight:400;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 4px;
     padding-right: 10px;
+}
+
+#comments ol.comment-list li article footer.comment-meta .comment-metadata span.edit-link a:after {
+
+    display:none;
 }
 
 #comments ol.comment-list li article .comment-content {

@@ -79,11 +79,14 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 
     	$defaults['cream_blog_select_search_sidebar_position'] = 'right';
 
-    	$defaults['cream_blog_enable_author_section'] = false;
+    	$defaults['cream_blog_display_featured_image_post'] = true;
+        $defaults['cream_blog_enable_author_section'] = false;
 
     	$defaults['cream_blog_enable_related_section'] = false;
     	$defaults['cream_blog_related_section_title'] = '';
     	$defaults['cream_blog_related_section_posts_number'] = 6;
+
+        $defaults['cream_blog_display_featured_image_page'] = true;
 
     	$defaults['cream_blog_enable_category_meta'] = true;
     	$defaults['cream_blog_enable_date_meta'] = true;

@@ -86,6 +86,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 - Fix: Woocommerce styles
 - Fix: Spacing styles
 - Fix: Section title styling
+- Added option for displaying featured image on post single and page single
 
 
 == 2.0.5 - 21 April, 2019 ==

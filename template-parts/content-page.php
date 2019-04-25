@@ -12,7 +12,12 @@
     <div class="page-title">
         <h2><?php the_title(); ?></h2>
     </div><!-- .page-title -->
-    <?php cream_blog_post_thumbnail(); ?>
+    <?php
+    $show_featured_image = cream_blog_get_option( 'cream_blog_display_featured_image_page' ); 
+    if( $show_featured_image == true ) {
+    	cream_blog_post_thumbnail(); 
+    }
+    ?>
     <div class="page-contents">
         <div class="cb-editor-contents-entry">
             <?php

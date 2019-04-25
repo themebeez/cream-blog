@@ -45,7 +45,7 @@ class Cream_Blog_Customize {
 		add_action( 'customize_register', array( $this, 'register_settings' ) );
 		add_action( 'customize_register', array( $this, 'register_controls' ) );
 		add_action( 'customize_register', array( $this, 'add_partials' ) );
-		// add_action( 'wp_head', array( $this, 'dynamic_style' ) );
+		add_action( 'wp_head', array( $this, 'dynamic_style' ) );
 
 		// Register scripts and styles for the controls.
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'customizer_scripts' ), 0 );
@@ -209,11 +209,20 @@ class Cream_Blog_Customize {
 			) 
 		);
 
-		// Single Post Options
+		// Post Single Options
 		$wp_customize->add_section( 
 			'cream_blog_single_post_options', 
 			array(
-				'title'			=> esc_html__( 'Single Post', 'cream-blog' ),
+				'title'			=> esc_html__( 'Post Single', 'cream-blog' ),
+				'panel'			=> 'cream_blog_advance_customization',
+			) 
+		);
+
+		// Page Single Options
+		$wp_customize->add_section( 
+			'cream_blog_single_page_options', 
+			array(
+				'title'			=> esc_html__( 'Page Single', 'cream-blog' ),
 				'panel'			=> 'cream_blog_advance_customization',
 			) 
 		);
@@ -458,6 +467,15 @@ class Cream_Blog_Customize {
 			) 
 		);
 
+		// Display Featured Image On Post Single
+		$wp_customize->add_setting( 
+			'cream_blog_display_featured_image_post', 
+			array(
+				'sanitize_callback'	=> 'wp_validate_boolean',
+				'default'			=> $defaults['cream_blog_display_featured_image_post'],
+			) 
+		);
+
 		// Enable Author Section
 		$wp_customize->add_setting( 
 			'cream_blog_enable_author_section', 
@@ -491,6 +509,15 @@ class Cream_Blog_Customize {
 			array(
 				'sanitize_callback'		=> 'cream_blog_sanitize_number',
 				'default'				=> $defaults['cream_blog_related_section_posts_number'], 
+			) 
+		);
+
+		// Display Featured Image On Page Single
+		$wp_customize->add_setting( 
+			'cream_blog_display_featured_image_page', 
+			array(
+				'sanitize_callback'	=> 'wp_validate_boolean',
+				'default'			=> $defaults['cream_blog_display_featured_image_page'],
 			) 
 		);
 
@@ -861,6 +888,16 @@ class Cream_Blog_Customize {
 			)
 		);
 
+		// Display Featured Image On Post Single
+		$wp_customize->add_control( 
+			'cream_blog_display_featured_image_post', 
+			array(
+				'label'				=> esc_html__( 'Display Featured Image', 'cream-blog' ),
+				'section'			=> 'cream_blog_single_post_options',
+				'type'				=> 'checkbox' 
+			) 
+		);
+
 		// Enable Author Section
 		$wp_customize->add_control( 
 			'cream_blog_enable_author_section', 
@@ -900,6 +937,16 @@ class Cream_Blog_Customize {
 				'section' => 'cream_blog_single_post_options',
 				'type' => 'number',
 				'active_callback'	=> 'cream_blog_is_active_related_post',
+			) 
+		);
+
+		// Display Featured Image On Page Single
+		$wp_customize->add_control( 
+			'cream_blog_display_featured_image_page', 
+			array(
+				'label'				=> esc_html__( 'Display Featured Image', 'cream-blog' ),
+				'section'			=> 'cream_blog_single_page_options',
+				'type'				=> 'checkbox' 
 			) 
 		);
 
@@ -1417,9 +1464,6 @@ class Cream_Blog_Customize {
 
 					background: <?php echo esc_attr( $theme_color ); ?>;
 				}
-
-
-
 			<?php
 			}
 			?>

@@ -81,7 +81,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 ==== Change logs ====
 
 
-== 2.0.6 - 24 April, 2019 ==
+== 2.0.6 - 6 May, 2019 ==
 
 - Fix: Woocommerce styles
 - Fix: Spacing styles

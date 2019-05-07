@@ -134,27 +134,6 @@
         */
 
 
-        // var lazy = function lazy() {
-        //     document.addEventListener('lazyloaded', function(e) {
-
-        //         e.target.parentNode.classList.add('image-loaded');
-        //         jQuery( '.lazyloading' ).removeClass( 'lazyloading' );
-
-        /*
-            Initialization of masonry
-        */
-        //         var container = jQuery( '#bricks-row' );
-        //         container.imagesLoaded().progress( function() {
-        //             container.masonry({
-        //                 itemSelector: '.brick-item',
-        //             });
-        //         } );
-        //     });
-        // }
-
-        // lazy();
-
-
         var lazy = function lazy() {
             document.addEventListener('lazyloaded', function(e) {
                 e.target.parentNode.classList.add('image-loaded');
@@ -181,6 +160,16 @@
 
         lazySizesConfig.preloadAfterLoad = false;
         lazySizesConfig.expandChild = 370;
+
+
+        // init masonry 
+
+        var container = $('#bricks-row');
+        container.imagesLoaded().progress(function() {
+            container.masonry({
+                itemSelector: '.brick-item',
+            });
+        });
 
 
 

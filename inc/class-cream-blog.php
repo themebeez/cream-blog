@@ -66,9 +66,6 @@ class Cream_Blog {
 
 		add_theme_support( 'title-tag' );
 
-		// Add editor style ( classic editor )
-
-		add_editor_style( 'admin/css/editor-styles.css' );
 
 		// Add support for gutenberg images
 

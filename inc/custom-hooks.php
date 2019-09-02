@@ -54,6 +54,11 @@ if( ! function_exists( 'cream_blog_body_before_action' ) ) :
  	function cream_blog_body_before_action() {
  	?>
  		<body <?php body_class(); ?>>
+ 			<?php 
+			if( function_exists( 'wp_body_open' ) ) { 
+				wp_body_open(); 
+			} 
+			?>
  	<?php
  	}
 endif;
@@ -69,6 +74,7 @@ if( ! function_exists( 'cream_blog_page_wrapper_start_action' ) ) :
  	function cream_blog_page_wrapper_start_action() {
  	?>
  		<div class="page-wrap">
+ 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'cream-blog' ); ?></a>
  	<?php
  	}
 endif;
@@ -339,6 +345,21 @@ add_action( 'cream_blog_toogle_search_form', 'cream_blog_toogle_search_form_acti
 
 
 /**
+ * Content Start Wrapper.
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'cream_blog_content_start_action' ) ) :
+ 	function cream_blog_content_start_action() {
+ 		?>
+ 		<div id="content" class="site-content">
+ 		<?php
+ 	}
+endif;
+add_action( 'cream_blog_content_start', 'cream_blog_content_start_action', 10 );
+
+
+/**
  * Breadcrumb declaration of the theme.
  *
  * @since 1.0.0
@@ -456,6 +477,22 @@ if( ! function_exists( 'cream_blog_homepage_widget_area_bottom_action' ) ) :
  	}
 endif;
 add_action( 'cream_blog_homepage_widget_area_bottom', 'cream_blog_homepage_widget_area_bottom_action', 10 );
+
+
+/**
+ * Content End Wrapper.
+ *
+ * @since 1.0.0
+ */
+if( ! function_exists( 'cream_blog_content_end_action' ) ) :
+ 	function cream_blog_content_end_action() {
+ 		?>
+ 		</div><!-- #content.site-content -->
+ 		<?php
+ 	}
+endif;
+add_action( 'cream_blog_content_end', 'cream_blog_content_end_action', 10 );
+
 
 
 /**

@@ -52,6 +52,14 @@
 	do_action( 'cream_blog_toggle_sidebar' );
 
 
+	/**
+	* Hook - cream_blog_content_start.
+	*
+	* @hooked cream_blog_content_start_action - 10
+	*/
+	do_action( 'cream_blog_content_start' );
+
+
 
 
 

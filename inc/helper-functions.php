@@ -271,6 +271,11 @@ if ( ! function_exists( 'cream_blog_recommended_plugins' ) ) :
                 'slug'     => 'themebeez-toolkit',
                 'required' => false,
             ),
+            array(
+                'name'     => esc_html__( 'Gutentor : WordPress Page Building Blocks with Unlimited Possibilities to Design', 'cream-blog' ),
+                'slug'     => 'gutentor',
+                'required' => false,
+            ),
         );
 
         tgmpa( $plugins );

@@ -8,6 +8,13 @@
  *
  * @package Cream_Blog
  */
+	
+	/**
+	* Hook - cream_blog_content_end.
+	*
+	* @hooked cream_blog_content_end_action - 10
+	*/
+	do_action( 'cream_blog_content_end' );
 
 	/**
 	* Hook - cream_blog_footer_wrapper_start.

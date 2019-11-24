@@ -39,12 +39,12 @@
 	                    		?>
 		                        <section class="cb-page-entry search-page-entry">
 		                            <div class="page-title">
-		                                <h2>
+		                                <h1>
 			                                <?php
 											/* translators: %s: search query. */
 											printf( esc_html__( 'Search Results for: %s', 'cream-blog' ), '<span>' . get_search_query() . '</span>' );
 											?>
-										</h2>
+										</h1>
 		                            </div><!-- .page-title -->
 		                            <section class="cb-recent-posts cb-post-bricks">
 		                                <div class="section-contants">

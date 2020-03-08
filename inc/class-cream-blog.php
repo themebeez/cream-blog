@@ -95,6 +95,7 @@ class Cream_Blog {
 		 * to output valid HTML5.
 		 */
 		add_theme_support( 'html5', array(
+
 			'search-form',
 			'comment-form',
 			'comment-list',
@@ -104,6 +105,7 @@ class Cream_Blog {
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'cream_blog_custom_background_args', array(
+
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -111,12 +113,17 @@ class Cream_Blog {
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		add_theme_support( 'responsive-embeds' );
+
+		add_theme_support( 'wp-block-styles' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
+
 			'height'      => 250,
 			'width'       => 250,
 			'flex-width'  => true,
@@ -129,6 +136,7 @@ class Cream_Blog {
 		 * @link https://developer.wordpress.org/themes/functionality/custom-headers/
 		 */
 		add_theme_support( 'custom-header', apply_filters( 'cream_blog_custom_header_args', array(
+			
 			'default-image'          => '',
 			'default-text-color'     => '000000',
 			'width'                  => 1920,
@@ -169,6 +177,7 @@ class Cream_Blog {
 			?>
 			.site-title,
 			.site-description {
+
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
@@ -180,6 +189,7 @@ class Cream_Blog {
 			.header-style-5 .site-identity .site-title a,
 			.header-style-3 .site-identity .site-description,
 			.header-style-5 .site-identity .site-description {
+
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
@@ -343,7 +353,7 @@ class Cream_Blog {
 	 * @return void
 	 */
 	public function search_form() {
-		$form = '<form role="search" method="get" id="search-form" class="clearfix" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Type here', 'cream-blog' ) . '" value"' . get_search_query() . '" ><input type="submit" id="submit" value="'. esc_attr__( 'Search', 'cream-blog' ).'"></form>';
+		$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search here...', 'cream-blog' ) . '" value"' . get_search_query() . '" ><button class="button-search" type="submit"><i class="cb cb-search"></i></button></form>';
 
         return $form;
 	}

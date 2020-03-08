@@ -1,0 +1,196 @@
+
+/*
+***************************************************************
+*
+*  Pagination
+*
+***************************************************************
+*/
+
+.page-links {
+    
+    font-family:$system_font;
+    font-size:15px;
+}
+
+.page-links .post-page-numbers {
+    
+    display:inline-block;
+    font-size:15px;
+    font-weight:normal;
+    text-align: center;
+    line-height:45px;
+    height:45px;
+    width:45px;
+    color:$primary_color;
+    border:2px solid $secondary_color;
+    text-decoration:none;
+    margin:5px;
+    @include border-radius(3px);
+}
+
+.page-links .post-page-numbers.current {
+
+    color:$secondary_color;
+}
+
+.page-links .post-page-numbers:last-child {
+
+    margin-right:0;
+}
+
+.page-links .post-page-numbers:hover {
+
+    border-color:$third_color;
+}
+
+.cb-pagination {
+
+    margin-bottom:50px;
+}
+
+
+.cb-pagination .nav-links {
+
+    width:100%;
+    list-style:none;
+}
+
+
+.cb-pagination .pagi-style-1 .nav-links a:hover,
+.cb-pagination .pagi-style-2 .nav-links a:hover {
+
+    background:$third_color;
+    color:$white;
+}
+
+
+/*
+===================================================
+=
+=  Pagination style 1
+=
+=====================================================================
+*/
+
+
+.cb-pagination .pagi-style-1 .nav-links span,
+.cb-pagination .pagi-style-1 .nav-links a {
+
+    display:inline-block;
+    line-height: 45px;
+    height:45px;
+    margin-right:5px;
+    width:auto;
+    padding-left:20px;
+    padding-right:20px;
+    border:1px solid $border_color;
+    font-size:15px;
+    font-weight:normal;
+    @include border-radius(2px);
+}
+
+.cb-pagination .pagi-style-1 .nav-links a:hover {
+    
+    color:$white;
+    border-color:$third_color;
+    background:$third_color;
+}
+
+.cb-pagination .pagi-style-1 .nav-links span.current,
+.cb-pagination .pagi-style-2 .nav-links span.current {
+
+    background:$secondary_color;
+    border-color:$secondary_color;
+    color:$white;
+}
+
+
+
+/*
+===================================================
+=
+=  Pagination style 2
+=
+=====================================================================
+*/
+
+
+.cb-pagination .pagi-style-2 .nav-links a,
+.cb-pagination .pagi-style-2 .nav-links span {
+
+    display:inline-block;
+    height:45px;
+    width:45px;
+    line-height:45px;
+    background:#eeeeee;
+    border:none;
+    border-radius:50%;
+    text-align:center;
+    font-weight:500;
+    font-size:14px;
+    margin-right:5px;
+}
+
+
+
+/*
+===================================================
+=
+=  Pagination style 3
+=
+=====================================================================
+*/
+
+
+.cb-pagination .pagi-style-3 .nav-links {
+
+    overflow:hidden;
+}
+
+.cb-pagination .pagi-style-3 a,
+.cb-pagination .pagi-style-4 a  {
+
+    display:inline-block;
+    padding:10px 30px;
+    border:1px solid $secondary_color;
+    background:$secondary_color;
+    font-weight:500;
+    text-transform:uppercase;
+    font-size:14px;
+    color:$white;
+    letter-spacing:0;
+}
+
+.cb-pagination .pagi-style-3 a:hover,
+.cb-pagination .pagi-style-4 a:hover {
+
+    background:$third_color;
+    border-color:$third_color;
+}
+
+.cb-pagination .pagi-style-3  .nav-previous a {
+
+    float:left;
+}
+
+.cb-pagination .pagi-style-3  .nav-next a {
+
+    float:right;
+}
+
+
+/*
+===================================================
+=
+=  Pagination style 4
+=
+=====================================================================
+*/
+
+.pagi-style-4 .nav-links {
+
+    text-align:right;
+}
+
+

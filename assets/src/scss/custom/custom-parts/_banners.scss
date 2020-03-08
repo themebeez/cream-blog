@@ -1,0 +1,608 @@
+
+/*
+***************************************************************
+*
+* Banner & Sliders 
+*
+***************************************************************
+*/
+
+
+.cb-banner .lazyloading, 
+.cb-banner .lazy-loaded, 
+.cb-banner img.lazyload, 
+.cb-banner img.lazyloaded {
+
+    transition: 1s all;
+}
+
+
+.cb-banner {
+
+    position:relative;
+    margin-bottom:40px;
+}
+
+.cb-banner .mask {
+
+    background:rgba(0,0,0,0);
+}
+
+// Banner style 1 ( author style )
+
+
+.cd-banner-style-1 .banner-inner {
+
+    padding:300px 0;
+    background-attachment:fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+.cd-banner-style-1 .contant-holder {
+
+    position:relative;
+    z-index: 5;
+    width:700px;
+    max-width:100%;
+}
+
+.cd-banner-style-1 .contant-holder h2 {
+
+    font-size:52px;
+    margin-bottom:20px;
+    color:$white;
+    animation: 0.7s 0.1s fadeInDown both;
+}
+
+.cd-banner-style-1 .contant-holder p {
+
+    margin-bottom:30px;
+    color:$white;
+    animation: 1.2s 0.8s fadeInDown both;
+}
+
+.cd-banner-style-1 .author-signature {
+
+    margin-bottom:30px;
+    animation: 0.7s 1.2s fadeInUp both;
+}
+
+
+.cb-banner .author-action a {
+
+    border-color:$white;
+    color:$white;
+    animation: 0.7s 1.7s fadeInUp both;
+
+    &:hover {
+
+        border-color:$third_color;
+    }
+}
+
+
+// Banner style 1 background slider
+
+
+.cb-banner-style-1-slider .banner-inner {
+
+    position:relative;
+    overflow:hidden;
+}
+
+.cb-banner-style-1-slider .banner-inner .owl-carousel {
+
+    position:absolute;
+    top:0;
+    z-index:-1;
+}
+
+.cb-banner-style-1-slider .banner-inner .owl-carousel .item {
+
+    height:950px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+}
+
+
+
+
+/*
+===================================================
+=
+=  Banner style 2 
+=
+=====================================================================
+*/
+
+
+#cb-banner-style-2 .thumb {
+
+    padding-bottom:0;
+    height: 550px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#cb-banner-style-2 .item .mask {
+
+    display:none;
+}
+
+#cb-banner-style-2 .item:hover .mask {
+    
+    display:none;
+}
+
+#cb-banner-style-2 .post-contents {
+
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:60px 30px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,0.5)),to(#000));
+    background-image: linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.5) 40%,#000 100%);
+    z-index:8;
+}
+
+#cb-banner-style-2 .post-contents .entry-cats,
+#cb-banner-style-2 .post-contents .post-title,
+#cb-banner-style-2 .post-contents .metas {
+
+    display:inline-block;
+    vertical-align:middle;
+    text-align:center;
+    margin:0;
+    padding:0;
+    width:24%;
+}
+
+#cb-banner-style-2 .post-contents .post-title {
+
+    width:50%;
+}
+
+
+#cb-banner-style-2 .entry-cats ul li a {
+
+    color:$white;
+    background:transparent;
+    padding: 0 5px;
+}
+
+
+#cb-banner-style-2 .post-title h3 {
+
+    margin-bottom:0;
+    font-size: 26px;
+}
+
+#cb-banner-style-2 .post-title h3 a {
+
+    color:$white;
+}
+
+
+#cb-banner-style-2 .metas ul li a,
+#cb-banner-style-2 .metas ul li span {
+
+    color:$white;
+}
+
+#cb-banner-style-2 .metas .metas-list,
+#cb-banner-style-2 .entry-cats ul.post-categories {
+
+    margin:0;
+}
+
+#cb-banner-style-2 .metas ul li a:hover,
+#cb-banner-style-2 .post-title h3 a:hover,
+#cb-banner-style-2 .entry-cats ul li a:hover {
+
+    color:$third_color;
+}
+
+
+#cb-banner-style-2 .owl-nav button.owl-prev, 
+#cb-banner-style-2 .owl-nav button.owl-next {
+
+    @include position_absolute(50%,unset,0,0);
+    z-index:10;
+    background: transparent;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border: 0.5px solid rgba(255,255,255,0.3);
+    border-radius: 100%;
+
+}
+
+#cb-banner-style-2 .owl-nav button.owl-prev {
+
+    left:10px;
+    right:auto;
+}
+
+#cb-banner-style-2 .owl-nav button.owl-next {
+
+    right:10px;
+    left:auto;
+}
+
+
+/*
+===================================================
+=
+=  Banner style 3 
+=
+=====================================================================
+*/
+
+
+.cb-banner-style-3 .thumb:hover .mask {
+
+    background:rgba(0,0,0,0.7);
+}
+
+.cb-banner-style-3 .card {
+
+    margin-bottom:0;
+}
+
+.cb-banner-style-3 .left-gutter .card:first-child,
+.cb-banner-style-3 .right-gutter .card:first-child {
+
+    margin-bottom:10px;
+}
+
+
+// gutter pading 
+
+
+.cb-banner-style-3 .center-gutter {
+
+    padding: 0 5px;
+}
+
+.cb-banner-style-3 .left-gutter {
+
+    padding-right:5px;
+}
+
+.cb-banner-style-3 .right-gutter {
+
+    padding-left:5px;
+}
+
+
+.cb-banner-style-3 .post-contents {
+
+    @include position_absolute(50%,unset,0,0);
+    padding: 0 15px;
+    text-align:center;
+}
+
+.cb-banner-style-3 ul.post-categories,
+.cb-banner-style-3 .metas-list,
+#cb-slider-carousel-4 .metas-list {
+
+    margin:0;
+}
+
+.cb-banner-style-3 .post-title h2 {
+
+    padding-top:15px;
+    padding-bottom:5px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.cb-banner-style-3 .common-gutter .post-title h2 {
+
+    font-size:18px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    letter-spacing:0;
+}
+
+.cb-banner-style-3 .post-title h2 a {
+
+    color:$white;
+}
+
+
+.cb-banner-style-3 .metas-list li a,
+.cb-banner-style-3 .metas-list li span,
+#cb-slider-carousel-4 .metas-list li span,
+#cb-slider-carousel-4 .metas-list li a {
+
+    color:$white;
+}
+
+.cb-banner-style-3 .metas-list li a:hover,
+.cb-banner-style-3 .post-title h2 a:hover {
+
+    color:$third_color;
+}
+
+.cb-banner-style-3 .common-gutter .metas-list li a, 
+.cb-banner-style-3 .common-gutter .metas-list li span {
+
+    font-size:10px;
+}
+
+
+// thumbnails 
+
+
+.cb-banner-style-3 .thumb {
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-color:#666666;
+    padding-bottom:0; 
+}
+
+.cb-banner-style-3 .center-gutter .thumb {
+
+    height: 380px;
+}
+
+.cb-banner-style-3 .common-gutter .thumb {
+
+    height:185px;
+}
+
+
+/*
+===================================================
+=
+=  Banner style 4 
+=
+=====================================================================
+*/
+
+
+
+.cb-banner-style-4 .mask  {
+
+    background:rgba(0,0,0,0);
+}
+
+.cb-banner-style-4 .thumb:hover .mask {
+
+    background:rgba(0,0,0,0.7);
+}
+
+
+#cb-slider-carousel-4 .thumb {
+    
+    height:550px;
+    background-color:#666666;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+    padding-bottom:0;
+}
+
+#cb-slider-carousel-4 .post-contents {
+
+    @include position_absolute(85%,unset,0,0);
+    padding:0 30px;
+    text-align:left;
+    width:100%;
+    max-width:700px;
+} 
+
+#cb-slider-carousel-4 .post-title h2 {
+
+    padding-bottom:5px;
+    margin-bottom:0;
+    font-size:32px;
+}
+
+#cb-slider-carousel-4 .post-title h2 a {
+
+    color:$white;
+}
+
+#cb-slider-carousel-4 .post-title h2 a:hover {
+
+    color:$third_color;
+}
+
+#cb-slider-carousel-4 .metas-list li a:hover {
+
+    color:$third_color;
+}
+
+#cb-slider-carousel-4 .metas-list li.posted-date::before {
+
+    content:"";
+    background-color:$white;
+}
+
+#cb-slider-carousel-4 .owl-nav button.owl-prev, 
+#cb-slider-carousel-4 .owl-nav button.owl-next {
+
+    @include position_absolute(85%,unset,auto,60px);
+    background:transparent;
+}
+
+#cb-slider-carousel-4 .owl-nav button.owl-prev, 
+#cb-slider-carousel-4 .owl-nav button.owl-next {
+
+    background:transparent;
+    border:none;
+}
+
+#cb-slider-carousel-4 .owl-nav button.owl-next {
+
+    right:15px;
+}
+
+
+// animations
+
+#cb-slider-carousel-4 .owl-item.active .post-title h2 {
+
+     animation: 1s 0.6s fadeInUp both;
+}
+
+#cb-slider-carousel-4 .owl-item.active .metas-list {
+
+    animation: 0.8s 1.3s fadeInUp both;
+}
+
+
+/*
+===================================================
+=
+=  Banner style 5 
+=
+=====================================================================
+*/
+
+.cb-banner-style-5 {
+
+    @extend .cb-banner-style-3;
+}
+
+.cb-banner-style-5 .center-gutter {
+
+    padding-right:5px;
+    padding-left:15px;
+}
+
+.cb-banner-style-5 .left-gutter {
+
+    padding-left:5px;
+}
+
+.cb-banner-style-5 .post-contents {
+
+    text-align:left;
+    top: 80%;
+}
+
+.cb-banner-style-5 .common-gutter .post-contents {
+
+    top:60%;
+}
+
+.cb-banner-style-5 .owl-carousel .owl-nav button.owl-prev, 
+.cb-banner-style-5 .owl-carousel .owl-nav button.owl-next {
+
+    background:transparent;
+    @include position_absolute(30px,unset,unset,15px);
+}
+
+.cb-banner-style-5 .owl-carousel .owl-nav button.owl-prev:hover, 
+.cb-banner-style-5 .owl-carousel .owl-nav button.owl-next:hover {
+
+    background:transparent;
+}
+
+.cb-banner-style-5 .owl-carousel .owl-nav button.owl-prev {
+
+    right:50px;
+}
+
+
+/*
+===================================================
+=
+=  Banner style 6 
+=
+=====================================================================
+*/
+
+.cb-banner-style-6 .left-gutter {
+
+    padding-right:5px;
+}
+
+.cb-banner-style-6 .right-gutter {
+
+    padding-left:5px;
+}
+
+.cb-banner-style-6 .thumb {
+
+    height:450px;
+    background-position:center center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    padding-bottom:0;
+}
+
+.cb-banner-style-6 .mask {
+
+    display:none;
+}
+
+.cb-banner-style-6 .thumb:hover .mask {
+
+    display:none;
+}
+
+.cb-banner-style-6 .post-contents {
+
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:30px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,0.5)),to(#000));
+    background-image: linear-gradient(180deg,transparent 0%,rgba(0,0,0,0.5) 40%,#000 100%);
+}
+
+.cb-banner-style-6 .post-contents .post-title h2 {
+
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.cb-banner-style-6 .post-contents .post-title h2 a {
+
+    color:$white;
+}
+
+.cb-banner-style-6 .post-contents .metas-list {
+
+    margin:0;
+}
+
+.cb-banner-style-6 .post-contents .post-title h2 a,
+.cb-banner-style-6 .post-contents .metas-list li a,
+.cb-banner-style-6 .post-contents .metas-list li span {
+
+    color:$white;
+
+}
+
+.cb-banner-style-6 .post-contents .post-title h2 a:hover,
+.cb-banner-style-6 .post-contents .metas-list li a:hover {
+
+    color:$third_color;
+}
+
+.cb-banner-style-6 .post-contents .metas-list li.posted-date::before {
+
+    content:"";
+    background:$white;
+}
+
+// Right gutter slider 
+
+#cb-slider-style-6 .post-contents .post-title h2 {
+
+    font-size:21px;
+}
+

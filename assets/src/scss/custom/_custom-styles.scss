@@ -1,0 +1,43 @@
+
+// No gutter extra pading for col at these location
+
+footer .cb-col,
+aside .cb-col {
+
+    padding:0;
+}
+
+// Top wrap 
+
+
+.cb-fp-top-wrapper .custom-html-widget,
+.cb-fp-bottom-wrapper .custom-html-widget {
+
+    margin-bottom:40px;
+}
+
+.cb-fp-top-wrapper .custom-html-widget img,
+.cb-fp-bottom-wrapper .custom-html-widget img {
+
+    display:block;
+    margin:0 auto;
+}
+
+
+// Mid section wrap 
+
+
+.cb-fp-mid-wrap {
+
+    margin-bottom:0;
+}
+
+
+// Sidebar deafult style
+
+aside.secondary,
+aside#secondary {
+
+    padding-bottom:50px;
+}
+

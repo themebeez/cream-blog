@@ -1,0 +1,32 @@
+// Clearing
+
+.clearfix:before,
+.clearfix:after,
+.entry-content:before,
+.entry-content:after,
+.dropcap:before,
+.dropcap:after,
+.alignleft:before,
+.alignleft:after,
+.alignright:before,
+.alignright:after,
+.cb-entry:before,
+.cb-entry:after {
+
+    content: '';
+    display: table;
+}
+
+.clearfix:after,
+.entry-content:after,
+.alignleft:after,
+.alignright:after,
+.cb-entry:after {
+
+    clear: both;
+}
+
+.clear {
+
+    clear: both;
+}

@@ -1307,6 +1307,7 @@ class Cream_Blog_Customize {
 			#canvas-toggle {
 				<?php
 				if( $show_toggled_sidebar_icon == false ) {
+					
 					?>
 					display: none;
 					<?php
@@ -1316,6 +1317,7 @@ class Cream_Blog_Customize {
 			#search-toggle {
 				<?php
 				if( $show_search_icon == false ) {
+
 					?>
 					display: none;
 					<?php
@@ -1325,6 +1327,7 @@ class Cream_Blog_Customize {
 			#toTop {
 				<?php
 				if( $show_scroll_top_icon == false ) {
+
 					?>
 					<!-- display: none; -->
 					<?php
@@ -1334,6 +1337,7 @@ class Cream_Blog_Customize {
 			.header-style-3 .cb-header-top {
 				<?php
 				if( has_header_image() ) {
+
 					?>
 					background-image: url( <?php header_image(); ?> );
 					<?php
@@ -1344,47 +1348,13 @@ class Cream_Blog_Customize {
 			<?php
 			if( !empty( $theme_color ) ) {
 				?>
-				.header-style-5 .cb-navigation-main-outer,
-				.header-style-3 .cb-navigation-main-outer,
-				.is-sticky #cb-stickhead,
-				ul.post-categories li a,
-				.widget .widget-title h3,
-				#toTop,
-				.calendar_wrap caption,
-				#header-search input[type="submit"], 
-				.search-box input[type="submit"], 
-				.widget_product_search input[type="submit"], 
-				.widget_search input[type="submit"],
-				.cb-pagination .pagi-style-1 .nav-links span.current, 
-				.cb-pagination .pagi-style-2 .nav-links span.current,
-				#comments form input[type="submit"],
-				.metas-list li.posted-date::before,
-				.woocommerce #respond input#submit, 
-				.woocommerce a.button, 
-				.woocommerce button.button, 
-				.woocommerce input.button, 
-				.woocommerce .wc-forward, 
-				.woocommerce a.added_to_cart, 
-				.woocommerce #respond input#submit.alt, 
-				.woocommerce a.button.alt, 
-				.woocommerce button.button.alt, 
-				.woocommerce input.button.alt,
-				.woocommerce nav.woocommerce-pagination ul li span.current,
-				.widget_product_search button,
-				.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
-				.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-				.post-tags a,
-				.jetpack_subscription_widget input[type="submit"]:hover {
-
-					background-color: <?php echo esc_attr( $theme_color ); ?>;
-				}
-
+				
+				body .edit-link a,
 				.metas-list li span, 
 				.metas-list li a,
 				.widget_rss ul li a,
 				.cb-topfooter .social-icons-list li a,
 				.breadcrumb-style-2 ul li.trail-end span,
-				.cb-editor-contents-entry a,
 				.cb-bottomfooter a, 
 				.header-style-5 .social-icons li a,
 				.secondary-nav ul li a,
@@ -1404,66 +1374,75 @@ class Cream_Blog_Customize {
 				.metas-list li span, 
 				.metas-list li a,
 				.cb-bottomfooter a,
-				.author-box .author-name h3 {
+				.author-box .author-name h3,
+				.search-page-entry .page-title h1 span, 
+				.search-page-entry .page-title h2 span, 
+				.search-page-entry .page-title h3 span {
 
 					color: <?php echo esc_attr( $theme_color ); ?>;
-				}	
+				}
+				
+				#toTop,
+				button, 
+				.button, 
+				.btn-general, 
+				input[type="button"], 
+				input[type="reset"], 
+				input[type="submit"],
+				.post-tags a,
+				body .edit-link a:after,
+				.header-style-5 .cb-navigation-main-outer,
+				.header-style-3 .cb-navigation-main-outer,
+				.is-sticky #cb-stickhead,
+				ul.post-categories li a,
+				.widget .widget-title h3,
+				.calendar_wrap caption,
+				#header-search input[type="submit"], 
+				.search-box input[type="submit"], 
+				.widget_product_search input[type="submit"], 
+				.widget_search input[type="submit"],
+				.cb-pagination .pagi-style-1 .nav-links span.current, 
+				.cb-pagination .pagi-style-2 .nav-links span.current,
+				.metas-list li.posted-date::before,
+				.woocommerce #respond input#submit, 
+				.woocommerce a.button, 
+				.woocommerce button.button, 
+				.woocommerce input.button, 
+				.woocommerce .wc-forward, 
+				.woocommerce a.added_to_cart, 
+				.woocommerce #respond input#submit.alt, 
+				.woocommerce a.button.alt, 
+				.woocommerce button.button.alt, 
+				.woocommerce input.button.alt,
+				.woocommerce nav.woocommerce-pagination ul li span.current,
+				.widget_product_search button,
+				.cb-author-widget .author-bio a:after,
+				form.mc4wp-form-theme .cb-newsleter input[type="submit"],
+				.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
+				.woocommerce .widget_price_filter .ui-slider .ui-slider-range {
 
-				#comments div#respond h3#reply-title::after,
-				#comments h2.comments-title:after,
-				.wp-block-pullquote {
-
-					border-bottom-color: <?php echo esc_attr( $theme_color ); ?>;
+					background-color: <?php echo esc_attr( $theme_color ); ?>;
 				}
 
-				#header-search form, 
+				#header-search, 
 				.search-box form, 
-				.widget_product_search form, 
-				.widget_search form,
 				.woocommerce-error, 
 				.woocommerce-info, 
-				.woocommerce-message,
-				.wp-block-pullquote {
+				.woocommerce-message {
 
 					border-top-color: <?php echo esc_attr( $theme_color ); ?>;
 				}
-
-				.cb-editor-contents-entry blockquote {
-
-					border-left-color: <?php echo esc_attr( $theme_color ); ?>;
-				}
-
-				.cb-pagination .pagi-style-1 .nav-links span.current,
-				a.btn-general,
-				#comments form input[type="submit"] {
+					
+				.cb-pagination .pagi-style-1 .nav-links span.current {
 
 					border-color: <?php echo esc_attr( $theme_color ); ?>;
 				}
-
-
 
 				form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
 
 					border-color: <?php echo esc_attr( $theme_color ); ?> !important;
 				}
 
-
-
-				form.mc4wp-form-theme .cb-newsleter input[type="submit"]  {
-
-					background: <?php echo esc_attr( $theme_color ); ?> !important;
-				}
-				
-				button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"], 
-				footer .widget-title h3:after,
-				.section-title h2::after,
-				.cb-author-widget .author-bio a:after {
-
-					background: <?php echo esc_attr( $theme_color ); ?>;
-				}
 			<?php
 			}
 			?>

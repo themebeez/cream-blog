@@ -42,13 +42,6 @@
     position: relative;
 }
 
-.main-navigation > ul > li > a {
-    
-    font-size: 14px;
-    font-weight:500;
-    text-transform:uppercase;
-}
-
 .main-navigation ul li:last-child a:after {
 
     display: none;
@@ -132,11 +125,11 @@
 
 .main-navigation>ul>li.menu-item-has-children>a:after {
 
-    content:'\f0d7';
-    font-family:'fontawesome';
+    content:'\e916';
+    font-family:'creamblog';
     display:inline-block;
     font-size:12px;
-    padding-left: 3px;
+    padding-left: 1px;
 }
 
 // toggle menu 

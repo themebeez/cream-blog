@@ -4,25 +4,6 @@
 
     jQuery(document).ready(function() {
 
-
-        /* 
-        =============================
-        = Init retina js  
-        ================================
-        */
-
-
-        $('select').niceSelect();
-
-
-        /* 
-        =============================
-        = Init retina js  
-        ================================
-        */
-
-        retinajs();
-
         /*
         ===========================
         = Main navigation
@@ -38,9 +19,9 @@
 
         });
 
-        $('.main-navigation .menu-item-has-children').append('<span class="sub-toggle"> <i class="fa fa-caret-down" aria-hidden="true"></i> </span>');
+        $('.main-navigation .menu-item-has-children').append('<span class="sub-toggle"> <i class="cb cb-chevron-down" aria-hidden="true"></i> </span>');
 
-        $('.main-navigation .page_item_has_children').append('<span class="sub-toggle"> <i class="fa fa-caret-down" aria-hidden="true"></i> </span>');
+        $('.main-navigation .page_item_has_children').append('<span class="sub-toggle"> <i class="cb cb-chevron-down" aria-hidden="true"></i> </span>');
 
 
         $('.main-navigation .sub-toggle').on('click', function() {
@@ -53,11 +34,11 @@
 
             if ($(this).hasClass('active-submenu')) {
 
-                $(this).find('.fa').removeClass('fa-caret-down').addClass('fa-caret-up');
+                $(this).find('.cb').removeClass('cb-chevron-down').addClass('cb-chevron-up');
 
             } else {
 
-                $(this).find('.fa').removeClass('fa-caret-up').addClass('fa-caret-down');
+                $(this).find('.cb').removeClass('cb-chevron-up').addClass('cb-chevron-down');
             }
 
         });
@@ -121,10 +102,10 @@
         =====================================
         */
 
+        
         jQuery('.cd-stickysidebar').theiaStickySidebar({
             additionalMarginTop: 30
         });
-
 
 
         /* 
@@ -183,23 +164,25 @@
         // layout 2
 
         jQuery('#cb-banner-style-2').owlCarousel({
+
             items: 1,
             loop: true,
             lazyLoad: false,
-            margin: 5,
+            margin: 0,
             smartSpeed: 800,
             nav: true,
             dots: false,
             autoplay: true,
             autoplayTimeout: 8000,
             autoplayHoverPause: true,
-            navText: ["<i class='feather icon-arrow-left'></i>", "<i class='feather icon-arrow-right'></i>"],
+            navText: ["<i class='cb cb-chevron-left'></i>", "<i class='cb cb-chevron-right'></i>"],
         });
 
 
         // Layout six 
 
         jQuery('#cb-slider-style-6').owlCarousel({
+            
             items: 1,
             loop: true,
             lazyLoad: false,
@@ -210,7 +193,7 @@
             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,
-            navText: ["<i class='feather icon-arrow-left'></i>", "<i class='feather icon-arrow-right'></i>"],
+            navText: ["<i class='cb cb-chevron-left'></i>", "<i class='cb cb-chevron-right'></i>"],
         });
 
         /* 
@@ -219,7 +202,7 @@
         =====================================
         */
 
-        jQuery('body').append('<div id="toTop" class="btn-general"><i class="feather icon-arrow-up"></i></div>');
+        jQuery('body').append('<div id="toTop" class="btn-general"><i class="cb cb-chevron-up"></i></div>');
 
         jQuery(window).on('scroll', function() {
             if (jQuery(this).scrollTop() != 0) {

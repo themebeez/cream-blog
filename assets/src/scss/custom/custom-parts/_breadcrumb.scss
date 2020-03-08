@@ -1,0 +1,132 @@
+
+/*
+***************************************************************
+*
+*  Breadcrumb
+*
+***************************************************************
+*/
+
+
+// If page is set as homepage
+
+body.home .cb-breadcrumb  {
+
+    display:none;
+}
+
+.cb-breadcrumb {
+
+    display:block;
+    margin-bottom:20px;
+}
+
+.cb-breadcrumb ul {
+
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.cb-breadcrumb ul li,
+.cb-breadcrumb ul li a,
+.cb-breadcrumb ul li span {
+    
+    position:relative;
+    display:inline-block;
+    vertical-align:text-bottom;
+}
+
+.cb-breadcrumb ul li a,
+.cb-breadcrumb ul li span {
+
+    font-size:14px;
+    font-weight:normal;
+}
+
+
+.cb-breadcrumb ul li.trail-end span {
+
+    color:$secondary_color;
+}
+
+
+
+/*
+===================================================
+=
+=  Bread crumb style 1
+=
+=====================================================================
+*/
+
+
+
+.breadcrumb-style-1 {
+
+    background:$section_bg;
+    padding:10px 20px;
+}
+
+.breadcrumb-style-1 ul li a::after {
+
+    content:'>';
+    display:inline-block;
+    padding:0 6px;
+}
+
+
+/*
+===================================================
+=
+=  Bread crumb style 2
+=
+=====================================================================
+*/
+
+.breadcrumb-style-2 ul li a::after {
+
+    content:"\e918";
+    font-family:'creamblog';
+    display:inline-block;
+    color:$primary_color;
+    padding:0 5px;
+    line-height: 1;
+    font-size: 12px;
+}
+
+.breadcrumb-style-2 ul li.trail-end span {
+
+    color:$secondary_color;
+}
+
+
+/*
+===================================================
+=
+=  Bread crumb style 3
+=
+=====================================================================
+*/
+
+
+.breadcrumb-style-3 ul {
+
+    background:#eeeeee;
+    padding:10px 20px;
+}
+
+.breadcrumb-style-3 ul li a::after {
+
+    content:"\e918";
+    font-family:'creamblog';
+    line-height: 1;
+    font-size: 12px;
+    padding-left:10px;
+}
+
+.breadcrumb-style-3 ul li {
+
+    padding-right: 10px;
+}
+

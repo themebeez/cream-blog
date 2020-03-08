@@ -24,21 +24,13 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
-* normalize.css https://necolas.github.io/normalize.css/, (Copyright (c) 2011, Thomas Griffin, [GPLv2](https://opensource.org/licenses/MIT)
-
 * TGM Plugin Activation http://tgmpluginactivation.com/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
 * Bootstrap https://github.com/twbs/bootstrap/blob/master/LICENSE, Copyright (c) 2011-2018 Twitter, Inc., [MIT](http://opensource.org/licenses/MIT)
 
 * Breadcrumbs Trail https://themehybrid.com/plugins/breadcrumb-trail, Copyright (c) 2008 - 2017 Justin Tadlock, [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
-* Font Awesome http://fontawesome.io/license/, [SIL OFL 1.1, MIT](http://scripts.sil.org/OFL, http://opensource.org/licenses/mit-license.html)
-
-* Feather Icons https://github.com/feathericons/feather, Copyright (c) 2013-2017 Cole Bemis, [MIT](http://opensource.org/licenses/MIT)
-
 * Owl Carousel https://github.com/OwlCarousel2/OwlCarousel2/, Copyright (c) 2014 Owl, [MIT](http://opensource.org/licenses/MIT)
-
-* Retina https://github.com/strues/retinajs, Copyright (c) 2013-2017 Steven Truesdell, John Newman, Ben Atkin, and other contributors, [MIT](http://opensource.org/licenses/MIT)
 
 * Theia Sticky Sidebar https://github.com/WeCodePixels/theia-sticky-sidebar, Copyright (c) 2014 Liviu Cristian Mirea Ghiban, [MIT](http://opensource.org/licenses/MIT)
 
@@ -49,8 +41,6 @@ Cream Blog is distributed under the terms of the GNU GPL
 * Lazysize https://github.com/aFarkas/lazysizes, Copyright (c) 2015 Alexander Farkas, [MIT](http://opensource.org/licenses/MIT)
 
 * Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
-
-* Jquery Nice Select https://github.com/h1dd3nsn1p3r/jquery-nice-select, [GPLv2](https://www.gnu.org/licenses/gpl-2.0.html)
 
 * Images included in theme, banner_1.png, banner_2.png, header_1.png, header_2.png, list_1.png, list_2.png, sidebar_left.png, sidebar_right.png, sidebar_none.png and selected.png self created GPLv2 
 

@@ -13,12 +13,6 @@
 
 	// Header
 
-
-	.header-style-3 .site-branding-holder {
-
-		padding:150px 0;
-	}
-
 	.header-style-4 .site-branding-holder {
 
 		padding:30px 0;
@@ -66,16 +60,6 @@
 
 		max-width: 1100px;
 	}
-
-
-	// Aside toggle sidebar 
-
-	#canvas-aside {
-
-		max-width:350px;
-	}
-
-
 
 	// Widgets 
 
@@ -164,9 +148,11 @@
 
 	.general-header .nav-extraa {
 		
-		@include position_absolute(29px,unset,auto,0);
-		flex:0 0 35px;
-		max-width:35px;
+		position:absolute;
+		top:9px;
+		right:10px;
+		flex:0 0 40px;
+		max-width:40px;
 		text-align:right;
 	}
 
@@ -429,28 +415,15 @@
 	// Header 
 
 
-	.header-style-3 .site-branding-holder {
-
-		padding:100px 0;
-	}
-
 	.header-style-4 .site-branding-holder {
 
 		padding:20px 0;
-	}
-
-	.header-style-5 .cb-mid-header {
-
-		padding:10px 0;
 	}
 
 	.header-style-5 .site-branding-holder {
 
 		padding:0;
 	}
-
-
-
 
 	// Banner
 
@@ -996,14 +969,6 @@
 		margin-bottom:30px;
 	}
 
-	footer .widget-title h3::after {
-
-		content:'';
-		left: -10px;
-    	top: -6px;
-    	height: 50px;
-    	width: 50px;
-	}
 
 	.cb-fp-mid-wrap {
 
@@ -1162,15 +1127,7 @@
     	max-width: 45%;
 	}
 
-
-
 	// Pages 
-
-
-	.cb-page-entry {
-
-		padding-bottom:30px;
-	}
 
 	.cb-404-page {
 
@@ -1223,16 +1180,6 @@
 		font-size:13px;
 		font-weight:400;
 	}
-
-
-	// Canvas sidebar
-
-
-	#canvas-aside {
-
-		max-width: 310px;
-    	padding: 15px;
-	} 
 
 	.search-box form {
 
@@ -1322,7 +1269,7 @@
 		line-height: 30px;
     	width: 30px;
     	height: 30px;
-    	border:none;
+    	@include border-radius(0);
 	}
 
 	.owl-carousel .owl-nav button.owl-prev i, 
@@ -1626,24 +1573,11 @@
 	// Pagination
 
 
-	.cb-pagination .pagi-style-1 .nav-links span, 
-	.cb-pagination .pagi-style-1 .nav-links a {
-
-		line-height: 30px;
-    	height: 30px;
-    	font-weight: 500;
-	}
-
 	.cb-pagination .pagi-style-3 a, 
 	.cb-pagination .pagi-style-4 a {
 
 		font-weight:500;
 		letter-spacing:0;
-	}
-
-	.cb-t-h-e-m-e-b-e-e-z .recent-posts {
-
-		color:inherit;
 	}
 
 
@@ -1658,11 +1592,6 @@
 	.header-style-3 .site-identity .site-title {
 
 		font-size:28px;
-	}
-
-	.header-style-3 .site-identity .site-description {
-
-		display:none;
 	}
 
 	.header-style-4 .site-branding-holder {
@@ -1712,7 +1641,7 @@
 
 	.header-style-5 .cb-mid-header {
 
-		padding:0;
+		padding:0 0 20px 0;
 	}
 
 	.header-style-6 .cb-mid-header {
@@ -1812,25 +1741,9 @@
 		padding:5px 0;
 	}
 
-	.header-style-3 .site-identity .site-title {
-
-		font-size:24px;
-		line-height:1.1;
-	}
-
-	.header-style-3 .site-branding-holder {
-
-		padding:30px 0;
-	}
-
 	.header-style-4 .site-branding-holder {
 
 		padding:10px 0;
-	}
-
-	.header-style-5 .cb-mid-header {
-
-		padding:0;
 	}
 
 	.header-style-5 .site-branding-holder {
@@ -1907,6 +1820,10 @@
 
 	// Blog posts pages 
 
+	.breadcrumb-style-2 ul li a:after {
+
+		padding:0 5px;
+	}
 
 	.social-sharing ul li a {
 
@@ -1933,12 +1850,17 @@
 
 	.author-box {
 
-		margin:40px 0;
+		margin:30px 0;
 	}
 
-	.related-posts .block-title h3 {
+	.comments-area .comment-list .comment-body {
 
-		font-size:27px;
+		padding:20px;
+	}
+
+	.comments-area .comment-list .children {
+
+		margin-left: 10px;
 	}
 
 
@@ -2187,13 +2109,8 @@
 	.cb-pagination .pagi-style-1 .nav-links span, 
 	.cb-pagination .pagi-style-1 .nav-links a {
 
-		padding-left: 12px;
-    	padding-right: 12px;
-    	font-weight: 400;
-    	margin-right:0;
-    	margin-bottom:5px;
-    	text-transform: capitalize;
-    	font-size:15
+		margin-bottom: 5px;
+ 
 	}
 
 	#header-search form {
@@ -2206,8 +2123,8 @@
 
 	#canvas-aside {
 
-		max-width:300px;
-		padding: 10px;
+		max-width:85%;
+		padding: 20px;
 	}
 
 
@@ -2331,14 +2248,6 @@
 		font-size:29px;
 	}
 
-	.section-title h2::after, 
-	footer .widget-title h3::after {
-
-		content:'';
-		top: -10px;
-	}
-
-
 	 // Header 
 
 	 .header-style-1 .site-branding img {
@@ -2349,25 +2258,14 @@
 	 .main-navigation .menu-toggle, 
 	 .main-navigation .call-btn-mobile, 
 	 .main-navigation .location-btn-mobile, 
-	 .main-navigation .close-menu,
-	 .general-header .nav-extraa a {
+	 .main-navigation .close-menu {
 
 		line-height:45px;
-	 }
-
-	 .general-header .nav-extraa a {
-
-	 	height:45px;
 	 }
 
 	 .main-navigation.mobile>ul {
 
 	 	 max-width: 260px;
-	 }
-
-	 .secondary-nav ul li a {
-
-	 	font-size:11px;
 	 }
 
 
@@ -2471,14 +2369,6 @@
 
 @media (max-width: 370px) {
 
-
-	// Common 
-
-
-	#canvas-aside {
-
-		max-width:270px;
-	}
 
 
 	// Header 

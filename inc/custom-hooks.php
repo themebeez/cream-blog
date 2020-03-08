@@ -223,37 +223,37 @@ if( ! function_exists( 'cream_blog_social_links_action' ) ) :
 	 			$facebook_link = cream_blog_get_option( 'cream_blog_facebook_link' );
 	 			if( !empty( $facebook_link ) ) {
 	 				?>
-                	<li><a href="<?php echo esc_url( $facebook_link); ?>"><i class="feather icon-facebook"></i></a></li>
+                	<li><a href="<?php echo esc_url( $facebook_link); ?>"><i class="cb cb-facebook"></i></a></li>
                 	<?php
 	 			}
 	 			$twitter_link = cream_blog_get_option( 'cream_blog_twitter_link' );
 	 			if( !empty( $twitter_link ) ) {
 	 				?>  
-                	<li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="feather icon-twitter"></i></a></li>
+                	<li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="cb cb-twitter"></i></a></li>
                 	<?php
 	 			}
 	 			$instagram_link = cream_blog_get_option( 'cream_blog_instagram_link' );
 	 			if( !empty( $instagram_link ) ) {
 	 				?>
-                	<li><a href="<?php echo esc_url( $instagram_link ); ?>"><i class="feather icon-instagram"></i></a></li>
+                	<li><a href="<?php echo esc_url( $instagram_link ); ?>"><i class="cb cb-instagram"></i></a></li>
                 	<?php
 	 			}
 	 			$linkedin_link = cream_blog_get_option( 'cream_blog_linkedin_link' );
 	 			if( !empty( $linkedin_link ) ) {
 	 				?> 
-                	<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="feather icon-linkedin"></i></a></li>
+                	<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="cb cb-linkedin"></i></a></li>
                 	<?php
 	 			}
 	 			$pinterest_link = cream_blog_get_option( 'cream_blog_pinterest_link' );
 	 			if( !empty( $pinterest_link ) ) {
 	 				?> 
-                	<li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="fab fa-pinterest"></i></a></li>
+                	<li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="cb cb-pinterest"></i></a></li>
                 	<?php
 	 			}
 	 			$youtube_link = cream_blog_get_option( 'cream_blog_youtube_link' );
 	 			if( !empty( $youtube_link ) ) {
 	 				?>
-                	<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="feather icon-youtube"></i></a></li>
+                	<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="cb cb-youtube"></i></a></li>
                 	<?php
 	 			}
                 ?>
@@ -275,7 +275,7 @@ if( ! function_exists( 'cream_blog_sidebar_toggle_button_action' ) ) :
  		if( is_active_sidebar( 'off-canvas-sidebar' ) ) {
 	 		?>
 	 		<a id="canvas-toggle" href="javascript:;">
-	 			<i class="feather icon-menu"></i>
+	 			<i class="cb cb-menu"></i>
 	 		</a><!-- #canvas-toogle -->
 	 		<?php
 	 	}
@@ -318,7 +318,7 @@ if( ! function_exists( 'cream_blog_search_button_action' ) ) :
  		if( is_active_sidebar( 'off-canvas-sidebar' ) && $show_toggled_sidebar_icon == true ) {
 	 		?>
 	 		<a id="search-toggle" href="javascript:;">
-	 			<i class="feather icon-search"></i>
+	 			<i class="cb cb-search"></i>
 	 		</a><!-- #search-toggle -->
 	 		<?php
 	 	}
@@ -530,37 +530,37 @@ if( ! function_exists( 'cream_blog_footer_top_action' ) ) :
 	                	$facebook_link = cream_blog_get_option( 'cream_blog_facebook_link' );
 			 			if( !empty( $facebook_link ) ) {
 			 				?>
-	                    	<li><a href="<?php echo esc_url( $facebook_link ); ?>"><i class="fab fa-facebook-f"></i> <?php esc_html_e( 'Facebook', 'cream-blog' ); ?></a></li>
+	                    	<li><a href="<?php echo esc_url( $facebook_link ); ?>"><i class="cb cb-facebook-square"></i> <?php esc_html_e( 'Facebook', 'cream-blog' ); ?></a></li>
 	                    	<?php
 	                    }
 			 			$twitter_link = cream_blog_get_option( 'cream_blog_twitter_link' );
 			 			if( !empty( $twitter_link ) ) {
 			 				?>  
-	                    	<li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="fab fa-twitter"></i> <?php esc_html_e( 'Twitter', 'cream-blog' ); ?></a></li>
+	                    	<li><a href="<?php echo esc_url( $twitter_link ); ?>"><i class="cb cb-twitter"></i> <?php esc_html_e( 'Twitter', 'cream-blog' ); ?></a></li>
 	                    	<?php
 	                    }
 	                    $instagram_link = cream_blog_get_option( 'cream_blog_instagram_link' );
 			 			if( !empty( $instagram_link ) ) {
 			 				?>
-	                    	<li><a href="<?php echo esc_url( $instagram_link ); ?>"><i class="fab fa-instagram"></i> <?php esc_html_e( 'Instagram', 'cream-blog' ); ?></a></li>
+	                    	<li><a href="<?php echo esc_url( $instagram_link ); ?>"><i class="cb cb-instagram-alt"></i> <?php esc_html_e( 'Instagram', 'cream-blog' ); ?></a></li>
 	                    	<?php
 	                    }
 	                    $linkedin_link = cream_blog_get_option( 'cream_blog_linkedin_link' );
 			 			if( !empty( $linkedin_link ) ) {
 			 				?> 
-	                    	<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="fab fa-linkedin"></i> <?php esc_html_e( 'Linkedin', 'cream-blog' ); ?></a></li>
+	                    	<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="cb cb-linkedin"></i> <?php esc_html_e( 'Linkedin', 'cream-blog' ); ?></a></li>
 		                    <?php
 				 		}
 			 			$pinterest_link = cream_blog_get_option( 'cream_blog_pinterest_link' );
 			 			if( !empty( $pinterest_link ) ) {
 			 				?> 
-		                    <li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="fab fa-pinterest"></i> <?php esc_html_e( 'Pinterest', 'cream-blog' ); ?></a></li>
+		                    <li><a href="<?php echo esc_url( $pinterest_link ); ?>"><i class="cb cb-pinterest-alt"></i> <?php esc_html_e( 'Pinterest', 'cream-blog' ); ?></a></li>
 		                    <?php
 			 			}
 			 			$youtube_link = cream_blog_get_option( 'cream_blog_youtube_link' );
 			 			if( !empty( $youtube_link ) ) {
 			 				?>
-		                    <li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="fab fa-youtube"></i> <?php esc_html_e( 'Youtube', 'cream-blog' ); ?></a></li>
+		                    <li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="cb cb-youtube"></i> <?php esc_html_e( 'Youtube', 'cream-blog' ); ?></a></li>
 		                    <?php
 			 			}
 	                    ?>
@@ -617,7 +617,7 @@ if( ! function_exists( 'cream_blog_footer_bottom_action' ) ) :
 					printf( esc_html__( '%1$s %2$s by %3$s', 'cream-blog' ), $copyright_text, 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );
  				} else {
  					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( '%1$s by %2$s.', 'cream-blog' ), 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );
+					printf( esc_html__( '%1$s by %2$s', 'cream-blog' ), 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );
  				}
  				?>
             </div><!-- .copyrights-info -->

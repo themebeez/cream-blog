@@ -19,7 +19,7 @@
     }
     ?>
     <div class="page-contents">
-        <div class="cb-editor-contents-entry">
+        <div class="cb-editor-contents-entry cb-entry">
             <?php
 	    	the_content();
 
@@ -45,7 +45,7 @@
 				'</span>'
 			);
 	    	?>
-        </div><!-- .cb-editor-contents-entry -->
+        </div><!-- .cb-editor-contents-entry cb-entry -->
     </div><!-- .page-contents -->
 </section><!-- #post-<?php the_ID(); ?> -->
 

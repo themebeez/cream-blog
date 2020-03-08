@@ -97,7 +97,7 @@ if( ! function_exists( 'cream_blog_post_meta' ) ) {
 				            	<?php
 				            	printf(
 									/* translators: %1$s: span tag open, %2$s: span tag close, %3$s: post author. */
-									esc_html_x( '%1$s Posted by - %2$s %3$s', 'post author', 'cream-blog' ),
+									esc_html_x( '%1$s By: %2$s %3$s', 'post author', 'cream-blog' ),
 									'<span class="meta-name">', '</span>', '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 								);
 				            	?>
@@ -113,7 +113,7 @@ if( ! function_exists( 'cream_blog_post_meta' ) ) {
 				            	<?php
 				            	printf(
 									/* translators: %1$s: span tag open, %2$s: span tag close, %3$s: post date. */
-									esc_html_x( '%1$s On - %1$s %3$s', 'post date', 'cream-blog' ), '<span class="meta-name">', '</span>', '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+									esc_html_x( '%1$s On: %1$s %3$s', 'post date', 'cream-blog' ), '<span class="meta-name">', '</span>', '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 								);
 				            	?>
 				           	</li><!-- .posted-date -->

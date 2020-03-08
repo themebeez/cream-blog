@@ -1,0 +1,367 @@
+
+
+/*
+***************************************************************
+*
+* Recent blog posts
+*
+***************************************************************
+*/
+
+
+// Recent post list style 1
+ 
+
+.cb-recent-posts {
+
+    margin-bottom:40px;
+}
+
+.cb-recent-posts .cb-post-box {
+
+    margin-bottom:100px;
+}
+
+.cb-recent-posts .cb-post-box:last-child {
+
+    margin-bottom:50px;
+}
+
+.cb-alt-list-style .cb-post-box .thumb {
+
+    padding-bottom:75%;
+}
+
+.cb-recent-posts .permalink {
+
+    margin-top:20px;
+}
+
+.cb-recent-posts .permalink .btn-general {
+    
+    font-size: 15px;
+    padding: 13px 20px;
+}
+
+
+// Alt list layout condition while having sidebar
+
+
+.cb-image-bricks #bricks-row .brick-item .thumb,
+.cb-post-bricks #bricks-row .brick-item .thumb {
+
+    padding-bottom:0;
+}
+
+
+.has-sidebar .cb-alt-list-style .post-title h3 {
+
+    font-size:24px;
+}
+
+.has-sidebar .cb-alt-list-style .cb-post-box {
+
+    margin-bottom:60px;
+}
+
+.has-sidebar .cb-alt-list-style .permalink,
+.has-sidebar .cb-alt-list-style .metas-list li.posted-date {
+
+    //display:none;
+}
+
+
+/*
+===================================================
+=
+=  Recent posts section style 2 
+=
+=====================================================================
+*/
+
+
+.cb-recent-posts.cb-list-style-2 .cb-post-box  {
+
+    margin-bottom:40px;
+}
+
+.cb-list-style-2 .cb-post-box .thumb {
+
+    padding-bottom:75%;
+    @include border-radius(5px);
+    @include drop_shadow_images();
+}
+
+.cb-list-style-2 .excerpt p {
+
+    margin-bottom: 15px;
+}
+
+// List layout condition while having sidebar
+
+
+.has-sidebar .cb-list-style-2 .post-title h3 {
+
+    font-size:24px;
+}
+
+.has-sidebar .cb-list-style-2 .permalink {
+
+    display:none;
+}   
+
+
+
+/*
+===================================================
+=
+=  Recent posts section style 3 ( Image Masnory ) 
+=
+=====================================================================
+*/
+
+
+.cb-image-bricks #bricks-row {
+    
+    @include flex_row_alt();
+    margin-right:-10px;
+    margin-left: -10px;
+    margin-bottom:50px;
+}
+
+.cb-post-bricks #bricks-row {
+
+    @include flex_row_alt();
+    margin-left:-15px;
+    margin-right:-15px;
+}
+
+.cb-image-bricks #bricks-row .brick-item {
+
+    padding:0 5px;
+    @include flex_col(33.333333%);
+    margin-bottom:10px;
+}
+
+.cb-post-bricks #bricks-row .brick-item {
+
+    @include flex_col(33.333333%);
+    padding:0 15px;
+    margin-bottom:0;
+}
+
+.cb-post-bricks #bricks-row .brick-item .cb-post-box {
+    
+    overflow:hidden;
+    @include border-radius(5px);
+}
+
+
+// Bricks items with sidebar
+
+
+.has-sidebar #bricks-row .brick-item {
+
+    @include flex_col(50%);
+}
+
+#bricks-row .brick-item .post-contents {
+
+    position:absolute;
+    bottom:30px;
+    left:0;
+    right:0;
+    padding:0 15px;
+    z-index:7;
+}
+
+.cb-image-bricks #bricks-row .brick-item .thumb img {
+    
+    position:relative;
+    top:unset;
+    bottom:unset;
+    left:unset;
+    right:unset;
+    width:auto;
+    height:auto;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.cb-image-bricks #bricks-row a.gallery {
+
+    display:block;
+}
+
+.cb-image-bricks #bricks-row .brick-item .post-title h3 {
+
+    font-size:22px;
+    line-height:21px;
+    margin:0;
+    padding-bottom:5px;
+}
+
+.cb-image-bricks #bricks-row .brick-item .post-title h3 a,
+.cb-image-bricks #bricks-row .brick-item .metas-list li span, 
+.cb-image-bricks #bricks-row .brick-item .metas-list li a {
+
+    color:$white;
+}
+
+.cb-image-bricks #bricks-row .brick-item .post-title h3 a:hover,
+.cb-image-bricks #bricks-row .brick-item .metas-list li a:hover {
+
+    color:$third_color;
+}
+
+.cb-image-bricks #bricks-row .brick-item .metas-list {
+
+    margin:0;
+}
+
+
+/*
+===================================================
+=
+=  Recent posts section style 4 ( Grid layout ) 
+=
+=====================================================================
+*/
+
+
+.cb-grid-style-4 .cb-post-box:last-child,
+.cb-grid-style-4 .cb-post-box {
+
+    margin-bottom:30px;
+}
+
+.cb-grid-style-4 .section-contants {
+
+    margin-bottom:20px;
+}
+
+.cb-grid-style-4 .post-contents {
+
+    margin-top:30px;
+}
+
+.cb-grid-style-4 ul.post-categories {
+
+    margin-top:0;
+}
+
+.cb-grid-style-4 .post-title h3 {
+
+    font-size:24px;
+    line-height:1.2;
+}
+
+.cb-grid-style-4 .excerpt p {
+
+    margin-bottom:15px;
+}
+
+.cb-grid-style-4 .cb-post-box .permalink a {
+
+    display:inline-block;
+    position:relative;
+    padding:10px 0;
+    font-size:14px;
+    font-weight:500;
+    text-transform:uppercase;
+    color:$secondary_color;
+    letter-spacing:0;
+}
+
+.cb-grid-style-4 .cb-post-box .permalink a:after {
+
+    content: '\e918';
+    font-family: 'creamblog';
+    @include position_absolute(50%,unset,unset,-25px);
+    @include transation_delay();
+}
+
+.cb-grid-style-4 .cb-post-box .permalink a:hover:after {
+
+    right:-55px;
+}
+
+/*
+===================================================
+=
+=  Recent posts section style 5 ( Masonry post layout ) 
+=
+=====================================================================
+*/
+
+
+.cb-post-bricks {
+
+    @extend .cb-grid-style-4;
+}
+
+#bricks-row .brick-item .thumb img {
+
+    position: relative;
+    top: unset;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    width: auto;
+    height: auto;
+}
+
+.cb-post-bricks #bricks-row .brick-item .post-contents {
+
+    position: relative;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    padding: inherit;
+    z-index: inherit;
+    margin:0;
+    padding:20px 30px 30px 30px;
+    background:#f5f5f5;
+}
+
+.cb-post-bricks .post-title h3 {
+
+    font-size:22px;
+}
+
+.cb-post-bricks .excerpt p {
+
+    margin-bottom:0;
+}
+
+
+
+/*
+===================================================
+=
+=  Recent posts section style 6 ( Big posts ) 
+=
+=====================================================================
+*/
+
+.cb-recent-posts.cb-big-posts .cb-post-box {
+
+    margin-bottom:40px;
+}
+
+.cb-recent-posts.cb-big-posts .cb-post-box .thumb {
+
+    @include border-radius(5px);
+    @include drop_shadow_images();
+}
+
+.cb-big-posts .hentry.has-post-thumbnail .post-contents {
+
+    padding:30px 0 0 5%;
+}
+
+.cb-big-posts .cb-post-box .excerpt p {
+
+    margin-bottom:0;
+}
+

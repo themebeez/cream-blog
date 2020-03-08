@@ -56,7 +56,7 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 
     	$defaults = array();
 
-        $defaults['cream_blog_theme_color'] = '#ff627d';
+        $defaults['cream_blog_theme_color'] = '#fb5975';
 
     	$defaults['cream_blog_enable_banner'] = false;
     	$defaults['cream_blog_banner_posts_no'] = 5;
@@ -138,16 +138,16 @@ if ( !function_exists( 'cream_blog_fonts_url' ) ) :
         $subsets   = 'latin,latin-ext';
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-        if ('off' !== _x('on', 'Poppins font: on or off', 'cream-blog')) {
+        if ('off' !== _x('on', 'DM Sans font: on or off', 'cream-blog')) {
 
-            $fonts[] = 'Poppins:400,400i,500,500i,600,700,700i';
+            $fonts[] = 'DM+Sans:400,400i,700,700i';
         }
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
 
-        if ('off' !== _x('on', 'Raleway font: on or off', 'cream-blog')) {
+        if ('off' !== _x('on', 'Nunito font: on or off', 'cream-blog')) {
 
-            $fonts[] = 'Raleway:400,400i,500,500i,600600i,700,700i,900';
+            $fonts[] = 'Nunito:400,400i,600,600i,700,700i';
         }
 
         if ( $fonts ) {

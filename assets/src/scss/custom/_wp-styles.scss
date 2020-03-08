@@ -1,7 +1,7 @@
 /*
 ***************************************************************
 *
-* 1. Assibility
+* Assibility
 *
 ***************************************************************
 */
@@ -54,25 +54,30 @@ body .edit-link a {
 
     position:relative;
     text-transform: uppercase;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 13px;
+    font-family: $system_font;
+    font-size: 14px;
     font-weight:bold;
-    color:#666666;
+    color:#1DA1F2;
     padding-right: 10px; 
     line-height: 1;
-    @include transation_delay();
+    text-decoration:none;
+}
+
+body .edit-link a:hover {
+
+    color:$secondary_color;
 }
 
 body .edit-link a:after {
 
     content: '';
-    background: #666666;
-    height: 1px;
+    height: 2px;
     width: 30px;
     position: absolute;
     z-index: 1;
     top: 55%;
     left: 35px;
+    background-color:#1DA1F2;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -83,54 +88,7 @@ body .edit-link a:hover:after {
 
     content:'';
     left:40px;
-}
-
-
-
-/*
-***************************************************************
-*
-* 2. Aligment
-*
-***************************************************************
-*/
-
-
-.alignleft {
-
-    display: inline;
-    float: left;
-    margin-right: 1.5em;
-}
-
-.alignright {
-
-    display: inline;
-    float: right;
-    margin-left: 1.5em;
-}
-
-.aligncenter {
-
-    clear: both;
-    text-align:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/*
-***************************************************************
-*
-* 3. Widget
-*
-***************************************************************
-*/
-
-.widget select {
-
-    max-width: 100%;
+    background-color:$secondary_color;
 }
 
 
@@ -145,13 +103,13 @@ body .edit-link a:hover:after {
 
 
 .sticky {
-
+    
     display: block;
 }
 
 .hentry {
 
-    margin: 0 0 1.5em;
+    margin: 0 0 30px;
 }
 
 .updated:not(.published) {
@@ -176,22 +134,173 @@ body .edit-link a:hover:after {
 /*
 ***************************************************************
 *
-* 5. Comment
+* 5. Comment form 
 *
 ***************************************************************
 */
 
+.comments-area {
 
-.comment-content a {
-
-    word-wrap: break-word;
+    margin-top: 30px;
 }
 
-.bypostauthor {
+.comments-area .comments-title,
+.comments-area .comment-reply-title {
+
+    font-size: 22px;
+}
+
+.comments-area .comments-title {
+
+    margin-bottom: 30px;
+}
+
+.comments-area ul,
+.comments-area ol {
     
-    display: block;
+    margin:0;
+    padding:0;
+    list-style: none;
 }
 
+.comments-area footer {
+
+    background-color:transparent;
+}
+
+.comments-area .comment-reply-link,
+.comments-area .comment-edit-link {
+
+    font-size: 15px;
+    font-weight:normal;
+    color:$primary_color;
+    text-transform:inherit;
+    text-decoration: none;
+}
+
+.comments-area .comment-reply-link::after,
+.comments-area .comment-edit-link::after  {
+
+    content:'';
+    display:none;
+}
+
+.comments-area .comment-meta {
+
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction:row;
+}
+
+.comments-area .comment-author {
+
+    flex:100%;
+    max-width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    flex-direction:row;
+}
+
+.comments-area .comment-author .avatar {
+    
+    margin-right: 15px;
+    @include drop_shadow_images();
+    @include border-radius(100%);
+}
+
+.comments-area .comment-author .says {
+
+    margin-left: 5px;
+}
+
+.comments-area .comment-metadata,
+.comments-area .comment-awaiting-moderation {
+
+    flex:100%;
+    max-width:100%;
+    padding-left: 50px;
+}
+
+.comments-area .comment-metadata a {
+    
+    font-family:$system_font;
+    font-size: 13px;
+}
+
+.comments-area .comment-metadata .edit-link {
+
+    margin-left: 5px;
+    padding-left: 8px;
+    border-left:1px solid $border_color;
+}
+
+.comments-area .comment-metadata .comment-edit-link {
+    
+    padding:0;
+    font-weight:normal;
+}
+
+.comments-area .comment-metadata .comment-edit-link::before  {
+
+    content:'\e91b';
+    font-family:'creamblog';
+    margin-right: 3px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.comments-area .comment-content {
+    
+    position:relative;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top:1px dotted $border_color;
+}
+
+.comments-area .comment-list .comment-body {
+    
+    border:1px solid $border_color;
+    padding:30px;
+    margin-bottom: 30px;
+}
+
+.comments-area .comment-content p:last-child {
+
+    margin-bottom: 0;
+}
+
+.comments-area .reply {
+
+    margin-top: 20px;
+}
+
+// depts 
+
+.comments-area .comment-list .children {
+
+    margin-left: 30px;
+}
+
+// respond 
+
+.comments-area .comment-reply-title {
+
+    margin-bottom: 10px;
+}
+
+.comments-area .comment-form {
+
+    margin-bottom: 30px;
+}
+
+.comment-respond .form-submit {
+
+    margin-top:20px;
+    margin-bottom: 0; 
+}
 
 
 /*
@@ -220,80 +329,6 @@ body .edit-link a:hover:after {
 .infinity-end.neverending .site-footer {
 
     display: block;
-}
-
-
-
-/*
-***************************************************************
-*
-* 7. Media
-*
-***************************************************************
-*/
-
-
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-
-    border: none;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 0;
-}
-
-
-// Make sure embeds and iframes fit their containers.
-
-embed,
-iframe,
-object {
-    max-width: 100%;
-}
-
-
-
-// Make sure logo link wraps around logo image.
-
-.custom-logo-link {
-
-    display: inline-block;
-}
-
-
-
-
-/*
-***************************************************************
-*
-* 7. Captions
-*
-***************************************************************
-*/
-
-
-.wp-caption {
-
-    margin-bottom: 1.5em;
-    max-width: 100%;
-}
-
-.wp-caption img[class*="wp-image-"] {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.wp-caption .wp-caption-text {
-
-    margin: 0.8075em 0;
-}
-
-.wp-caption-text {
-
-    text-align: center;
 }
 
 

@@ -22,7 +22,7 @@
     }
     ?>
 
-    <div class="cb-editor-contents-entry">
+    <div class="cb-editor-contents-entry cb-entry">
         <?php
         the_content();
 

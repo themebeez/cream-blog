@@ -127,10 +127,14 @@ body.post-template-default .site-content {
 .archive-page-entry .page-title h3,
 .archive-page-entry .archive-description {
 
-    margin-bottom:40px;
+    margin-bottom:30px;
 
 }
 
+.archive-page-entry .page-title h1 {
+
+    font-size: 26px;
+}
 
 /*
 ***************************************************************
@@ -145,8 +149,8 @@ body.post-template-default .site-content {
 .search-page-entry .page-title h2,
 .search-page-entry .page-title h3 {
 
-    font-size:28px;
-    margin-bottom:40px;
+    font-size:26px;
+    margin-bottom:30px;
 }
 
 .search-page-entry .page-title h1 span,

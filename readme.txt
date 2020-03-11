@@ -4,7 +4,7 @@ Contributors: themebeez
 Requires PHP: 5.6
 Requires at least: 5.0
 Tested up to: 5.3
-Stable tag: 2.1.0
+Stable tag: 3.0.0-BETA 1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
@@ -69,6 +69,11 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
 ==== Change logs ====
+
+== 3.0.0-BETA 1 - 11 March, 2020 ==
+
+- Releasing BETA 1 for testing
+
 
 == 2.1.0 - 25 November, 2019 ==
 

@@ -172,7 +172,7 @@ p {
     margin: 0 0 20px 0;
 }
 
-a:not(wp-block-button__link) {
+a {
 
     color: $primary_color;
     text-decoration: none;
@@ -188,6 +188,12 @@ a:focus {
 
     outline: none;
     text-decoration: none;
+}
+
+.wp-block-button__link,
+.cb-entry .wp-block-button__link {
+
+    color:inherit;
 }
 
 a:not([href]):not([tabindex]) {
@@ -668,13 +674,28 @@ textarea {
     line-height: 1.8;
 }
 
-address {}
+address {
 
-progress {}
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: inherit;
+}
 
-output {}
+progress {
 
-summary {}
+    vertical-align: baseline;
+}
+
+output {
+
+    display: inline-block;
+}
+
+summary {
+
+    display: list-item;
+    cursor: pointer;
+}
 
 
 // tables
@@ -708,7 +729,13 @@ td {
     border-width: 0 1px 1px 0;
 }
 
-caption {}
+caption {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    caption-side: bottom;
+}
 
 
 // media 

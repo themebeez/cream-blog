@@ -817,24 +817,41 @@ footer form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
     margin-left: 0;
 }
 
-.widget_archive li,
-.widget_categories li,
-.widget_recent_entries li,
-.widget_meta li,
-.widget_recent_comments li,
-.widget_rss li,
-.widget_pages li,
-.widget_nav_menu li a,
-.widget_product_categories li,
+.widget_pages ul li,
+.widget_meta ul li,
+.widget_archive ul li,
+.widget_nav_menu ul li,
+.widget_categories ul li,
+.widget_product_categories ul li,
 .woocommerce-widget-layered-nav ul li,
+.woocommerce .widget_rating_filter ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li,
 .woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item {
-
+    
     position: relative;
     border-bottom: 1px solid $border_color;
-    padding: 10px 0;
     margin: 0;
+     padding: 10px 0;
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   
 }
 
+.widget_pages ul li ul,
+.widget_nav_menu ul li ul,
+.widget_archive ul li ul,
+.widget_categories ul li ul,
+.widget_product_categories ul li ul {
+
+    order: 4;
+    flex-grow: 0;
+    flex-basis: 100%;
+    margin-left: 15px;
+}
 
 .widget_archive li:last-child,
 .widget_categories li:last-child,
@@ -924,25 +941,40 @@ footer form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
 .woocommerce-widget-layered-nav ul li {
 
     text-align:left;
-} 
-
-.widget_archive ul li a,
-.widget_categories ul li a,
-.widget_product_categories ul li a,
-.woocommerce-widget-layered-nav ul li a {
-    
-    display:inline-block;
-    float:none;
-    width:80%;
 }
 
+.widget_pages ul li::before,
+.widget_nav_menu ul li::before,
+.widget_archive ul li::before,
+.widget_categories ul li::before,
+.widget_product_categories ul li::before,
+.woocommerce-widget-layered-nav ul li::before,
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item::before {
 
+    content: "";
+    flex-grow: 1;
+    order: 2;
+}
 
-.widget_nav_menu ul li ul,
-.widget_product_categories ul li ul,
-.widget_nav_menu ul li ul {
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item::before {
 
-    padding-left:20px;
+    content:'';
+    display:inherit;
+}
+
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item::after {
+
+    content:'';
+    display:none;
+}
+
+.widget_archive ul li .count,
+.widget_categories ul li .count,
+.widget_product_categories ul li .count,
+.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-widget-layered-nav-list__item span {
+
+    order: 3;
+    font-size: 90%;
 }
 
 .widget_product_categories ul li ul {
@@ -1147,7 +1179,7 @@ footer form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
     text-align:center;
     letter-spacing:0;
     padding: 5px 15px;
-    margin:2px;
+    margin:5px;
     background:#eeeeee;
 }
 

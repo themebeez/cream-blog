@@ -1377,7 +1377,8 @@ class Cream_Blog_Customize {
 				.author-box .author-name h3,
 				.search-page-entry .page-title h1 span, 
 				.search-page-entry .page-title h2 span, 
-				.search-page-entry .page-title h3 span {
+				.search-page-entry .page-title h3 span,
+				.page-links .post-page-numbers.current {
 
 					color: <?php echo esc_attr( $theme_color ); ?>;
 				}
@@ -1432,7 +1433,8 @@ class Cream_Blog_Customize {
 
 					border-top-color: <?php echo esc_attr( $theme_color ); ?>;
 				}
-					
+				
+				.page-links .post-page-numbers,
 				.cb-pagination .pagi-style-1 .nav-links span.current {
 
 					border-color: <?php echo esc_attr( $theme_color ); ?>;

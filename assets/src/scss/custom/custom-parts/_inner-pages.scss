@@ -133,7 +133,7 @@ body.post-template-default .site-content {
 
 .archive-page-entry .page-title h1 {
 
-    font-size: 26px;
+    font-size: 32px;
 }
 
 /*
@@ -412,7 +412,7 @@ body.post-template-default .site-content {
 
 // Related posts
 
-.cb-recent-posts .thumb {
+.related-posts .cb-recent-posts .thumb {
 
     @include border-radius(5px);
     @include drop_shadow_images();

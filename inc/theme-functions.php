@@ -525,3 +525,31 @@ if( ! function_exists( 'cream_blog_woocommerce_sidebar' ) ) {
 		}
 	}
 }
+
+
+
+/**
+* Filter for default archive widget
+*/
+
+function cream_blog_default_archive_widget($links) {
+
+    $links = str_replace('</a>&nbsp;(', '</a> <span class="count">(', $links);
+    $links = str_replace(')', ')</span>', $links);
+    return $links;
+}
+
+add_filter('get_archives_link', 'cream_blog_default_archive_widget');
+
+
+/**
+ * Filter the default categories widget
+ */
+
+function cream_blog_cat_count_span( $links ) {
+
+    $links = str_replace( '</a> (', '</a><span class="count">(', $links );
+    $links = str_replace( ')', ')</span>', $links );
+    return $links;
+}
+add_filter( 'wp_list_categories', 'cream_blog_cat_count_span' );

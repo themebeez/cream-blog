@@ -228,6 +228,22 @@ a.wp-block-button__link {
 // heading 
 
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    line-height: $body_heading_line_height;
+    font-family: $primary_font_family;
+    font-weight: $body_heading_font_weight;
+    margin-bottom: 20px;
+    letter-spacing: $heading_letter_spacing;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 h1 {
 
     font-size: 38px;
@@ -262,22 +278,6 @@ h6 {
 
     font-size: 16px;
     line-height: 1.6;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-
-    line-height: $body_heading_line_height;
-    font-family: $primary_font_family;
-    font-weight: $body_heading_font_weight;
-    margin-bottom: 20px;
-    letter-spacing: $heading_letter_spacing;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 // strong, big & small texts
@@ -332,14 +332,16 @@ tt,
 var,
 samp {
 
-    font-family: Consolas, monospace; // recommended
+    font-family: monospace, monospace; // recommended
     font-size: 15px;
     letter-spacing: 0;
 }
 
 pre {
-
+    
     display: block;
+    font-family: monospace, monospace; // recommended
+    font-size: 15px;
     color: #ffffff;
     background-color: #2c2848;
     overflow: auto;
@@ -500,13 +502,16 @@ input[type="search"],
 input[type="tel"],
 input[type="color"] {
 
-    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color:#ffffff;
     font-family: $system_font;
     font-size: 15px;
     margin: 0;
-    padding: 0 15px;
+    padding: 12px 15px;
     border: 1px solid $border_color;
-    height: 43px;
+    min-height: 43px;
+    height: auto;
     width: 100%;
     max-width: 100%;
     @include border-radius(0);
@@ -531,7 +536,9 @@ input[type="number"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus {
-
+    
+    outline: 0;
+    border-width: 1px;
     border-color: #3da6ff;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
@@ -545,14 +552,17 @@ input::-moz-focus-inner {
 }
 
 input::-webkit-input-placeholder {
+
     line-height: normal;
 }
 
 input:-ms-input-placeholder {
+
     line-height: normal;
 }
 
 input::-moz-placeholder {
+
     line-height: normal;
 }
 
@@ -576,6 +586,8 @@ input[type="submit"] {
     font-size: 16px;
     font-weight: normal;
     padding: 13px 30px;
+    line-height: 43px;
+    height:auto;
     text-align: center;
     border: none;
     opacity: 1;
@@ -584,16 +596,19 @@ input[type="submit"] {
     cursor: pointer;
     color: #ffffff;
     background-color: $secondary_color;
+    cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     @include border-radius(2px);
     @include transation_delay();
 }
 
+
+
 .button-search {
 
     position: absolute;
-    top: 13px;
+    top: 15px;
     right: 10px;
     z-index: 1;
     font-family: 'creamblog';
@@ -669,9 +684,10 @@ textarea {
     max-width: 100%;
     margin: 0;
     padding: 20px;
-    min-height: 150px;
+    height: 150px;
     vertical-align: middle;
     line-height: 1.8;
+    resize: vertical;
 }
 
 address {
@@ -751,7 +767,8 @@ progress {
 img {
 
     max-width: 100%;
-    height: auto; // WordPress fix 
+    height: auto; // WordPress fix
+    vertical-align:middle; 
 }
 
 audio:not([controls]) {
@@ -832,11 +849,10 @@ br {
     line-height: 1;
 }
 
+i,
 em {
 
-    font-family: 'cursive', 'serif'; // apply from system
     font-style: italic;
-    font-weight: normal;
 }
 
 ins,

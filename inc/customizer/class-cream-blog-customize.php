@@ -1442,7 +1442,12 @@ class Cream_Blog_Customize {
 
 				form.mc4wp-form-theme .cb-newsleter input[type="submit"] {
 
-					border-color: <?php echo esc_attr( $theme_color ); ?> !important;
+					border-color: <?php echo esc_attr( $theme_color ); ?>;
+				}
+
+				.section-title {
+
+					border-left-color:<?php echo esc_attr( $theme_color ); ?>;
 				}
 
 			<?php

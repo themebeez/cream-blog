@@ -166,12 +166,46 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
  		<div class="site-branding">
  			<?php 
 			if( has_custom_logo() ) { 
+				
+				if( is_home() ) {
+					?>
+					<h1 class="site-logo">
+					<?php
+				}
+
 				the_custom_logo(); 
+
+				if( is_home() ) {
+					?>
+					</h1>
+					<?php
+				}
 			} else { 
 				?>
 	            <div class="site-identity">
-	                <span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+	            	<?php
+	            	if( is_home() ) {
+	            		?>
+	            		<h1 class="site-title">
+	            		<?php
+	            	} else {
+	            		?>
+	            		<span class="site-title">
+	            		<?php
+	            	}
+	            	?>
+	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					<?php 
+					if( is_home() ) {
+	            		?>
+	            		</h1>
+	            		<?php
+	            	} else {
+	            		?>
+	            		</span>
+	            		<?php
+	            	}
+	            	
 	                $site_description = get_bloginfo( 'description', 'display' );
 	                if ( $site_description || is_customize_preview() ) {
 		                ?>
@@ -584,7 +618,7 @@ if( ! function_exists( 'cream_blog_footer_middle_action' ) ) :
 
  	function cream_blog_footer_middle_action() {
 
- 		if( is_active_sidebar( 'footer' ) ) {
+ 		if( is_active_sidebar( 'footer' ) && cream_blog_get_option( 'cream_blog_display_footer_widgets' ) ==  true ) {
  			?>
  			<div class="cb-midfooter">
                 <div class="row">

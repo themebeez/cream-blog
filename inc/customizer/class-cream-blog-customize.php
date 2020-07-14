@@ -317,6 +317,15 @@ class Cream_Blog_Customize {
 
 		// Set Theme Color
 		$wp_customize->add_setting( 
+			'cream_blog_tagline_color', 
+			array(
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'default'			=> $defaults['cream_blog_tagline_color'],
+			) 
+		);
+
+		// Set Theme Color
+		$wp_customize->add_setting( 
 			'cream_blog_theme_color', 
 			array(
 				'sanitize_callback'	=> 'sanitize_hex_color',
@@ -422,6 +431,15 @@ class Cream_Blog_Customize {
 			) 
 		);
 
+		// Setting - Display Footer Widgets Area
+		$wp_customize->add_setting( 
+			'cream_blog_display_footer_widgets', 
+			array(
+				'sanitize_callback'	=> 'wp_validate_boolean',
+				'default'			=> $defaults['cream_blog_display_footer_widgets'],
+			) 
+		);
+
 		// Enable Footer Social Links
 		$wp_customize->add_setting( 
 			'cream_blog_enable_footer_social_links', 
@@ -455,6 +473,15 @@ class Cream_Blog_Customize {
 			array(
 				'sanitize_callback'	=> 'cream_blog_sanitize_select',
 				'default'			=> $defaults['cream_blog_select_archive_sidebar_position'],
+			) 
+		);
+
+		// Setting - Hide Pages In Search Result
+		$wp_customize->add_setting( 
+			'cream_blog_hide_pages_on_search_result', 
+			array(
+				'sanitize_callback'	=> 'wp_validate_boolean',
+				'default'			=> $defaults['cream_blog_hide_pages_on_search_result'],
 			) 
 		);
 
@@ -685,6 +712,18 @@ class Cream_Blog_Customize {
 		// Radio Image Control
 		require get_template_directory() . '/inc/customizer/controls/class-cream-blog-radio-image-control.php';
 
+		// Control - Tagline Color
+		$wp_customize->add_control( 
+			new WP_Customize_Color_Control( 
+				$wp_customize, 
+				'cream_blog_tagline_color', 
+				array(
+					'label'		=> esc_html__( 'Tagline Color', 'cream-blog' ),
+					'section'	=> 'title_tagline',
+				) 
+			) 
+		);
+
 		// Set Theme Color
 		$wp_customize->add_control( 
 			new WP_Customize_Color_Control( 
@@ -775,14 +814,18 @@ class Cream_Blog_Customize {
 			) 
 		);
 
-		// Enable Sticky Menu Bar
+		// Select Header Layout
 		$wp_customize->add_control( 
-			'cream_blog_enable_sticky_menu', 
-			array(
-				'label'				=> esc_html__( 'Enable Sticky Menu Bar', 'cream-blog' ),
-				'section'			=> 'cream_blog_header_options',
-				'type'				=> 'checkbox',
-			) 
+			new Cream_Blog_Radio_Image_Control( 
+				$wp_customize,
+				'cream_blog_select_header_layout', 
+				array(
+					'label'				=> esc_html__( 'Select Header Layout', 'cream-blog' ),
+					'section'			=> 'cream_blog_header_options',
+					'type'				=> 'select',
+					'choices'			=> $this->get_header_layout(), 
+				) 
+			)
 		);
 
 		// Enable Top Header
@@ -792,7 +835,7 @@ class Cream_Blog_Customize {
 				'label'				=> esc_html__( 'Enable Top Header', 'cream-blog' ),
 				'section'			=> 'cream_blog_header_options',
 				'type'				=> 'checkbox',
-				'active_callback'	=>  'cream_blog_is_active_header_four_five',
+				'active_callback'	=>  'cream_blog_is_header_layout_2_active',
 			) 
 		);
 
@@ -816,18 +859,24 @@ class Cream_Blog_Customize {
 			) 
 		);
 
-		// Select Header Layout
+		// Enable Sticky Menu Bar
 		$wp_customize->add_control( 
-			new Cream_Blog_Radio_Image_Control( 
-				$wp_customize,
-				'cream_blog_select_header_layout', 
-				array(
-					'label'				=> esc_html__( 'Select Header Layout', 'cream-blog' ),
-					'section'			=> 'cream_blog_header_options',
-					'type'				=> 'select',
-					'choices'			=> $this->get_header_layout(), 
-				) 
-			)
+			'cream_blog_enable_sticky_menu', 
+			array(
+				'label'				=> esc_html__( 'Enable Sticky Menu Bar', 'cream-blog' ),
+				'section'			=> 'cream_blog_header_options',
+				'type'				=> 'checkbox',
+			) 
+		);
+
+		// Control - Display Footer Widgets
+		$wp_customize->add_control( 
+			'cream_blog_display_footer_widgets', 
+			array(
+				'label'				=> esc_html__( 'Display Footer Widgets Area', 'cream-blog' ),
+				'section'			=> 'cream_blog_footer_options',
+				'type'				=> 'checkbox' 
+			) 
 		);
 
 		// Enable Footer Social Links
@@ -872,6 +921,16 @@ class Cream_Blog_Customize {
 					'choices'			=> $this->get_sidebar_position(), 
 				) 
 			)
+		);
+
+		// Control - Hide Pages In Search Result
+		$wp_customize->add_control( 
+			'cream_blog_hide_pages_on_search_result', 
+			array(
+				'label'				=> esc_html__( 'Hide Pages In Search Result', 'cream-blog' ),
+				'section'			=> 'cream_blog_search_page_options',
+				'type'				=> 'checkbox' 
+			) 
 		);
 
 		// Select Sidebar Position For Search Page
@@ -1304,6 +1363,16 @@ class Cream_Blog_Customize {
 			</style>
 		</noscript>
 		<style>
+			<?php
+			if( cream_blog_get_option( 'cream_blog_tagline_color' ) ) {
+				?>
+				.header-style-3 .site-identity .site-description,
+				.header-style-5 .site-identity .site-description {
+					color: <?php echo esc_attr( cream_blog_get_option( 'cream_blog_tagline_color' ) ); ?>;
+				}
+				<?php
+			}
+			?>
 			#canvas-toggle {
 				<?php
 				if( $show_toggled_sidebar_icon == false ) {

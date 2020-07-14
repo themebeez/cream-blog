@@ -23,10 +23,10 @@ if( ! function_exists( 'cream_blog_is_banner_active' ) ) {
 /*
  *	Active Callback Functions for Top Header
  */
-if( ! function_exists( 'cream_blog_is_active_header_four_five' ) ) {
+if( ! function_exists( 'cream_blog_is_header_layout_2_active' ) ) {
 
-	function cream_blog_is_active_header_four_five( $control ) {
-		if( $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_5' || $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_4') {
+	function cream_blog_is_header_layout_2_active( $control ) {
+		if( $control->manager->get_setting( 'cream_blog_select_header_layout' )->value() == 'header_2') {
 			return true;
 		} else {
 			return false;

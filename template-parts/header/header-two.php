@@ -9,38 +9,44 @@
 ?>
 <header class="general-header header-style-5">
     <div class="header-inner">
-        <div class="cb-header-top">
-            <div class="cb-container">
-                <div class="headertop-entry">
-                    <div class="cb-row">
-                        <div class="cb-col left-col">
-                            <div class="secondary-nav">
+        <?php
+        if( cream_blog_get_option( 'cream_blog_enable_top_header' ) ) {
+            ?>
+            <div class="cb-header-top">
+                <div class="cb-container">
+                    <div class="headertop-entry">
+                        <div class="cb-row">
+                            <div class="cb-col left-col">
+                                <div class="secondary-nav">
+                                    <?php
+                                    /**
+                                    * Hook - cream_blog_header_top_menu.
+                                    *
+                                    * @hooked cream_blog_header_top_menu_action - 10
+                                    */
+                                    do_action( 'cream_blog_header_top_menu' );
+                                    ?>
+                                </div><!-- .secondary-nav -->
+                            </div><!-- .cb-col.left-col -->
+
+                            <div class="cb-col right-col">
                                 <?php
                                 /**
-                                * Hook - cream_blog_header_top_menu.
+                                * Hook - cream_blog_social_links.
                                 *
-                                * @hooked cream_blog_header_top_menu_action - 10
+                                * @hooked cream_blog_social_links_action - 10
                                 */
-                                do_action( 'cream_blog_header_top_menu' );
+                                do_action( 'cream_blog_social_links' );
                                 ?>
-                            </div><!-- .secondary-nav -->
-                        </div><!-- .cb-col.left-col -->
+                            </div><!-- .cb-col.right-col -->
 
-                        <div class="cb-col right-col">
-                            <?php
-                            /**
-                            * Hook - cream_blog_social_links.
-                            *
-                            * @hooked cream_blog_social_links_action - 10
-                            */
-                            do_action( 'cream_blog_social_links' );
-                            ?>
-                        </div><!-- .cb-col.right-col -->
-
-                    </div><!-- .cb-row -->
-                </div><!-- .headertop-entry -->
-            </div><!-- .cb-container -->
-        </div><!-- .cb-header-top -->
+                        </div><!-- .cb-row -->
+                    </div><!-- .headertop-entry -->
+                </div><!-- .cb-container -->
+            </div><!-- .cb-header-top -->
+            <?php
+        }
+        ?>
 
         <div class="cb-mid-header">
             <div class="cb-container">

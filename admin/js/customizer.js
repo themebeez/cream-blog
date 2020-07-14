@@ -20,6 +20,13 @@
 		} );
 	} );
 
+	// Tagline text color.
+	wp.customize( 'cream_blog_tagline_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.header-style-3 .site-identity .site-description, .header-style-5 .site-identity .site-description' ).css( { 'color' : to } );
+		} );
+	} );
+
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
@@ -33,7 +40,7 @@
 					'clip': 'auto',
 					'position': 'relative'
 				} );
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title a' ).css( {
 					'color': to
 				} );
 			}

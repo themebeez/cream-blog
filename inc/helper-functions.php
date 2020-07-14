@@ -17,7 +17,7 @@ if ( ! function_exists( 'cream_blog_get_option' ) ) {
 	 */
 	function cream_blog_get_option( $key ) {
 
-	       if ( empty( $key ) ) {
+        if ( empty( $key ) ) {
 			return;
 		}
 
@@ -113,6 +113,11 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
         if( class_exists( 'Woocommerce' ) ) {
             $defaults['cream_blog_select_woocommerce_sidebar_position'] = 'right';
         }
+
+        // New Settings
+        $defaults['cream_blog_tagline_color'] = '#000';
+        $defaults['cream_blog_hide_pages_on_search_result'] = false;
+        $defaults['cream_blog_display_footer_widgets'] = true;
 
     	return $defaults;
 
@@ -252,6 +257,28 @@ if ( !function_exists( 'cream_blog_check_sticky_sidebar' ) ) :
 endif;
 
 
+/**
+ * Filter For Main Query
+ */
+if( ! function_exists( 'cream_blog_main_query_filter' ) ) :
+
+    function cream_blog_main_query_filter( $query ) {
+
+        if ( is_admin() ) {
+
+            return $query;
+        }
+
+        if ( $query->is_search && ( cream_blog_get_option( 'cream_blog_hide_pages_on_search_result' ) == true ) ) {
+            
+            $query->set('post_type', 'post');
+        }
+
+        return $query;
+    }
+endif;
+add_filter( 'pre_get_posts', 'cream_blog_main_query_filter' );
+
 /*
  * Hook - Plugin Recommendation
  */
@@ -267,7 +294,7 @@ if ( ! function_exists( 'cream_blog_recommended_plugins' ) ) :
 
         $plugins = array(
             array(
-                'name'     => esc_html__( 'Themebeez Toolkit', 'cream-blog' ),
+                'name'     => 'Themebeez Toolkit',
                 'slug'     => 'themebeez-toolkit',
                 'required' => false,
             ),

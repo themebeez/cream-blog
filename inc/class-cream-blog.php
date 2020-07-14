@@ -186,9 +186,7 @@ class Cream_Blog {
 		else :
 			?>
 			.header-style-3 .site-identity .site-title a,
-			.header-style-5 .site-identity .site-title a,
-			.header-style-3 .site-identity .site-description,
-			.header-style-5 .site-identity .site-description {
+			.header-style-5 .site-identity .site-title a {
 
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}

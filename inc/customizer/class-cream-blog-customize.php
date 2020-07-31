@@ -315,7 +315,7 @@ class Cream_Blog_Customize {
 
 		$defaults = cream_blog_get_default_theme_options();	
 
-		// Set Theme Color
+		// Set Tagline Color
 		$wp_customize->add_setting( 
 			'cream_blog_tagline_color', 
 			array(
@@ -330,6 +330,15 @@ class Cream_Blog_Customize {
 			array(
 				'sanitize_callback'	=> 'sanitize_hex_color',
 				'default'			=> $defaults['cream_blog_theme_color'],
+			) 
+		);
+
+		// Set Content Link Color
+		$wp_customize->add_setting( 
+			'cream_blog_content_link_color', 
+			array(
+				'sanitize_callback'	=> 'sanitize_hex_color',
+				'default'			=> $defaults['cream_blog_content_link_color'],
 			) 
 		);
 
@@ -731,6 +740,18 @@ class Cream_Blog_Customize {
 				'cream_blog_theme_color', 
 				array(
 					'label'		=> esc_html__( 'Theme Color', 'cream-blog' ),
+					'section'	=> 'colors',
+				) 
+			) 
+		);
+
+		// Content's Link Color
+		$wp_customize->add_control( 
+			new WP_Customize_Color_Control( 
+				$wp_customize, 
+				'cream_blog_content_link_color', 
+				array(
+					'label'		=> esc_html__( 'Content&rsquo;s Link Color', 'cream-blog' ),
 					'section'	=> 'colors',
 				) 
 			) 
@@ -1520,6 +1541,14 @@ class Cream_Blog_Customize {
 				}
 
 			<?php
+			}
+
+			if( cream_blog_get_option( 'cream_blog_content_link_color' ) ) {
+				?>
+				.cb-editor-contents-entry a {
+					color: <?php echo esc_attr( cream_blog_get_option( 'cream_blog_content_link_color' ) ); ?>;
+				}
+				<?php
 			}
 			?>
 		</style>

@@ -1,4 +1,4 @@
-# Copyright (C) 2019 Cream Blog
+# Copyright (C) 2020 Cream Blog
 # This file is distributed under the same license as the Cream Blog package.
 msgid ""
 msgstr ""
@@ -6,7 +6,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language-Team: themebeez <themebeez@gmail.com>\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -47,83 +46,83 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: inc/breadcrumbs.php:264
+#: inc/breadcrumbs.php:268
 msgid "Browse:"
 msgstr ""
 
-#: inc/breadcrumbs.php:265
+#: inc/breadcrumbs.php:269
 msgctxt "breadcrumbs aria label"
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/breadcrumbs.php:266
+#: inc/breadcrumbs.php:270
 msgid "Home"
 msgstr ""
 
-#: inc/breadcrumbs.php:267
+#: inc/breadcrumbs.php:271
 msgid "404 Not Found"
 msgstr ""
 
-#: inc/breadcrumbs.php:268
+#: inc/breadcrumbs.php:272
 msgid "Archives"
 msgstr ""
 
 #. translators: %s is the search query.
-#: inc/breadcrumbs.php:270
+#: inc/breadcrumbs.php:274
 msgid "Search results for: %s"
 msgstr ""
 
 #. translators: %s is the page number.
-#: inc/breadcrumbs.php:272
+#: inc/breadcrumbs.php:276
 msgid "Page %s"
 msgstr ""
 
 #. translators: %s is the page number.
-#: inc/breadcrumbs.php:274
+#: inc/breadcrumbs.php:278
 msgid "Comment Page %s"
 msgstr ""
 
 #. translators: Minute archive title. %s is the minute time format.
-#: inc/breadcrumbs.php:276
+#: inc/breadcrumbs.php:280
 msgid "Minute %s"
 msgstr ""
 
 #. translators: Weekly archive title. %s is the week date format.
-#: inc/breadcrumbs.php:278
+#: inc/breadcrumbs.php:282
 msgid "Week %s"
 msgstr ""
 
-#: inc/breadcrumbs.php:738
+#: inc/breadcrumbs.php:742
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr ""
 
-#: inc/breadcrumbs.php:755
+#: inc/breadcrumbs.php:759
 msgctxt "minute archives time format"
 msgid "i"
 msgstr ""
 
-#: inc/breadcrumbs.php:772
+#: inc/breadcrumbs.php:776
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr ""
 
-#: inc/breadcrumbs.php:788, inc/breadcrumbs.php:817, inc/breadcrumbs.php:844, inc/breadcrumbs.php:871, inc/breadcrumbs.php:1211
+#: inc/breadcrumbs.php:792, inc/breadcrumbs.php:821, inc/breadcrumbs.php:848, inc/breadcrumbs.php:875, inc/breadcrumbs.php:1215
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: inc/breadcrumbs.php:789, inc/breadcrumbs.php:845, inc/breadcrumbs.php:1215
+#: inc/breadcrumbs.php:793, inc/breadcrumbs.php:849, inc/breadcrumbs.php:1219
 msgctxt "monthly archives date format"
 msgid "F"
 msgstr ""
 
-#: inc/breadcrumbs.php:790, inc/breadcrumbs.php:1219
+#: inc/breadcrumbs.php:794, inc/breadcrumbs.php:1223
 msgctxt "daily archives date format"
 msgid "j"
 msgstr ""
 
-#: inc/breadcrumbs.php:818
+#: inc/breadcrumbs.php:822
 msgctxt "weekly archives date format"
 msgid "W"
 msgstr ""
@@ -136,70 +135,66 @@ msgstr ""
 msgid "Top Header Menu"
 msgstr ""
 
-#: inc/class-cream-blog.php:346
-msgid "Type here"
-msgstr ""
-
-#: inc/class-cream-blog.php:346
-msgid "Search"
+#: inc/class-cream-blog.php:354
+msgid "Search here..."
 msgstr ""
 
 #: inc/custom-hooks.php:77
 msgid "Skip to content"
 msgstr ""
 
-#: inc/custom-hooks.php:400
+#: inc/custom-hooks.php:434
 msgid "Prev"
 msgstr ""
 
-#: inc/custom-hooks.php:401
+#: inc/custom-hooks.php:435
 msgid "Next"
 msgstr ""
 
-#: inc/custom-hooks.php:420
+#: inc/custom-hooks.php:454
 msgid "Prev Post"
 msgstr ""
 
-#: inc/custom-hooks.php:421
+#: inc/custom-hooks.php:455
 msgid "Next Post"
 msgstr ""
 
-#: inc/custom-hooks.php:533
+#: inc/custom-hooks.php:567
 msgid "Facebook"
 msgstr ""
 
-#: inc/custom-hooks.php:539
+#: inc/custom-hooks.php:573
 msgid "Twitter"
 msgstr ""
 
-#: inc/custom-hooks.php:545
+#: inc/custom-hooks.php:579
 msgid "Instagram"
 msgstr ""
 
-#: inc/custom-hooks.php:551
+#: inc/custom-hooks.php:585
 msgid "Linkedin"
 msgstr ""
 
-#: inc/custom-hooks.php:557
+#: inc/custom-hooks.php:591
 msgid "Pinterest"
 msgstr ""
 
-#: inc/custom-hooks.php:563
+#: inc/custom-hooks.php:597
 msgid "Youtube"
 msgstr ""
 
 #. translators: 1: Copyright Text 2: Theme name, 3: Theme author.
-#: inc/custom-hooks.php:617
+#: inc/custom-hooks.php:651
 msgid "%1$s %2$s by %3$s"
 msgstr ""
 
-#: inc/custom-hooks.php:617, inc/custom-hooks.php:620
+#: inc/custom-hooks.php:651, inc/custom-hooks.php:654
 msgid "Themebeez"
 msgstr ""
 
 #. translators: 1: Theme name, 2: Theme author.
-#: inc/custom-hooks.php:620
-msgid "%1$s by %2$s."
+#: inc/custom-hooks.php:654
+msgid "%1$s by %2$s"
 msgstr ""
 
 #: inc/customizer/class-cream-blog-customize.php:87
@@ -310,147 +305,163 @@ msgstr ""
 msgid "Woocoomerce Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:694
+#: inc/customizer/class-cream-blog-customize.php:730
+msgid "Tagline Color"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:742
 msgid "Theme Color"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:705
+#: inc/customizer/class-cream-blog-customize.php:754
+msgid "Content&rsquo;s Link Color"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:765
 msgid "Enable Banner/Slider"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:716
+#: inc/customizer/class-cream-blog-customize.php:776
 msgid "Banner/Slider Post Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:728
+#: inc/customizer/class-cream-blog-customize.php:788
 msgid "Banner/Slider Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:741
+#: inc/customizer/class-cream-blog-customize.php:801
 msgid "Select Banner/Slider Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:756
+#: inc/customizer/class-cream-blog-customize.php:816
 msgid "Select Post Listing Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:770, inc/metabox/class-cream-blog-post-meta.php:45
+#: inc/customizer/class-cream-blog-customize.php:830, inc/metabox/class-cream-blog-post-meta.php:45
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:782
-msgid "Enable Sticky Menu Bar"
-msgstr ""
-
-#: inc/customizer/class-cream-blog-customize.php:792
-msgid "Enable Top Header"
-msgstr ""
-
-#: inc/customizer/class-cream-blog-customize.php:803
-msgid "Enable Sidebar Toggle Button"
-msgstr ""
-
-#: inc/customizer/class-cream-blog-customize.php:813
-msgid "Enable Search Button"
-msgstr ""
-
-#: inc/customizer/class-cream-blog-customize.php:825
+#: inc/customizer/class-cream-blog-customize.php:844
 msgid "Select Header Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:837
+#: inc/customizer/class-cream-blog-customize.php:856
+msgid "Enable Top Header"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:867
+msgid "Enable Sidebar Toggle Button"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:877
+msgid "Enable Search Button"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:887
+msgid "Enable Sticky Menu Bar"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:897
+msgid "Display Footer Widgets Area"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:907
 msgid "Enable Footer Social Links"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:847
+#: inc/customizer/class-cream-blog-customize.php:917
 msgid "Copyright & Credit Text"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:857
+#: inc/customizer/class-cream-blog-customize.php:927
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:869, inc/customizer/class-cream-blog-customize.php:883, inc/customizer/class-cream-blog-customize.php:1111
+#: inc/customizer/class-cream-blog-customize.php:939, inc/customizer/class-cream-blog-customize.php:963, inc/customizer/class-cream-blog-customize.php:1191
 msgid "Select Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:895, inc/customizer/class-cream-blog-customize.php:947
+#: inc/customizer/class-cream-blog-customize.php:951
+msgid "Hide Pages In Search Result"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:975, inc/customizer/class-cream-blog-customize.php:1027
 msgid "Display Featured Image"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:905
+#: inc/customizer/class-cream-blog-customize.php:985
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:915
+#: inc/customizer/class-cream-blog-customize.php:995
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:925
+#: inc/customizer/class-cream-blog-customize.php:1005
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:936
+#: inc/customizer/class-cream-blog-customize.php:1016
 msgid "Related Section Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:957
+#: inc/customizer/class-cream-blog-customize.php:1037
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:967
+#: inc/customizer/class-cream-blog-customize.php:1047
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:977
+#: inc/customizer/class-cream-blog-customize.php:1057
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:987
+#: inc/customizer/class-cream-blog-customize.php:1067
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:997
+#: inc/customizer/class-cream-blog-customize.php:1077
 msgid "Enable Post Tags Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1007
+#: inc/customizer/class-cream-blog-customize.php:1087
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1017
+#: inc/customizer/class-cream-blog-customize.php:1097
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1027
+#: inc/customizer/class-cream-blog-customize.php:1107
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1037
+#: inc/customizer/class-cream-blog-customize.php:1117
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1047
+#: inc/customizer/class-cream-blog-customize.php:1127
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1057
+#: inc/customizer/class-cream-blog-customize.php:1137
 msgid "Linkedin Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1067
+#: inc/customizer/class-cream-blog-customize.php:1147
 msgid "Pinterest Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1077
+#: inc/customizer/class-cream-blog-customize.php:1157
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1087
+#: inc/customizer/class-cream-blog-customize.php:1167
 msgid "Enable Image Lazy Load"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1097
+#: inc/customizer/class-cream-blog-customize.php:1177
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
@@ -459,23 +470,15 @@ msgid "Select"
 msgstr ""
 
 #. translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
-#: inc/helper-functions.php:141
-msgctxt "Poppins font: on or off"
+#: inc/helper-functions.php:147
+msgctxt "DM Sans font: on or off"
 msgid "on"
 msgstr ""
 
 #. translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
-#: inc/helper-functions.php:148
-msgctxt "Raleway font: on or off"
+#: inc/helper-functions.php:154
+msgctxt "Nunito font: on or off"
 msgid "on"
-msgstr ""
-
-#: inc/helper-functions.php:270
-msgid "Themebeez Toolkit"
-msgstr ""
-
-#: inc/helper-functions.php:275
-msgid "Gutentor : WordPress Page Building Blocks with Unlimited Possibilities to Design"
 msgstr ""
 
 #: inc/metabox/class-cream-blog-post-meta.php:66
@@ -497,13 +500,13 @@ msgstr ""
 #. translators: %1$s: span tag open, %2$s: span tag close, %3$s: post author.
 #: inc/theme-functions.php:100
 msgctxt "post author"
-msgid "%1$s Posted by - %2$s %3$s"
+msgid "%1$s By: %2$s %3$s"
 msgstr ""
 
 #. translators: %1$s: span tag open, %2$s: span tag close, %3$s: post date.
 #: inc/theme-functions.php:116
 msgctxt "post date"
-msgid "%1$s On - %1$s %3$s"
+msgid "%1$s On: %1$s %3$s"
 msgstr ""
 
 #. translators: %1$s: comments number

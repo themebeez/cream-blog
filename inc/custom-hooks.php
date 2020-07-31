@@ -167,7 +167,7 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
  			<?php 
 			if( has_custom_logo() ) { 
 				
-				if( is_home() ) {
+				if( is_home() || is_front_page() ) {
 					?>
 					<h1 class="site-logo">
 					<?php
@@ -175,7 +175,7 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
 
 				the_custom_logo(); 
 
-				if( is_home() ) {
+				if( is_home() || is_front_page() ) {
 					?>
 					</h1>
 					<?php
@@ -184,7 +184,7 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
 				?>
 	            <div class="site-identity">
 	            	<?php
-	            	if( is_home() ) {
+	            	if( is_home() || is_front_page() ) {
 	            		?>
 	            		<h1 class="site-title">
 	            		<?php
@@ -196,7 +196,7 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
 	            	?>
 	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					<?php 
-					if( is_home() ) {
+					if( is_home() || is_front_page() ) {
 	            		?>
 	            		</h1>
 	            		<?php

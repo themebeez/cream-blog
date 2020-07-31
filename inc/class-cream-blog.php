@@ -209,7 +209,7 @@ class Cream_Blog {
 
 		wp_enqueue_style( 'cream-blog-fonts', cream_blog_fonts_url() );
 
-		wp_enqueue_style( 'cream-blog-main', get_template_directory_uri() . '/assets/dist/css/main.css' );
+		wp_enqueue_style( 'cream-blog-main', get_template_directory_uri() . '/assets/dist/css/main.css', array(), CREAM_BLOG_VERSION, 'all' );
 
 		wp_enqueue_script( 'cream-blog-bundle', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array( 'jquery', 'masonry' ), CREAM_BLOG_VERSION, true );
 

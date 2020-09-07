@@ -3,7 +3,7 @@
 Contributors: themebeez
 Requires PHP: 5.6
 Requires at least: 5.0
-Tested up to: 5.4.2
+Tested up to: 5.5.1
 Stable tag: 2.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -77,6 +77,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 - Added: Option to hide pages in search result
 - Added: Option to display footer widget area
 - Added: Content's link color option
+- Added: Option to display related posts according to category and tag
 - Updated: Breadcrumb trail
 
 

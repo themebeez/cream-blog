@@ -305,163 +305,183 @@ msgstr ""
 msgid "Woocoomerce Sidebar"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:730
+#: inc/customizer/class-cream-blog-customize.php:739
 msgid "Tagline Color"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:742
+#: inc/customizer/class-cream-blog-customize.php:751
 msgid "Theme Color"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:754
+#: inc/customizer/class-cream-blog-customize.php:763
 msgid "Content&rsquo;s Link Color"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:765
+#: inc/customizer/class-cream-blog-customize.php:774
 msgid "Enable Banner/Slider"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:776
+#: inc/customizer/class-cream-blog-customize.php:785
 msgid "Banner/Slider Post Categories"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:788
+#: inc/customizer/class-cream-blog-customize.php:797
 msgid "Banner/Slider Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:801
+#: inc/customizer/class-cream-blog-customize.php:810
 msgid "Select Banner/Slider Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:816
+#: inc/customizer/class-cream-blog-customize.php:825
 msgid "Select Post Listing Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:830, inc/metabox/class-cream-blog-post-meta.php:45
+#: inc/customizer/class-cream-blog-customize.php:839, inc/metabox/class-cream-blog-post-meta.php:45
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:844
+#: inc/customizer/class-cream-blog-customize.php:853
 msgid "Select Header Layout"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:856
+#: inc/customizer/class-cream-blog-customize.php:865
 msgid "Enable Top Header"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:867
+#: inc/customizer/class-cream-blog-customize.php:876
 msgid "Enable Sidebar Toggle Button"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:877
+#: inc/customizer/class-cream-blog-customize.php:886
 msgid "Enable Search Button"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:887
+#: inc/customizer/class-cream-blog-customize.php:896
 msgid "Enable Sticky Menu Bar"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:897
+#: inc/customizer/class-cream-blog-customize.php:906
 msgid "Display Footer Widgets Area"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:907
+#: inc/customizer/class-cream-blog-customize.php:916
 msgid "Enable Footer Social Links"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:917
+#: inc/customizer/class-cream-blog-customize.php:926
 msgid "Copyright & Credit Text"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:927
+#: inc/customizer/class-cream-blog-customize.php:936
 msgid "Enable Scroll Top Button"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:939, inc/customizer/class-cream-blog-customize.php:963, inc/customizer/class-cream-blog-customize.php:1191
+#: inc/customizer/class-cream-blog-customize.php:948, inc/customizer/class-cream-blog-customize.php:972, inc/customizer/class-cream-blog-customize.php:1218
 msgid "Select Sidebar Position"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:951
+#: inc/customizer/class-cream-blog-customize.php:960
 msgid "Hide Pages In Search Result"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:975, inc/customizer/class-cream-blog-customize.php:1027
+#: inc/customizer/class-cream-blog-customize.php:984, inc/customizer/class-cream-blog-customize.php:1054
 msgid "Display Featured Image"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:985
+#: inc/customizer/class-cream-blog-customize.php:994
 msgid "Enable Author Section"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:995
+#: inc/customizer/class-cream-blog-customize.php:1004
 msgid "Enable Related Posts Section"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1005
+#: inc/customizer/class-cream-blog-customize.php:1014
 msgid "Related Posts Section Title"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1016
+#: inc/customizer/class-cream-blog-customize.php:1026
+msgid "Display Related Posts By"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1030
+msgid "Category"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1031
+msgid "Tag"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1032
+msgid "Category Or Tag"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1033
+msgid "Category And Tag"
+msgstr ""
+
+#: inc/customizer/class-cream-blog-customize.php:1043
 msgid "Related Section Posts Number"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1037
+#: inc/customizer/class-cream-blog-customize.php:1064
 msgid "Enable Post Author Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1047
+#: inc/customizer/class-cream-blog-customize.php:1074
 msgid "Enable Posted Date Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1057
+#: inc/customizer/class-cream-blog-customize.php:1084
 msgid "Enable Post Comments Number Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1067
+#: inc/customizer/class-cream-blog-customize.php:1094
 msgid "Enable Post Categories Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1077
+#: inc/customizer/class-cream-blog-customize.php:1104
 msgid "Enable Post Tags Meta"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1087
+#: inc/customizer/class-cream-blog-customize.php:1114
 msgid "Excerpt Length"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1097
+#: inc/customizer/class-cream-blog-customize.php:1124
 msgid "Facebook Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1107
+#: inc/customizer/class-cream-blog-customize.php:1134
 msgid "Twitter Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1117
+#: inc/customizer/class-cream-blog-customize.php:1144
 msgid "Instagram Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1127
+#: inc/customizer/class-cream-blog-customize.php:1154
 msgid "Youtube Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1137
+#: inc/customizer/class-cream-blog-customize.php:1164
 msgid "Linkedin Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1147
+#: inc/customizer/class-cream-blog-customize.php:1174
 msgid "Pinterest Link"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1157
+#: inc/customizer/class-cream-blog-customize.php:1184
 msgid "Enable Breadcrumb"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1167
+#: inc/customizer/class-cream-blog-customize.php:1194
 msgid "Enable Image Lazy Load"
 msgstr ""
 
-#: inc/customizer/class-cream-blog-customize.php:1177
+#: inc/customizer/class-cream-blog-customize.php:1204
 msgid "Enable Sticky Sidebar"
 msgstr ""
 
@@ -470,13 +490,13 @@ msgid "Select"
 msgstr ""
 
 #. translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
-#: inc/helper-functions.php:147
+#: inc/helper-functions.php:148
 msgctxt "DM Sans font: on or off"
 msgid "on"
 msgstr ""
 
 #. translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language.
-#: inc/helper-functions.php:154
+#: inc/helper-functions.php:155
 msgctxt "Nunito font: on or off"
 msgid "on"
 msgstr ""

@@ -539,6 +539,15 @@ class Cream_Blog_Customize {
 			) 
 		);
 
+		// Related Posts According To
+		$wp_customize->add_setting( 
+			'cream_blog_related_posts_by', 
+			array(
+				'sanitize_callback'	=> 'cream_blog_sanitize_select',
+				'default'			=> $defaults['cream_blog_related_posts_by'],
+			) 
+		);
+
 		// Related Section Posts No
 		$wp_customize->add_setting( 
 			'cream_blog_related_section_posts_number', 
@@ -1005,6 +1014,24 @@ class Cream_Blog_Customize {
 				'label'				=> esc_html__( 'Related Posts Section Title', 'cream-blog' ),
 				'section'			=> 'cream_blog_single_post_options',
 				'type'				=> 'text',
+				'active_callback'	=> 'cream_blog_is_active_related_post',
+			) 
+		);
+
+
+		// Related Posts According To
+		$wp_customize->add_control( 
+			'cream_blog_related_posts_by', 
+			array(
+				'label'				=> esc_html__( 'Display Related Posts By', 'cream-blog' ),
+				'section'			=> 'cream_blog_single_post_options',
+				'type'				=> 'select',
+				'choices'			=> array(
+					'category'		=> esc_html__( 'Category', 'cream-blog' ),
+					'tag'			=> esc_html__( 'Tag', 'cream-blog' ),
+					'both_or'		=> esc_html__( 'Category Or Tag', 'cream-blog' ),
+					'both_and'		=> esc_html__( 'Category And Tag', 'cream-blog' ),
+				),
 				'active_callback'	=> 'cream_blog_is_active_related_post',
 			) 
 		);

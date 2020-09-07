@@ -114,11 +114,12 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
             $defaults['cream_blog_select_woocommerce_sidebar_position'] = 'right';
         }
 
-        // New Settings
+        // Since v-2.1.1
         $defaults['cream_blog_tagline_color'] = '#000';
         $defaults['cream_blog_hide_pages_on_search_result'] = false;
         $defaults['cream_blog_display_footer_widgets'] = true;
         $defaults['cream_blog_content_link_color'] = '#fb5975';
+        $defaults['cream_blog_related_posts_by'] = 'category';
 
     	return $defaults;
 

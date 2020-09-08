@@ -209,7 +209,7 @@ if( ! function_exists( 'cream_blog_site_identity_action' ) ) :
 	                $site_description = get_bloginfo( 'description', 'display' );
 	                if ( $site_description || is_customize_preview() ) {
 		                ?>
-		                <p class="site-description"><?php echo esc_html( $site_description ); /* WPCS: xss ok. */ ?></p>
+		                <p class="site-description"><?php echo esc_html( $site_description ); /* phpcs:ignore */ ?></p>
 						<?php
 					}
 					?>
@@ -648,7 +648,7 @@ if( ! function_exists( 'cream_blog_footer_bottom_action' ) ) :
             	<?php
  				if( !empty( $copyright_text ) ) {
 					/* translators: 1: Copyright Text 2: Theme name, 3: Theme author. */
-					printf( esc_html__( '%1$s %2$s by %3$s', 'cream-blog' ), $copyright_text, 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );
+					printf( esc_html__( '%1$s %2$s by %3$s', 'cream-blog' ), esc_html( $copyright_text ), 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );
  				} else {
  					/* translators: 1: Theme name, 2: Theme author. */
 					printf( esc_html__( '%1$s by %2$s', 'cream-blog' ), 'Cream Blog', '<a href="'. esc_url( 'https://themebeez.com' ) . '">' . esc_html__( 'Themebeez', 'cream-blog' ) . '</a>' );

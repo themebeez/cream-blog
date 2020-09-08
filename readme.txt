@@ -16,7 +16,7 @@ Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPres
 
 == Copyright and License ==
 
-Cream Blog WordPress Theme, Copyright (C) 2019, themebeez.
+Cream Blog WordPress Theme, Copyright (C) 2020, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
 
 
@@ -79,6 +79,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 - Added: Content's link color option
 - Added: Option to display related posts according to category and tag
 - Updated: Breadcrumb trail
+- Fix: Minor fixes
 
 
 == 2.1.0 - 25 November, 2019 ==

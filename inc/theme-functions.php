@@ -166,7 +166,7 @@ if( ! function_exists( 'cream_blog_post_categories_meta' ) ) {
 				if ( $categories_list ) {
 					?>
 					<div class="entry-cats">
-						<?php echo $categories_list; // WPCS: XSS OK. ?>
+						<?php echo $categories_list; // phpcs:ignore ?>
 					</div><!-- entry-cats -->
 					<?php
 				}
@@ -192,7 +192,7 @@ if( ! function_exists( 'cream_blog_post_tags_meta' ) ) {
 					?>
 					<div class="entry-tags">
 						<div class="post-tags">
-							<?php echo $tags_list; // WPCS: XSS OK.  ?>
+							<?php echo $tags_list; // phpcs:ignore  ?>
 						</div><!-- .post-tags -->
 					</div><!-- .entry-tags -->
 					<?php

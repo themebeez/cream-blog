@@ -47,11 +47,9 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 == Screenshots ==
 
-https://pixabay.com/en/photographer-photo-woman-outdoors-865295/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pixabay.com/en/girls-woman-hat-stomach-jeans-1149908/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pixabay.com/en/new-year-s-eve-christmas-1856831/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pixabay.com/en/e-mail-aerial-afternoon-tea-3239670/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
-https://pixabay.com/en/laptop-computer-business-table-3317007/ (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+ 1. https://pxhere.com/en/photo/1594162 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+ 2. https://pxhere.com/en/photo/492231 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+ 3. https://pxhere.com/en/photo/1201517 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
 
 
 == Installation ==
@@ -81,6 +79,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 - Added: Option to display related posts according to category and tag
 - Updated: Breadcrumb trail
 - Fix: Minor fixes
+- Changed: Screenshot changed
 
 
 == 2.1.0 - 25 November, 2019 ==

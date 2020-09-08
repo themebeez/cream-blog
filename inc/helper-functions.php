@@ -67,8 +67,8 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 
         $defaults['cream_blog_enable_sticky_menu'] = false;
     	$defaults['cream_blog_enable_top_header'] = true; 
-    	$defaults['cream_blog_enable_sidebar_toggle_button'] = true;
-    	$defaults['cream_blog_enable_search_button'] = true;
+    	$defaults['cream_blog_enable_sidebar_toggle_button'] = false;
+    	$defaults['cream_blog_enable_search_button'] = false;
         $defaults['cream_blog_select_header_layout'] = 'header_1';
 
         $defaults['cream_blog_enable_footer_social_links'] = true;

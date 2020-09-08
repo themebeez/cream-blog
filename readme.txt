@@ -47,9 +47,10 @@ Cream Blog is distributed under the terms of the GNU GPL
 
 == Screenshots ==
 
- 1. https://pxhere.com/en/photo/1594162 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
- 2. https://pxhere.com/en/photo/492231 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
- 3. https://pxhere.com/en/photo/1201517 (http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+License: [CC0](http://creativecommons.org/publicdomain/zero/1.0 - CC0)
+Source: 1. https://pxhere.com/en/photo/1594162
+		2. https://pxhere.com/en/photo/492231
+		3. https://pxhere.com/en/photo/1201517
 
 
 == Installation ==
@@ -68,7 +69,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
-== 2.1.1 - 09 September, 2020 ==
+== 2.1.1 - 8 September, 2020 ==
 
 - Tweak: Major base styling CSS
 - Fix: H1 issue in homepage when logo is set

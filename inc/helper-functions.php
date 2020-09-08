@@ -152,9 +152,9 @@ if ( !function_exists( 'cream_blog_fonts_url' ) ) :
 
         /* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
 
-        if ('off' !== _x('on', 'Nunito font: on or off', 'cream-blog')) {
+        if ('off' !== _x('on', 'Inter font: on or off', 'cream-blog')) {
 
-            $fonts[] = 'Nunito:400,400i,600,600i,700,700i';
+            $fonts[] = 'Inter:400,500,600,700';
         }
 
         if ( $fonts ) {

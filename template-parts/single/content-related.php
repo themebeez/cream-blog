@@ -53,8 +53,8 @@ if ( $current_object instanceof WP_Post ) {
 
             $post_tags = array();
 
-            foreach ( $tags as $tag ) {
-                $post_tags[] = $tag->term_id;
+            foreach ( $tags as $post_tag ) {
+                $post_tags[] = $post_tag->term_id;
             }
 
             if ( ! empty( $tags ) ) {
@@ -77,8 +77,8 @@ if ( $current_object instanceof WP_Post ) {
 
             $post_tags = array();
 
-            foreach ( $tags as $tag ) {
-                $post_tags[] = $tag->term_id;
+            foreach ( $tags as $post_tag ) {
+                $post_tags[] = $post_tag->term_id;
             }
 
             $relation = 'AND';

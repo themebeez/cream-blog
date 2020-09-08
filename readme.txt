@@ -1,7 +1,7 @@
 === Cream Blog ===
 
 Contributors: themebeez
-Requires PHP: 5.6
+Requires PHP: 7.0.0
 Requires at least: 5.0
 Tested up to: 5.5.1
 Stable tag: 2.1.1
@@ -70,8 +70,9 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
-== 2.1.1 - 31 July, 2020 ==
+== 2.1.1 - 09 September, 2020 ==
 
+- Tweak: Major base styling CSS
 - Fix: H1 issue in homepage when logo is set
 - Added: Tagline color option
 - Added: Option to hide pages in search result

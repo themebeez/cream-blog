@@ -182,11 +182,12 @@ a {
 a:hover {
 
     color: $third_color;
+    text-decoration: underline;
 }
 
 a:focus {
 
-    outline: none;
+    outline: 1px dotted;
     text-decoration: none;
 }
 
@@ -650,7 +651,7 @@ input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus {
 
-    outline: none;
+    outline: 1px solid;
     text-decoration: none;
 }
 

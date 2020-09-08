@@ -66,11 +66,6 @@
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
     -ms-box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    animation: 0.4s 0.1s fadeOut both;
-    -moz-animation: 0.4s 0.1s fadeOut both;
-    -webkit-animation: 0.4s 0.1s fadeOut both;
-    -o-animation: 0.4s 0.1s fadeOut both;
-    -ms-animation: 0.4s 0.1s fadeOut both;
     @include transation_delay();
 }
 
@@ -87,11 +82,6 @@
     display:block;
     opacity: 1;
     visibility: visible;
-    animation: 0.3s 0.1s fadeIn both;
-    -webkit-animation: 0.3s 0.1s fadeIn both;
-    -moz-animation: 0.3s 0.1s fadeIn both;
-    -o-animation: 0.3s 0.1s fadeIn both;
-    -ms-animation: 0.3s 0.1s fadeIn both;
 }
 
 .main-navigation ul li .sub-menu li, 
@@ -172,4 +162,33 @@ body.menu-toggle-active .menu-toggle span {
 .sub-toggle {
 
     display: none; // large screen hide this
+}
+
+
+// keyboard navigation 
+
+@media ( min-width: 1051px ) {
+
+
+    .main-navigation ul li .sub-menu, 
+    .main-navigation ul li .children {
+
+        display:block;
+        clip: rect(1px, 1px, 1px, 1px);
+        visibility: visible;
+        opacity:1;
+    }
+
+    .main-navigation ul li:hover > .sub-menu, 
+    .main-navigation ul li:hover > .children,
+    .main-navigation ul li:focus > .sub-menu, 
+    .main-navigation ul li:focus > .children,
+    .main-navigation ul li:focus-within > .sub-menu, 
+    .main-navigation ul li:focus-within > .children {
+        
+        display:block;
+        clip: auto;
+        visibility: visible;
+        opacity:1;
+    }
 }

@@ -149,6 +149,14 @@ class Cream_Blog {
 		// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( 'cream_blog_content_width', 640 );
+
+
+		/**
+		 * Remove block widget support in WordPress version 5.8 & later 
+		 *
+		 * @link https://make.wordpress.org/core/2021/06/29/block-based-widgets-editor-in-wordpress-5-8/
+		 */
+		remove_theme_support( 'widgets-block-editor' );
 	}
 
 	/**

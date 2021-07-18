@@ -22,9 +22,8 @@ if( class_exists( 'WP_Customize_Control' ) ) {
     }
 
     public function render_content() {
-      if ( empty( $this->choices ) ) {
-        return;
-      }       
+      $default_values = ( $this->value() ) ? $this->value() : array();   
+      $choices = $this->choices;      
       ?>
         <label>
           <span class="customize-control-title">
@@ -37,12 +36,12 @@ if( class_exists( 'WP_Customize_Control' ) ) {
           <?php } ?>
           <select multiple="multiple" class="hs-chosen-select" <?php $this->link(); ?>>
             <?php
-            foreach ( $this->choices as $value => $label ) {
-              $selected = '';
-              if(in_array($value, $this->value())){
-                  $selected = 'selected="selected"';
+            if ( $choices ) {
+              foreach ( $choices as $value => $label ) {
+                ?>
+                <option value="<?php echo esc_attr( $value ); ?>" <?php selected( in_array( $value, $default_values ), true ); ?>><?php echo esc_html( $label ); ?></option>
+                <?php
               }
-              echo '<option value="' . esc_attr( $value ) . '"' . esc_attr( $selected ) . '>' . esc_html($label) . '</option>';
             }
             ?>
           </select>

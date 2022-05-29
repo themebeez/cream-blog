@@ -3,8 +3,8 @@
 Contributors: themebeez
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 5.8
-Stable tag: 2.1.2
+Tested up to: 6.0
+Stable tag: 2.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
@@ -16,7 +16,7 @@ Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPres
 
 == Copyright and License ==
 
-Cream Blog WordPress Theme, Copyright (C) 2021, themebeez.
+Cream Blog WordPress Theme, Copyright (C) 2022, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
 
 
@@ -68,6 +68,11 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
 ==== Change logs ====
+
+== 2.1.3 - 28 May, 2022 ==
+
+- Added: Everest Backup plugin recommendation notice.
+
 
 == 2.1.2 - 18 July, 2021 ==
 

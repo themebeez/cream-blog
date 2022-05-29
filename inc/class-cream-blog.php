@@ -307,6 +307,8 @@ class Cream_Blog {
 		require get_template_directory() . '/inc/breadcrumbs.php';
 		// Load class for plugin recommendation
 		require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+		// Load class for Everest Backup plugin recommendation notice
+		require get_template_directory() . '/inc/ebwp-notice.php';
 		// Load woocommerce
 		if( class_exists( 'Woocommerce' ) ) {
 			require get_template_directory() . '/inc/woocommerce/class-cream-blog-woocommerce.php';

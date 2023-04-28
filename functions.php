@@ -1,6 +1,8 @@
 <?php
 /**
- * Cream Blog class and the class object initialization.
+ * Constant definition and call theme's main file and run it.
+ *
+ * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package    Cream_Blog
  * @author     Themebeez <themebeez@gmail.com>
@@ -15,7 +17,11 @@ define( 'CREAM_BLOG_VERSION', $cream_blog_theme->get( 'Version' ) );
 
 require get_template_directory() . '/inc/class-cream-blog.php';
 
-
+/**
+ * Theme's main function.
+ *
+ * @since 1.0.0
+ */
 function cream_blog_run() {
 
 	$cream_blog = new Cream_Blog();

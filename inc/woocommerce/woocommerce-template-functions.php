@@ -13,14 +13,17 @@
  * @return integer products per row.
  */
 function cream_blog_woocommerce_loop_columns() {
+
 	$sidebar_position = cream_blog_sidebar_position();
-	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+
+	if ( 'none' !== $sidebar_position && is_active_sidebar( 'woocommerce-sidebar' ) ) {
 		return 3;
 	} else {
 		return 4;
 	}
 }
 add_filter( 'loop_shop_columns', 'cream_blog_woocommerce_loop_columns' );
+
 
 /**
  * Related Products Args.
@@ -29,13 +32,16 @@ add_filter( 'loop_shop_columns', 'cream_blog_woocommerce_loop_columns' );
  * @return array $args related products args.
  */
 function cream_blog_woocommerce_related_products_args( $args ) {
-	$columns = '';
+
+	$columns          = '';
 	$sidebar_position = cream_blog_sidebar_position();
-	if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+
+	if ( 'none' !== $sidebar_position && is_active_sidebar( 'woocommerce-sidebar' ) ) {
 		$columns = 3;
 	} else {
 		$columns = 4;
 	}
+
 	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => $columns,
@@ -47,6 +53,7 @@ function cream_blog_woocommerce_related_products_args( $args ) {
 }
 add_filter( 'woocommerce_output_related_products_args', 'cream_blog_woocommerce_related_products_args' );
 
+
 if ( ! function_exists( 'cream_blog_woocommerce_product_columns_wrapper' ) ) {
 	/**
 	 * Product columns wrapper.
@@ -54,11 +61,14 @@ if ( ! function_exists( 'cream_blog_woocommerce_product_columns_wrapper' ) ) {
 	 * @return  void
 	 */
 	function cream_blog_woocommerce_product_columns_wrapper() {
+
 		$columns = cream_blog_woocommerce_loop_columns();
+
 		echo '<div class="columns-' . absint( $columns ) . '">';
 	}
 }
 add_action( 'woocommerce_before_shop_loop', 'cream_blog_woocommerce_product_columns_wrapper', 40 );
+
 
 if ( ! function_exists( 'cream_blog_woocommerce_product_columns_wrapper_close' ) ) {
 	/**
@@ -67,10 +77,12 @@ if ( ! function_exists( 'cream_blog_woocommerce_product_columns_wrapper_close' )
 	 * @return  void
 	 */
 	function cream_blog_woocommerce_product_columns_wrapper_close() {
+
 		echo '</div>';
 	}
 }
 add_action( 'woocommerce_after_shop_loop', 'cream_blog_woocommerce_product_columns_wrapper_close', 40 );
+
 
 /**
  * Remove default WooCommerce wrapper.
@@ -78,6 +90,7 @@ add_action( 'woocommerce_after_shop_loop', 'cream_blog_woocommerce_product_colum
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+
 
 if ( ! function_exists( 'cream_blog_woocommerce_wrapper_before' ) ) {
 	/**
@@ -88,37 +101,41 @@ if ( ! function_exists( 'cream_blog_woocommerce_wrapper_before' ) ) {
 	 * @return void
 	 */
 	function cream_blog_woocommerce_wrapper_before() {
+
 		$sidebar_existence = '';
-	    $sidebar_position = cream_blog_sidebar_position();
-	    $main_class = cream_blog_main_class();
-	    if( $sidebar_position != 'none' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-	        $sidebar_existence = 'has-sidebar';
-	    }
+		$sidebar_position  = cream_blog_sidebar_position();
+		$main_class        = cream_blog_main_class();
+
+		if ( 'none' !== $sidebar_position && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+
+			$sidebar_existence = 'has-sidebar';
+		}
 		?>
 		<div class="cb-container">
-            <div class="cb-mid-wrap cb-innerpage-mid-wrap cb-woo-page <?php if( !empty( $sidebar_existence ) ) { echo esc_attr( $sidebar_existence ); } ?>">
-                <?php
-                /**
-				* Hook - cream_blog_breadcrumb.
-				*
-				* @hooked cream_blog_doctype_action - 10
-				*/
+			<div class="cb-mid-wrap cb-innerpage-mid-wrap cb-woo-page <?php echo esc_attr( $sidebar_existence ); ?>">
+				<?php
+				/**
+				 * Hook - cream_blog_breadcrumb.
+				 *
+				 * @hooked cream_blog_doctype_action - 10
+				 */
 				do_action( 'cream_blog_breadcrumb' );
-                ?>
-                <div class="row">
-                	<?php
-	                if( $sidebar_position == 'left' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-	                    cream_blog_woocommerce_sidebar();
-	                }
-	                ?>
-                    <div class="<?php echo esc_attr( $main_class ); ?>">
-                        <div id="primary" class="content-area">
-                            <main id="main" class="site-main">
-                                <section class="cb-page-entry">
-                                	<?php
+				?>
+				<div class="row">
+					<?php
+					if ( 'left' === $sidebar_position && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+						cream_blog_woocommerce_sidebar();
+					}
+					?>
+					<div class="<?php echo esc_attr( $main_class ); ?>">
+						<div id="primary" class="content-area">
+							<main id="main" class="site-main">
+								<section class="cb-page-entry">
+									<?php
 	}
 }
 add_action( 'woocommerce_before_main_content', 'cream_blog_woocommerce_wrapper_before' );
+
 
 if ( ! function_exists( 'cream_blog_woocommerce_wrapper_after' ) ) {
 	/**
@@ -129,24 +146,27 @@ if ( ! function_exists( 'cream_blog_woocommerce_wrapper_after' ) ) {
 	 * @return void
 	 */
 	function cream_blog_woocommerce_wrapper_after() {
-								?>
+		?>
 								</section><!-- .cb-page-entry -->
-                            </main><!-- #main.site-main -->
-                        </div><!-- #primary.content-area -->
-                    </div>
+							</main><!-- #main.site-main -->
+						</div><!-- #primary.content-area -->
+					</div>
 					<?php
 					$sidebar_position = cream_blog_sidebar_position();
-					if( $sidebar_position == 'right' && is_active_sidebar( 'woocommerce-sidebar' ) ) {
-                    	cream_blog_woocommerce_sidebar();
-                    }
+
+					if ( 'right' === $sidebar_position && is_active_sidebar( 'woocommerce-sidebar' ) ) {
+
+						cream_blog_woocommerce_sidebar();
+					}
 					?>
-                </div><!-- .row -->
-            </div><!-- .cb-mid-wrap.cb-innerpage-mid-wrap.cb-woo-page -->
-        </div><!-- .cb-container -->
+				</div><!-- .row -->
+			</div><!-- .cb-mid-wrap.cb-innerpage-mid-wrap.cb-woo-page -->
+		</div><!-- .cb-container -->
 		<?php
 	}
 }
 add_action( 'woocommerce_after_main_content', 'cream_blog_woocommerce_wrapper_after' );
+
 
 /**
  * Sample implementation of the WooCommerce Mini Cart.
@@ -170,6 +190,7 @@ if ( ! function_exists( 'cream_blog_woocommerce_cart_link_fragment' ) ) {
 	 * @return array Fragments to refresh via AJAX.
 	 */
 	function cream_blog_woocommerce_cart_link_fragment( $fragments ) {
+
 		ob_start();
 		cream_blog_woocommerce_cart_link();
 		$fragments['a.cart-contents'] = ob_get_clean();
@@ -178,6 +199,7 @@ if ( ! function_exists( 'cream_blog_woocommerce_cart_link_fragment' ) ) {
 	}
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'cream_blog_woocommerce_cart_link_fragment' );
+
 
 if ( ! function_exists( 'cream_blog_woocommerce_cart_link' ) ) {
 	/**
@@ -210,6 +232,7 @@ if ( ! function_exists( 'cream_blog_woocommerce_header_cart' ) ) {
 	 * @return void
 	 */
 	function cream_blog_woocommerce_header_cart() {
+
 		if ( is_cart() ) {
 			$class = 'current-menu-item';
 		} else {

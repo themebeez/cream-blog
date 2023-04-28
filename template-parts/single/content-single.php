@@ -6,45 +6,46 @@
  *
  * @package Cream_Blog
  */
+
 ?>
 <section id="post-<?php the_ID(); ?>" <?php post_class( 'cb-page-entry post-page-entry' ); ?>>
+	<div class="page-title">
+		<h1><?php the_title(); ?></h1>
+	</div><!-- .page-title -->
+	<?php
+	cream_blog_post_meta( true, true, true );
 
-    <div class="page-title">
-        <h1><?php the_title(); ?></h1>
-    </div><!-- .page-title -->
+	$show_featured_image = cream_blog_get_option( 'cream_blog_display_featured_image_post' );
+	if ( true === $show_featured_image || 1 === $show_featured_image ) {
+		cream_blog_post_thumbnail();
+	}
+	?>
 
-    <?php 
-    cream_blog_post_meta( true, true, true ); 
+	<div class="cb-editor-contents-entry cb-entry">
+		<?php
+		the_content();
 
-    $show_featured_image = cream_blog_get_option( 'cream_blog_display_featured_image_post' ); 
-    if( $show_featured_image == true ) {
-        cream_blog_post_thumbnail(); 
-    }
-    ?>
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cream-blog' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .cb-editor-contents-entry -->
 
-    <div class="cb-editor-contents-entry cb-entry">
-        <?php
-        the_content();
+	<?php
+	cream_blog_post_tags_meta();
 
-        wp_link_pages( array(
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'cream-blog' ),
-            'after'  => '</div>',
-        ) );
-        ?>
-    </div><!-- .cb-editor-contents-entry -->
+	/**
+	 * Hook - cream_blog_post_navigation.
+	 *
+	 * @hooked cream_blog_post_navigation_action - 10
+	 */
+	do_action( 'cream_blog_post_navigation' );
 
-    <?php
-    cream_blog_post_tags_meta();
+	get_template_part( 'template-parts/single/content', 'author' );
 
-    /**
-    * Hook - cream_blog_post_navigation.
-    *
-    * @hooked cream_blog_post_navigation_action - 10
-    */
-    do_action( 'cream_blog_post_navigation' );
-
-    get_template_part( 'template-parts/single/content', 'author' );
-
-    get_template_part( 'template-parts/single/content', 'related' );
-    ?>
+	get_template_part( 'template-parts/single/content', 'related' );
+	?>
 </section><!-- .cb-page-entry.post-page-entry -->

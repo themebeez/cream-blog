@@ -21,7 +21,7 @@ class Cream_Blog {
 	 */
 	public function __construct() {
 
-		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );		
+		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
 		add_filter( 'body_class', array( $this, 'body_classes' ), 10, 1 );
 		add_action( 'wp_head', array( $this, 'pingback_header' ), 10 );
@@ -46,7 +46,7 @@ class Cream_Blog {
 	 */
 	public function setup() {
 
-		/*
+		/**
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on Cream Blog, use a find and replace
@@ -63,52 +63,55 @@ class Cream_Blog {
 		 * hard-coded <title> tag in the document head, and expect WordPress to
 		 * provide it for us.
 		 */
-
 		add_theme_support( 'title-tag' );
-
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-
-		
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'cream-blog-thumbnail-one', 888.89, 500, true ); // Main Slider one Image Thumbnail, One Column Image Thumbnail
-		add_image_size( 'cream-blog-thumbnail-two', 600, 450, true ); // Alternate Post Layout Image Thumbnail, Two Columns Layout Image Thumbnail, Grid Layout Image Thumbnail
-		add_image_size( 'cream-blog-thumbnail-three', 600, 375.5, true ); // Featured Category Layout Four Image Thumbnail
-		add_image_size( 'cream-blog-thumbnail-four', 900, 500, true ); // Main Slider two Image Thumbnail
-		add_image_size( 'cream-blog-thumbnail-five', 600, 450, true ); // Main Slider two Image Thumbnail
-
-		
+		add_image_size( 'cream-blog-thumbnail-one', 888.89, 500, true ); // Main Slider one Image Thumbnail, One Column Image Thumbnail.
+		add_image_size( 'cream-blog-thumbnail-two', 600, 450, true ); // Alternate Post Layout Image Thumbnail, Two Columns Layout Image Thumbnail, Grid Layout Image Thumbnail.
+		add_image_size( 'cream-blog-thumbnail-three', 600, 375.5, true ); // Featured Category Layout Four Image Thumbnail.
+		add_image_size( 'cream-blog-thumbnail-four', 900, 500, true ); // Main Slider two Image Thumbnail.
+		add_image_size( 'cream-blog-thumbnail-five', 600, 450, true ); // Main Slider two Image Thumbnail.
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary Menu', 'cream-blog' ), // Primary Menu
-			'menu-2' => esc_html__( 'Top Header Menu', 'cream-blog' ), // Top Header Menu
-		) );
+		register_nav_menus(
+			array(
+				'menu-1' => esc_html__( 'Primary Menu', 'cream-blog' ), // Primary Menu.
+				'menu-2' => esc_html__( 'Top Header Menu', 'cream-blog' ), // Top Header Menu.
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'cream_blog_custom_background_args', array(
-
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'cream_blog_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -122,37 +125,43 @@ class Cream_Blog {
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 250,
+				'width'       => 250,
+				'flex-width'  => true,
+				'flex-height' => true,
+			)
+		);
 
 		/**
 		 * Add support for core custom header.
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/custom-headers/
 		 */
-		add_theme_support( 'custom-header', apply_filters( 'cream_blog_custom_header_args', array(
-			
-			'default-image'          => '',
-			'default-text-color'     => '000000',
-			'width'                  => 1920,
-			'height'                 => 600,
-			'flex-height'            => true,
-			'wp-head-callback'       => array( $this, 'header_style' ),
-		) ) );
+		add_theme_support(
+			'custom-header',
+			apply_filters(
+				'cream_blog_custom_header_args',
+				array(
+					'default-image'      => '',
+					'default-text-color' => '000000',
+					'width'              => 1920,
+					'height'             => 600,
+					'flex-height'        => true,
+					'wp-head-callback'   => array( $this, 'header_style' ),
+				)
+			)
+		);
 
 		// This variable is intended to be overruled from themes.
 		// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( 'cream_blog_content_width', 640 );
 
-
 		/**
-		 * Remove block widget support in WordPress version 5.8 & later 
+		 * Remove block widget support in WordPress version 5.8 & later.
 		 *
 		 * @link https://make.wordpress.org/core/2021/06/29/block-based-widgets-editor-in-wordpress-5-8/
 		 */
@@ -181,7 +190,7 @@ class Cream_Blog {
 		<style type="text/css">
 		<?php
 		// Has the text been hidden?
-		if ( ! display_header_text() ) :
+		if ( ! display_header_text() ) {
 			?>
 			.site-title,
 			.site-description {
@@ -189,16 +198,18 @@ class Cream_Blog {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
-		<?php
-		// If the user has set a custom color for the text use that.
-		else :
+			<?php
+			// If the user has set a custom color for the text use that.
+		} else {
 			?>
 			.header-style-3 .site-identity .site-title a,
 			.header-style-5 .site-identity .site-title a {
 
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
-		<?php endif; ?>
+			<?php
+		}
+		?>
 		</style>
 		<?php
 	}
@@ -206,20 +217,46 @@ class Cream_Blog {
 	/**
 	 * Enqueue scripts and styles.
 	 *
-	 * @see 	https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts
-	 * @see 	https://developer.wordpress.org/reference/functions/wp_enqueue_style/
-	 * @see 	https://developer.wordpress.org/reference/functions/wp_enqueue_script/
-	 * @return 	void
+	 * @see https://codex.wordpress.org/Plugin_API/Action_Reference/wp_enqueue_scripts
+	 * @see https://developer.wordpress.org/reference/functions/wp_enqueue_style/
+	 * @see https://developer.wordpress.org/reference/functions/wp_enqueue_script/
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_style( 'cream-blog-style', get_stylesheet_uri() );
+		wp_enqueue_style(
+			'cream-blog-style',
+			get_stylesheet_uri(),
+			array(),
+			CREAM_BLOG_VERSION,
+			'all'
+		);
 
-		wp_enqueue_style( 'cream-blog-fonts', cream_blog_fonts_url() );
+		if ( cream_blog_has_google_fonts() ) {
 
-		wp_enqueue_style( 'cream-blog-main', get_template_directory_uri() . '/assets/dist/css/main.css', array(), CREAM_BLOG_VERSION, 'all' );
+			wp_enqueue_style( // phpcs:ignore
+				'cream-blog-google-fonts',
+				cream_blog_get_google_fonts_url(),
+				array(),
+				null,
+				'all'
+			);
+		}
 
-		wp_enqueue_script( 'cream-blog-bundle', get_template_directory_uri() . '/assets/dist/js/bundle.min.js', array( 'jquery', 'masonry' ), CREAM_BLOG_VERSION, true );
+		wp_enqueue_style(
+			'cream-blog-main',
+			get_template_directory_uri() . '/assets/dist/css/main.css',
+			array(),
+			CREAM_BLOG_VERSION,
+			'all'
+		);
+
+		wp_enqueue_script(
+			'cream-blog-bundle',
+			get_template_directory_uri() . '/assets/dist/js/bundle.min.js',
+			array( 'jquery', 'masonry' ),
+			CREAM_BLOG_VERSION,
+			true
+		);
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -242,7 +279,7 @@ class Cream_Blog {
 		$background_color = get_background_color();
 		$background_image = get_background_image();
 
-		if( !empty( $background_image ) || ( $background_color != 'ffffff' ) ) {
+		if ( ! empty( $background_image ) || ( 'ffffff' !== $background_color ) ) {
 			$classes[] = 'boxed';
 		}
 
@@ -265,13 +302,14 @@ class Cream_Blog {
 		if ( is_singular() && pings_open() ) {
 			echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 		}
-	}	
+	}
 
 
 	/**
 	 * Trailing text for post excerpts.
 	 *
-	 * @return  void
+	 * @param string $more The string shown within the more link.
+	 * @return string
 	 */
 	public function excerpt_more( $more ) {
 
@@ -289,28 +327,26 @@ class Cream_Blog {
 	 * @return void
 	 */
 	public function load_dependencies() {
-		// Load theme functions
+		// Load theme functions.
 		require get_template_directory() . '/inc/theme-functions.php';
-		// Load custom hook functions
+		// Load custom hook functions.
 		require get_template_directory() . '/inc/custom-hooks.php';
-		// Load theme hook functions
+		// Load theme hook functions.
 		require get_template_directory() . '/inc/theme-hooks.php';
-		// Load helper functions
+		// Load helper functions.
 		require get_template_directory() . '/inc/helper-functions.php';
-		// Load customizer dependency
+		// Load customizer dependency.
 		require get_template_directory() . '/inc/customizer/class-cream-blog-customize.php';
-		// Load post meta dependency
+		// Load post meta dependency.
 		require get_template_directory() . '/inc/metabox/class-cream-blog-post-meta.php';
-		// Load main widget class
+		// Load main widget class.
 		require get_template_directory() . '/inc/widget/class-cream-blog-widget-init.php';
-		// Load breadcrumb class
+		// Load breadcrumb class.
 		require get_template_directory() . '/inc/breadcrumbs.php';
-		// Load class for plugin recommendation
+		// Load class for plugin recommendation.
 		require get_template_directory() . '/inc/class-tgm-plugin-activation.php';
-		// Load class for Everest Backup plugin recommendation notice
-		require get_template_directory() . '/inc/ebwp-notice.php';
-		// Load woocommerce
-		if( class_exists( 'Woocommerce' ) ) {
+		// Load woocommerce.
+		if ( class_exists( 'WooCommerce' ) ) {
 			require get_template_directory() . '/inc/woocommerce/class-cream-blog-woocommerce.php';
 
 			require get_template_directory() . '/inc/woocommerce/woocommerce-template-functions.php';
@@ -345,26 +381,23 @@ class Cream_Blog {
 	}
 
 	/**
-	 * Initialize Woocommerce
+	 * Initialize Woocommerce.
 	 *
 	 * @return void
 	 */
 	public function woocommerce_init() {
-		if( class_exists( 'Woocommerce' ) ) {
+
+		if ( class_exists( 'WooCommerce' ) ) {
 			$cream_blog_woocommerce = new Cream_Blog_Woocommerce();
 		}
 	}
 
 	/**
-	 * Custom Search Form
-	 *
-	 * @return void
+	 * Custom Search Form.
 	 */
 	public function search_form() {
-		$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search here...', 'cream-blog' ) . '" value"' . get_search_query() . '" ><button class="button-search" type="submit"><i class="cb cb-search"></i></button></form>';
+		$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search here...', 'cream-blog' ) . '" value="' . get_search_query() . '"><button class="button-search" type="submit"><i class="cb cb-search"></i></button></form>';
 
-        return $form;
+		return $form;
 	}
-
-
 }

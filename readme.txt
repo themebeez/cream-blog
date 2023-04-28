@@ -1,10 +1,10 @@
 === Cream Blog ===
 
 Contributors: themebeez
-Requires PHP: 7.0
+Requires PHP: 7 or higher
 Requires at least: 5.0
-Tested up to: 6.0
-Stable tag: 2.1.3
+Tested up to: 6.2
+Stable tag: 2.1.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, one-column, two-columns, blog, right-sidebar, theme-options, footer-widgets, left-sidebar, e-commerce
@@ -16,7 +16,7 @@ Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPres
 
 == Copyright and License ==
 
-Cream Blog WordPress Theme, Copyright (C) 2022, themebeez.
+Cream Blog WordPress Theme, Copyright (C) 2023, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
 
 
@@ -68,6 +68,12 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
 ==== Change logs ====
+
+== 2.1.4 - 28 April, 2023 ==
+
+- Removed: Everest backup plugin recommendation.
+- Updated: WPCS maintained.
+- Fixed:  Missing `=` after an instance of `value` attribute in an `input` tag in `value"' . get_search_query() . '"`.
 
 == 2.1.3 - 28 May, 2022 ==
 

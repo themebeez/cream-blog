@@ -19,9 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
 <div id="comments" class="comments-area">
-
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
@@ -33,14 +31,14 @@ if ( post_password_required() ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'cream-blog' ),
-					'<span>' . get_the_title() . '</span>'
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore
 				);
 			} else {
-				printf( // WPCS: XSS OK.
+				printf( // phpcs:ignore
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $cream_blog_comment_count, 'comments title', 'cream-blog' ) ),
-					number_format_i18n( $cream_blog_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					number_format_i18n( $cream_blog_comment_count ), // phpcs:ignore
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore
 				);
 			}
 			?>
@@ -50,10 +48,12 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
+			wp_list_comments(
+				array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				)
+			);
 			?>
 		</ol><!-- .comment-list -->
 
@@ -71,5 +71,4 @@ if ( post_password_required() ) {
 
 	comment_form();
 	?>
-
 </div><!-- #comments -->

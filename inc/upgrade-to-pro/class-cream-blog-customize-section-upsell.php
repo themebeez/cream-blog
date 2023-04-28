@@ -49,7 +49,6 @@ class Cream_Blog_Customize_Section_Upsell extends WP_Customize_Section {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @return void
 	 */
 	public function json() {
 		$json = parent::json();
@@ -67,8 +66,8 @@ class Cream_Blog_Customize_Section_Upsell extends WP_Customize_Section {
 	 * @access public
 	 * @return void
 	 */
-	protected function render_template() { ?>
-
+	protected function render_template() {
+		?>
 		<li id="accordion-section-{{ data.id }}" class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
 
 			<h3 class="accordion-section-title">
@@ -79,5 +78,6 @@ class Cream_Blog_Customize_Section_Upsell extends WP_Customize_Section {
 				<# } #>
 			</h3>
 		</li>
-	<?php }
+		<?php
+	}
 }

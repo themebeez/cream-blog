@@ -22,22 +22,12 @@ class Cream_Blog_Woocommerce {
 	public function __construct() {
 
 		add_action( 'init', array( $this, 'remove_breadcrumbs' ), 10 );
-		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );		
+		add_action( 'after_setup_theme', array( $this, 'setup' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 10 );
 
 		add_filter( 'body_class', array( $this, 'active_body_class' ), 10, 1 );
 		add_filter( 'loop_shop_per_page', array( $this, 'products_per_page' ), 10, 1 );
 		add_filter( 'woocommerce_product_thumbnails_columns', array( $this, 'thumbnail_columns' ), 10, 1 );
-
-		/**
-		 * Disable the default WooCommerce stylesheet.
-		 *
-		 * Removing the default WooCommerce stylesheet and enqueing your own will
-		 * protect you during WooCommerce core updates.
-		 *
-		 * @link https://docs.woocommerce.com/document/disable-the-default-stylesheet/
-		 */
-		// add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 	}
 
 	/**
@@ -96,9 +86,10 @@ class Cream_Blog_Woocommerce {
 	 * @return integer number of products.
 	 */
 	public function products_per_page() {
+
 		return 12;
 	}
-	
+
 
 	/**
 	 * Product gallery thumnbail columns.
@@ -113,7 +104,8 @@ class Cream_Blog_Woocommerce {
 	 *
 	 * @return void.
 	 */
-	function remove_breadcrumbs() {
-	    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+	public function remove_breadcrumbs() {
+
+		remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 	}
 }

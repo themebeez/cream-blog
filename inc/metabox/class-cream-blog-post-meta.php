@@ -1,6 +1,6 @@
 <?php
 /**
- * Class to create custom post meta fields and save and update the meta values.
+ * Register and render post meta for sidebar position.
  *
  * @package    Cream_Blog
  * @author     Themebeez <themebeez@gmail.com>
@@ -9,14 +9,19 @@
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
+/**
+ * Class to register, render, and save post meta for sidebar position.
+ *
+ * @since 1.0.0
+ *
+ * @package Cream_Blog
+ */
 class Cream_Blog_Post_Meta {
 
 	/**
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    'cream-blog'       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
 	 */
 	public function __construct() {
 		$this->init();
@@ -40,9 +45,16 @@ class Cream_Blog_Post_Meta {
 	 *
 	 * @since    1.0.0
 	 */
-	public function register_post_meta() {   
+	public function register_post_meta() {
 
-	    add_meta_box( 'sidebar_position_metabox', esc_html__( 'Sidebar Position', 'cream-blog' ), array( $this, 'sidebar_position_meta' ), array( 'post', 'page' ), 'side', 'default' );
+		add_meta_box(
+			'sidebar_position_metabox',
+			esc_html__( 'Sidebar Position', 'cream-blog' ),
+			array( $this, 'sidebar_position_meta' ),
+			array( 'post', 'page' ),
+			'side',
+			'default'
+		);
 	}
 
 	/**
@@ -56,34 +68,42 @@ class Cream_Blog_Post_Meta {
 
 		$sidebar = get_post_meta( $post->ID, 'cream_blog_sidebar_position', true );
 
-		if( empty( $sidebar ) ) {
+		if ( empty( $sidebar ) ) {
 			$sidebar = 'right';
 		}
 
-	    wp_nonce_field( 'cream_blog_sidebar_position_meta_nonce', 'cream_blog_sidebar_position_meta_nonce_id' );
+		wp_nonce_field( 'cream_blog_sidebar_position_meta_nonce', 'cream_blog_sidebar_position_meta_nonce_id' );
 
-	    $sidebar_positions = array(
-	        'right' => esc_html__( 'Right', 'cream-blog' ),
-	        'left' => esc_html__( 'Left', 'cream-blog' ),
-	        'none' => esc_html__( 'None', 'cream-blog' ),
-	    );
-
-	    ?>
-
-	    <table width="100%" border="0" class="options" cellspacing="5" cellpadding="5">
-	        <tr>
-	            <?php
-	                foreach( $sidebar_positions as $key => $option ) {
-	                    ?>
-	                    <td width="10%">
-	                        <input type="radio" name="sidebar_position" id="sidebar_position" value="<?php echo esc_attr( $key ); ?>" <?php if( $sidebar == $key ) { esc_attr_e( 'checked', 'cream-blog' ); } ?>><label><?php echo esc_html( $option ); ?></label>               
-	                    </td>  
-	                    <?php
-	                }
-	            ?>        
-	        </tr> 
-	    </table>   
-	    <?php   
+		$sidebar_positions = array(
+			'right' => esc_html__( 'Right', 'cream-blog' ),
+			'left'  => esc_html__( 'Left', 'cream-blog' ),
+			'none'  => esc_html__( 'None', 'cream-blog' ),
+		);
+		?>
+		<table width="100%" border="0" class="options" cellspacing="5" cellpadding="5">
+			<tr>
+				<?php
+				foreach ( $sidebar_positions as $key => $option ) {
+					?>
+					<td width="10%">
+						<input
+							type="radio"
+							name="sidebar_position"
+							id="sidebar_position"
+							value="<?php echo esc_attr( $key ); ?>"
+							<?php
+							if ( $sidebar === $key ) {
+								echo 'checked';
+							}
+							?>
+						><label><?php echo esc_html( $option ); ?></label>               
+					</td>  
+					<?php
+				}
+				?>
+			</tr> 
+		</table>   
+		<?php
 	}
 
 	/**
@@ -93,25 +113,35 @@ class Cream_Blog_Post_Meta {
 	 */
 	public function save_sidebar_position_meta() {
 
-	    global $post;  
+		global $post;
 
-	    // Bail if we're doing an auto save
-	    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-	        return;
-	    }
-	    
-	    // if our nonce isn't there, or we can't verify it, bail
-	    if( !isset( $_POST['cream_blog_sidebar_position_meta_nonce_id'] ) || !wp_verify_nonce( sanitize_key( $_POST['cream_blog_sidebar_position_meta_nonce_id'] ), 'cream_blog_sidebar_position_meta_nonce' ) ) {
-	        return;
-	    }
-	    
-	    // if our current user can't edit this post, bail
-	    if ( ! current_user_can( 'edit_post', $post->ID ) ) {
-	        return;
-	    } 
+		// Bail if we're doing an auto save.
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
 
-	    if( isset( $_POST['sidebar_position'] ) ) {
-			update_post_meta( $post->ID, 'cream_blog_sidebar_position', sanitize_text_field( wp_unslash( $_POST['sidebar_position'] ) ) ); 
+		// If our nonce isn't there, or we can't verify it, bail.
+		if (
+			! isset( $_POST['cream_blog_sidebar_position_meta_nonce_id'] ) ||
+			! wp_verify_nonce(
+				sanitize_key( $_POST['cream_blog_sidebar_position_meta_nonce_id'] ),
+				'cream_blog_sidebar_position_meta_nonce'
+			)
+		) {
+			return;
+		}
+
+		// If our current user can't edit this post, bail.
+		if ( ! current_user_can( 'edit_post', $post->ID ) ) {
+			return;
+		}
+
+		if ( isset( $_POST['sidebar_position'] ) ) {
+			update_post_meta(
+				$post->ID,
+				'cream_blog_sidebar_position',
+				sanitize_text_field( wp_unslash( $_POST['sidebar_position'] ) )
+			);
 		}
 	}
 }

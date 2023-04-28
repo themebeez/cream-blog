@@ -11,9 +11,9 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
 
-$sidebar_class = cream_blog_sidebar_class();
+$cream_blog_sidebar_class = cream_blog_sidebar_class();
 ?>
-<div class="<?php echo esc_attr( $sidebar_class ); ?>">
+<div class="<?php echo esc_attr( $cream_blog_sidebar_class ); ?>">
 	<aside class="secondary">
 		<?php dynamic_sidebar( 'sidebar' ); ?>
 	</aside><!-- #secondary --> 

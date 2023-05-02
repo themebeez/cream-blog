@@ -71,12 +71,12 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 == 2.1.4 - 28 April, 2023 ==
 
-- Removed: Everest backup plugin recommendation.
-- Updated: WPCS maintained.
 - Added: Typography options for body and headings.
+- Updated: WPCS maintained.
 - Fixed:  Missing `=` after an instance of `value` attribute in an `input` tag in `value"' . get_search_query() . '"`.
-* Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /breadcrumbs.php on line 802 and exactly 3 expected.`
+- Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /breadcrumbs.php on line 802 and exactly 3 expected.`
 - Fixed: Other minor fixes.
+- Removed: Everest backup plugin recommendation.
 
 == 2.1.3 - 28 May, 2022 ==
 

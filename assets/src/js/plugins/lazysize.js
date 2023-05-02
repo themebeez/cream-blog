@@ -1,4 +1,4 @@
-(function(window, factory) {
+(function (window, factory) {
     var lazySizes = factory(window, window.document);
     window.lazySizes = lazySizes;
     if (typeof module == 'object' && module.exports) {
@@ -37,37 +37,37 @@
 
     var forEach = Array.prototype.forEach;
 
-    var hasClass = function(ele, cls) {
+    var hasClass = function (ele, cls) {
         if (!regClassCache[cls]) {
             regClassCache[cls] = new RegExp('(\\s|^)' + cls + '(\\s|$)');
         }
         return regClassCache[cls].test(ele[_getAttribute]('class') || '') && regClassCache[cls];
     };
 
-    var addClass = function(ele, cls) {
+    var addClass = function (ele, cls) {
         if (!hasClass(ele, cls)) {
             ele.setAttribute('class', (ele[_getAttribute]('class') || '').trim() + ' ' + cls);
         }
     };
 
-    var removeClass = function(ele, cls) {
+    var removeClass = function (ele, cls) {
         var reg;
         if ((reg = hasClass(ele, cls))) {
             ele.setAttribute('class', (ele[_getAttribute]('class') || '').replace(reg, ' '));
         }
     };
 
-    var addRemoveLoadEvents = function(dom, fn, add) {
+    var addRemoveLoadEvents = function (dom, fn, add) {
         var action = add ? _addEventListener : 'removeEventListener';
         if (add) {
             addRemoveLoadEvents(dom, fn);
         }
-        loadEvents.forEach(function(evt) {
+        loadEvents.forEach(function (evt) {
             dom[action](evt, fn);
         });
     };
 
-    var triggerEvent = function(elem, name, detail, noBubbles, noCancelable) {
+    var triggerEvent = function (elem, name, detail, noBubbles, noCancelable) {
         var event = document.createEvent('CustomEvent');
 
         if (!detail) {
@@ -82,7 +82,7 @@
         return event;
     };
 
-    var updatePolyfill = function(el, full) {
+    var updatePolyfill = function (el, full) {
         var polyfill;
         if (!supportPicture && (polyfill = (window.picturefill || lazySizesConfig.pf))) {
             polyfill({ reevaluate: true, elements: [el] });
@@ -91,11 +91,11 @@
         }
     };
 
-    var getCSS = function(elem, style) {
+    var getCSS = function (elem, style) {
         return (getComputedStyle(elem, null) || {})[style];
     };
 
-    var getWidth = function(elem, parent, width) {
+    var getWidth = function (elem, parent, width) {
         width = width || elem.offsetWidth;
 
         while (width < lazySizesConfig.minSize && parent && !elem._lazysizesWidth) {
@@ -106,13 +106,13 @@
         return width;
     };
 
-    var rAF = (function() {
+    var rAF = (function () {
         var running, waiting;
         var firstFns = [];
         var secondFns = [];
         var fns = firstFns;
 
-        var run = function() {
+        var run = function () {
             var runFns = fns;
 
             fns = firstFns.length ? secondFns : firstFns;
@@ -127,7 +127,7 @@
             running = false;
         };
 
-        var rafBatch = function(fn, queue) {
+        var rafBatch = function (fn, queue) {
             if (running && !queue) {
                 fn.apply(this, arguments);
             } else {
@@ -145,43 +145,43 @@
         return rafBatch;
     })();
 
-    var rAFIt = function(fn, simple) {
+    var rAFIt = function (fn, simple) {
         return simple ?
-            function() {
+            function () {
                 rAF(fn);
             } :
-            function() {
+            function () {
                 var that = this;
                 var args = arguments;
-                rAF(function() {
+                rAF(function () {
                     fn.apply(that, args);
                 });
             };
     };
 
-    var throttle = function(fn) {
+    var throttle = function (fn) {
         var running;
         var lastTime = 0;
         var gDelay = lazySizesConfig.throttleDelay;
         var rICTimeout = lazySizesConfig.ricTimeout;
-        var run = function() {
+        var run = function () {
             running = false;
             lastTime = Date.now();
             fn();
         };
         var idleCallback = requestIdleCallback && rICTimeout > 49 ?
-            function() {
+            function () {
                 requestIdleCallback(run, { timeout: rICTimeout });
 
                 if (rICTimeout !== lazySizesConfig.ricTimeout) {
                     rICTimeout = lazySizesConfig.ricTimeout;
                 }
             } :
-            rAFIt(function() {
+            rAFIt(function () {
                 setTimeout(run);
             }, true);
 
-        return function(isPriority) {
+        return function (isPriority) {
             var delay;
 
             if ((isPriority = isPriority === true)) {
@@ -209,14 +209,14 @@
     };
 
     //based on http://modernjavascript.blogspot.de/2013/08/building-better-debounce.html
-    var debounce = function(func) {
+    var debounce = function (func) {
         var timeout, timestamp;
         var wait = 99;
-        var run = function() {
+        var run = function () {
             timeout = null;
             func();
         };
-        var later = function() {
+        var later = function () {
             var last = Date.now() - timestamp;
 
             if (last < wait) {
@@ -226,7 +226,7 @@
             }
         };
 
-        return function() {
+        return function () {
             timestamp = Date.now();
 
             if (!timeout) {
@@ -235,7 +235,7 @@
         };
     };
 
-    (function() {
+    (function () {
         var prop;
 
         var lazySizesDefaults = {
@@ -271,14 +271,14 @@
 
         window.lazySizesConfig = lazySizesConfig;
 
-        setTimeout(function() {
+        setTimeout(function () {
             if (lazySizesConfig.init) {
                 init();
             }
         });
     })();
 
-    var loader = (function() {
+    var loader = (function () {
         var preloadElems, isCompleted, resetPreloadingTimer, loadMode, started;
 
         var eLvW, elvH, eLtop, eLleft, eLright, eLbottom;
@@ -296,7 +296,7 @@
         var isLoading = 0;
         var lowRuns = -1;
 
-        var resetPreloading = function(e) {
+        var resetPreloading = function (e) {
             isLoading--;
             if (e && e.target) {
                 addRemoveLoadEvents(e.target, resetPreloading);
@@ -307,7 +307,7 @@
             }
         };
 
-        var isNestedVisible = function(elem, elemExpand) {
+        var isNestedVisible = function (elem, elemExpand) {
             var outerRect;
             var parent = elem;
             var visible = getCSS(document.body, 'visibility') == 'hidden' || getCSS(elem, 'visibility') != 'hidden';
@@ -332,7 +332,7 @@
             return visible;
         };
 
-        var checkElements = function() {
+        var checkElements = function () {
             var eLlen, i, rect, autoLoadElem, loadedSomething, elemExpand, elemNegativeExpand, elemExpandVal, beforeExpandVal;
 
             var lazyloadElems = lazysizes.elements;
@@ -406,18 +406,18 @@
 
         var throttledCheckElements = throttle(checkElements);
 
-        var switchLoadingClass = function(e) {
+        var switchLoadingClass = function (e) {
             addClass(e.target, lazySizesConfig.loadedClass);
             removeClass(e.target, lazySizesConfig.loadingClass);
             addRemoveLoadEvents(e.target, rafSwitchLoadingClass);
             triggerEvent(e.target, 'lazyloaded');
         };
         var rafedSwitchLoadingClass = rAFIt(switchLoadingClass);
-        var rafSwitchLoadingClass = function(e) {
+        var rafSwitchLoadingClass = function (e) {
             rafedSwitchLoadingClass({ target: e.target });
         };
 
-        var changeIframeSrc = function(elem, src) {
+        var changeIframeSrc = function (elem, src) {
             try {
                 elem.contentWindow.location.replace(src);
             } catch (e) {
@@ -425,7 +425,7 @@
             }
         };
 
-        var handleSources = function(source) {
+        var handleSources = function (source) {
             var customMedia;
 
             var sourceSrcset = source[_getAttribute](lazySizesConfig.srcsetAttr);
@@ -439,7 +439,7 @@
             }
         };
 
-        var lazyUnveil = rAFIt(function(elem, detail, isAuto, sizes, isImg) {
+        var lazyUnveil = rAFIt(function (elem, detail, isAuto, sizes, isImg) {
             var src, srcset, parent, isPicture, event, firesLoad;
 
             if (!(event = triggerEvent(elem, 'lazybeforeunveil', detail)).defaultPrevented) {
@@ -497,7 +497,7 @@
             }
             removeClass(elem, lazySizesConfig.lazyClass);
 
-            rAF(function() {
+            rAF(function () {
                 if (!firesLoad || (elem.complete && elem.naturalWidth > 1)) {
                     if (firesLoad) {
                         resetPreloading(event);
@@ -509,7 +509,7 @@
             }, true);
         });
 
-        var unveilElement = function(elem) {
+        var unveilElement = function (elem) {
             var detail;
 
             var isImg = regImg.test(elem.nodeName);
@@ -532,13 +532,13 @@
             lazyUnveil(elem, detail, isAuto, sizes, isImg);
         };
 
-        var onload = function() {
+        var onload = function () {
             if (isCompleted) { return; }
             if (Date.now() - started < 999) {
                 setTimeout(onload, 999);
                 return;
             }
-            var afterScroll = debounce(function() {
+            var afterScroll = debounce(function () {
                 lazySizesConfig.loadMode = 3;
                 throttledCheckElements();
             });
@@ -549,7 +549,7 @@
 
             throttledCheckElements();
 
-            addEventListener('scroll', function() {
+            addEventListener('scroll', function () {
                 if (lazySizesConfig.loadMode == 3) {
                     lazySizesConfig.loadMode = 2;
                 }
@@ -558,7 +558,7 @@
         };
 
         return {
-            _: function() {
+            _: function () {
                 started = Date.now();
 
                 lazysizes.elements = document.getElementsByClassName(lazySizesConfig.lazyClass);
@@ -580,7 +580,7 @@
                 addEventListener('hashchange', throttledCheckElements, true);
 
                 //, 'fullscreenchange'
-                ['focus', 'mouseover', 'click', 'load', 'transitionend', 'animationend', 'webkitAnimationEnd'].forEach(function(name) {
+                ['focus', 'mouseover', 'click', 'load', 'transitionend', 'animationend', 'webkitAnimationEnd'].forEach(function (name) {
                     document[_addEventListener](name, throttledCheckElements, true);
                 });
 
@@ -605,10 +605,10 @@
     })();
 
 
-    var autoSizer = (function() {
+    var autoSizer = (function () {
         var autosizesElems;
 
-        var sizeElement = rAFIt(function(elem, parent, event, width) {
+        var sizeElement = rAFIt(function (elem, parent, event, width) {
             var sources, i, len;
             elem._lazysizesWidth = width;
             width += 'px';
@@ -626,7 +626,7 @@
                 updatePolyfill(elem, event.detail);
             }
         });
-        var getSizeElement = function(elem, dataAttr, width) {
+        var getSizeElement = function (elem, dataAttr, width) {
             var event;
             var parent = elem.parentNode;
 
@@ -644,7 +644,7 @@
             }
         };
 
-        var updateElementsSizes = function() {
+        var updateElementsSizes = function () {
             var i;
             var len = autosizesElems.length;
             if (len) {
@@ -659,7 +659,7 @@
         var debouncedUpdateElementsSizes = debounce(updateElementsSizes);
 
         return {
-            _: function() {
+            _: function () {
                 autosizesElems = document.getElementsByClassName(lazySizesConfig.autosizesClass);
                 addEventListener('resize', debouncedUpdateElementsSizes);
             },
@@ -668,7 +668,7 @@
         };
     })();
 
-    var init = function() {
+    var init = function () {
         if (!init.i) {
             init.i = true;
             autoSizer._();

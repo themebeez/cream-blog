@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-02T12:30:46+00:00\n"
+"POT-Creation-Date: 2023-05-03T07:53:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: cream-blog\n"
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Top Header Menu"
 msgstr ""
 
-#: inc/class-cream-blog.php:399
+#: inc/class-cream-blog.php:407
 msgid "Search here..."
 msgstr ""
 
@@ -610,7 +610,7 @@ msgid "Instagram"
 msgstr ""
 
 #: inc/custom-hooks.php:641
-msgid "Linkedin"
+msgid "LinkedIn"
 msgstr ""
 
 #: inc/custom-hooks.php:647
@@ -618,7 +618,7 @@ msgid "Pinterest"
 msgstr ""
 
 #: inc/custom-hooks.php:653
-msgid "Youtube"
+msgid "YouTube"
 msgstr ""
 
 #. translators: 1: Copyright Text 2: Theme name, 3: Theme author.
@@ -746,7 +746,7 @@ msgid "Miscellaneous"
 msgstr ""
 
 #: inc/customizer/class-cream-blog-customize.php:298
-msgid "Woocoomerce Sidebar"
+msgid "WooCommerce Sidebar"
 msgstr ""
 
 #: inc/customizer/class-cream-blog-customize.php:756
@@ -945,35 +945,35 @@ msgstr ""
 msgid "Websafe Fonts"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:245
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:244
 msgid "Google Fonts"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:276
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:271
 msgid "Variants"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:301
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:296
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:337
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:332
 msgid "Font Size"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:605
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:600
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:702
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:697
 msgid "Letter Spacing"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:971
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:966
 msgid "Text Style"
 msgstr ""
 
-#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:1057
+#: inc/customizer/controls/typography/class-cream-blog-customize-typography-control.php:1052
 msgid "Text Transform"
 msgstr ""
 

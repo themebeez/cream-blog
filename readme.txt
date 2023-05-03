@@ -67,7 +67,7 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 ==== Change logs ====
 
-== 2.1.4 - 28 April, 2023 ==
+== 2.1.4 - 3 May, 2023 ==
 
 - Added: Typography options for body and headings.
 - Updated: WPCS maintained.

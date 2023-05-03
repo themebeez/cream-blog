@@ -99,7 +99,7 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 					'source'        => 'google',
 					'font_family'   => 'DM Sans',
 					'font_variants' => '400,400italic',
-					'font_url'      => 'Open+Sans:ital@0;1',
+					'font_url'      => 'DM+Sans:ital@0;1',
 					'font_weight'   => '400',
 				)
 			),

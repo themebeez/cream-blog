@@ -216,7 +216,9 @@ if ( ! function_exists( 'cream_blog_sidebar_position' ) ) {
 				is_product() ||
 				is_cart() ||
 				is_checkout() ||
-				is_account_page()
+				is_account_page() ||
+				is_product_category() ||
+				is_product_tag()
 			) {
 
 				$sidebar_position = cream_blog_get_option( 'cream_blog_select_woocommerce_sidebar_position' );

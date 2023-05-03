@@ -16,7 +16,7 @@ Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPres
 
 == Copyright and License ==
 
-Cream Blog WordPress Theme, Copyright (C) 2023, themebeez.
+Cream Blog WordPress Theme, Copyright (C) 2018-2023, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
 
 
@@ -37,8 +37,6 @@ Cream Blog is distributed under the terms of the GNU GPL
 * Choosen https://github.com/harvesthq/chosen, Copyright (c) 2011-2018 Harvest, [MIT](http://opensource.org/licenses/MIT)
 
 * Animate https://github.com/daneden/animate.css, [MIT](http://opensource.org/licenses/MIT)
-
-* Lazysize https://github.com/aFarkas/lazysizes, Copyright (c) 2015 Alexander Farkas, [MIT](http://opensource.org/licenses/MIT)
 
 * Sticky https://github.com/garand/sticky, Copyright 2014-2016 Anthony Garand, [MIT](http://opensource.org/licenses/MIT)
 
@@ -73,10 +71,13 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 - Added: Typography options for body and headings.
 - Updated: WPCS maintained.
-- Fixed:  Missing `=` after an instance of `value` attribute in an `input` tag in `value"' . get_search_query() . '"`.
+- Fixed: Missing `=` after an instance of `value` attribute in an `input` tag in `value"' . get_search_query() . '"`.
 - Fixed: PHP error - `PHP Fatal error: Uncaught ArgumentCountError: Too few arguments to function get_day_link(), 1 passed in /breadcrumbs.php on line 802 and exactly 3 expected.`
+- Fixed: Sidebar position issue in WooCommerce archive pages.
 - Fixed: Other minor fixes.
 - Removed: Everest backup plugin recommendation.
+- Removed: Lazysize jQuery plugin.
+
 
 == 2.1.3 - 28 May, 2022 ==
 

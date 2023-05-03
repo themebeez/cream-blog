@@ -44,7 +44,7 @@ if (
 					is_account_page()
 				) {
 					if (
-						'left' === $sidebar_position &&
+						'left' === $cream_blog_sidebar_position &&
 						is_active_sidebar( 'woocommerce-sidebar' )
 					) {
 						cream_blog_woocommerce_sidebar();
@@ -93,7 +93,7 @@ if (
 					is_account_page()
 				) {
 					if (
-						'right' === $sidebar_position &&
+						'right' === $cream_blog_sidebar_position &&
 						is_active_sidebar( 'woocommerce-sidebar' )
 					) {
 						cream_blog_woocommerce_sidebar();

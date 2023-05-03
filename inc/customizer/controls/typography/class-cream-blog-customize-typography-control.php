@@ -228,16 +228,15 @@ class Cream_Blog_Customize_Typography_Control extends WP_Customize_Control {
 										<#
 										let selectedFontFamily = '';							
 										if ( savedValue.source == 'websafe' ) {
-											if ( savedValue.font_family == value ) {
+											if ( savedValue.font_family == key ) {
 												selectedFontFamily = "selected";
-											} else {
-												if ( defaultValue.font_family == value ) {
-													selectedFontFamily = "selected";
-												}
 											}
 										}
 										#>
-										<option value="{{ key }}" data-variants="{{ data.websafeFontVariants }}" data-source="websafe" {{{ selectedFontFamily }}}>{{ value }}</option>
+										<option
+											value="{{ key }}"
+											data-source="websafe" {{{ selectedFontFamily }}}
+										>{{ value }}</option>
 									<# } ); #>
 								</optgroup>
 							<# } #>
@@ -249,10 +248,6 @@ class Cream_Blog_Customize_Typography_Control extends WP_Customize_Control {
 										if ( savedValue.source == 'google' ) {
 											if ( savedValue.font_family == value.family ) {
 												selectedFontFamily = "selected";
-											} else {
-												if ( defaultValue.font_family == value.family ) {
-													selectedFontFamily = "selected";
-												}
 											}
 										}
 										#>

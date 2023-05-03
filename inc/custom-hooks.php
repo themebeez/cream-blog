@@ -638,7 +638,7 @@ if ( ! function_exists( 'cream_blog_footer_top_action' ) ) {
 						$linkedin_link = cream_blog_get_option( 'cream_blog_linkedin_link' );
 						if ( ! empty( $linkedin_link ) ) {
 							?>
-							<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="cb cb-linkedin"></i> <?php esc_html_e( 'Linkedin', 'cream-blog' ); ?></a></li>
+							<li><a href="<?php echo esc_url( $linkedin_link ); ?>"><i class="cb cb-linkedin"></i> <?php esc_html_e( 'LinkedIn', 'cream-blog' ); ?></a></li>
 							<?php
 						}
 						$pinterest_link = cream_blog_get_option( 'cream_blog_pinterest_link' );
@@ -650,7 +650,7 @@ if ( ! function_exists( 'cream_blog_footer_top_action' ) ) {
 						$youtube_link = cream_blog_get_option( 'cream_blog_youtube_link' );
 						if ( ! empty( $youtube_link ) ) {
 							?>
-							<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="cb cb-youtube"></i> <?php esc_html_e( 'Youtube', 'cream-blog' ); ?></a></li>
+							<li><a href="<?php echo esc_url( $youtube_link ); ?>"><i class="cb cb-youtube"></i> <?php esc_html_e( 'YouTube', 'cream-blog' ); ?></a></li>
 							<?php
 						}
 						?>

@@ -258,6 +258,14 @@ class Cream_Blog {
 			true
 		);
 
+		wp_localize_script(
+			'cream-blog-bundle',
+			'creamBlogJSObject',
+			array(
+				'displayScrollTopButton' => cream_blog_get_option( 'cream_blog_enable_scroll_top_button' ),
+			)
+		);
+
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}

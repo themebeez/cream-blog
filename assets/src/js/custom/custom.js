@@ -4,6 +4,8 @@
 
     jQuery(document).ready(function() {
 
+        console.log(creamBlogJSObject);
+
         /*
         ===========================
         = Main navigation
@@ -109,52 +111,6 @@
 
 
         /* 
-        ===========================================
-        = Configure lazyload ( lazysizes.js ) 
-        ==================================================
-        */
-
-
-        var lazy = function lazy() {
-            document.addEventListener('lazyloaded', function(e) {
-                e.target.parentNode.classList.add('image-loaded');
-                $.when().done(function() {
-                    var cloele = $('.thumb');
-                    cloele.removeClass('lazyloading');
-                });
-
-                // e.target.parentNode.classList.add('image-loaded');
-                // e.target.parentNode.classList.remove('lazyloading');
-
-                var container = $('#bricks-row');
-                container.imagesLoaded().progress(function() {
-                    container.masonry({
-                        itemSelector: '.brick-item',
-                    });
-                });
-            });
-        }
-
-        lazy();
-
-        window.lazySizesConfig = window.lazySizesConfig || {};
-
-        lazySizesConfig.preloadAfterLoad = false;
-        lazySizesConfig.expandChild = 370;
-
-
-        // init masonry 
-
-        var container = $('#bricks-row');
-        container.imagesLoaded().progress(function() {
-            container.masonry({
-                itemSelector: '.brick-item',
-            });
-        });
-
-
-
-        /* 
         =================================================
         = Init carousel for main baner ( slider )
         ===========================================================
@@ -202,22 +158,25 @@
         =====================================
         */
 
-        jQuery('body').append('<div id="toTop" class="btn-general"><i class="cb cb-chevron-up"></i></div>');
+        if (creamBlogJSObject.displayScrollTopButton === '1' ) {
 
-        jQuery(window).on('scroll', function() {
-            if (jQuery(this).scrollTop() != 0) {
-                jQuery('#toTop').fadeIn();
-            } else {
-                jQuery('#toTop').fadeOut();
-            }
-        });
+            jQuery('body').append('<div id="toTop" class="btn-general"><i class="cb cb-chevron-up"></i></div>');
 
-        jQuery("body").on('click', '#toTop', function() {
+            jQuery(window).on('scroll', function() {
+                if (jQuery(this).scrollTop() != 0) {
+                    jQuery('#toTop').fadeIn();
+                } else {
+                    jQuery('#toTop').fadeOut();
+                }
+            });
 
-            jQuery("html, body").animate({ scrollTop: 0 }, 800);
-            return false;
+            jQuery("body").on('click', '#toTop', function() {
 
-        });
+                jQuery("html, body").animate({ scrollTop: 0 }, 800);
+                return false;
+
+            });
+        }
 
     });
 

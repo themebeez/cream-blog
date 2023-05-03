@@ -295,7 +295,7 @@ class Cream_Blog_Customize {
 			$wp_customize->add_section(
 				'cream_blog_woocommerce_sidebar',
 				array(
-					'title' => esc_html__( 'Woocoomerce Sidebar', 'cream-blog' ),
+					'title' => esc_html__( 'WooCommerce Sidebar', 'cream-blog' ),
 					'panel' => 'woocommerce',
 				)
 			);
@@ -1539,12 +1539,6 @@ class Cream_Blog_Customize {
 
 		if ( false === $show_search_icon || 0 === $show_search_icon ) {
 			$css .= '#search-toggle {';
-			$css .= 'display: none;';
-			$css .= '}';
-		}
-
-		if ( false === $show_scroll_top_icon || 0 === $show_scroll_top_icon ) {
-			$css .= '#toTop {';
 			$css .= 'display: none;';
 			$css .= '}';
 		}

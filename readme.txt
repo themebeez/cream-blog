@@ -1,7 +1,7 @@
 === Cream Blog ===
 
 Contributors: themebeez
-Requires PHP: 7 or higher
+Requires PHP: 7.0
 Requires at least: 5.0
 Tested up to: 6.5.2
 Stable tag: 2.1.5
@@ -14,10 +14,20 @@ Tags: custom-background, custom-header, custom-logo, custom-menu, featured-image
 Cream Blog is 100% responsive, cross browser compatible, clean & trendy WordPress theme designed beautifully and developed with respect to WordPress standards. Cream blog fulfills the needs of those who want to build blog to publish online contents, write blog posts on travel, food, technology, fashion etc. Cream blog supports Woocommerce in case one is in need of setting up their own online store. Cream blog comes with tons of handy options that you can be trigged from WordPress live customizer. Build your blog with no hassale & let us know when you really need a hand by simply creating a support ticket from https://themebeez.com/support/.
 
 
-== Copyright and License ==
+== Copyright ==
 
 Cream Blog WordPress Theme, Copyright (C) 2018-2024, themebeez.
 Cream Blog is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 
 
 == Credits ==

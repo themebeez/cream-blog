@@ -233,11 +233,11 @@ class Cream_Blog {
 
 		if ( cream_blog_has_google_fonts() ) {
 
-			wp_enqueue_style( // phpcs:ignore
+			wp_enqueue_style( // phpcs:ignore.
 				'cream-blog-google-fonts',
 				cream_blog_get_google_fonts_url(),
 				array(),
-				null,
+				CREAM_BLOG_VERSION,
 				'all'
 			);
 		}
@@ -326,7 +326,6 @@ class Cream_Blog {
 		}
 
 		return ' .... ';
-
 	}
 
 	/**
@@ -404,7 +403,7 @@ class Cream_Blog {
 	 * Custom Search Form.
 	 */
 	public function search_form() {
-		$form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search here...', 'cream-blog' ) . '" value="' . get_search_query() . '"><button class="button-search" type="submit"><i class="cb cb-search"></i></button></form>';
+		$form = '<form method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '"><input type="search" name="s" placeholder="' . esc_attr__( 'Search here...', 'cream-blog' ) . '" value="' . get_search_query() . '"><button class="button-search" type="submit"><i class="cb cb-search"></i></button></form>';
 
 		return $form;
 	}

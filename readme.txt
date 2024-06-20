@@ -76,6 +76,8 @@ Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
 ==== Change logs ====
+== 2.1.6 - ?, 2024 ==
+- Tested upto PHP 8.3.0 and WordPress 6.6
 
 == 2.1.5 - 25 April, 2024 ==
 - Tested upto PHP 8.3.0 and WordPress 6.5.2

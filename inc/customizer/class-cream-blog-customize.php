@@ -1167,7 +1167,7 @@ class Cream_Blog_Customize {
 		$wp_customize->add_control(
 			'cream_blog_youtube_link',
 			array(
-				'label'   => esc_html__( 'Youtube Link', 'cream-blog' ),
+				'label'   => esc_html__( 'YouTube Link', 'cream-blog' ),
 				'section' => 'cream_blog_social_links_options',
 				'type'    => 'url',
 			)

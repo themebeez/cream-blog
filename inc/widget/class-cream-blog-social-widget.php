@@ -165,14 +165,14 @@ class Cream_Blog_Social_Widget extends WP_Widget {
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>">
-				<strong><?php esc_html_e( 'linkedin Link:', 'cream-blog' ); ?></strong>
+				<strong><?php esc_html_e( 'Linkedin Link:', 'cream-blog' ); ?></strong>
 			</label>
 			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'linkedin' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'linkedin' ) ); ?>" value="<?php echo esc_attr( $instance['linkedin'] ); ?>">
 		</p>
 
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>">
-				<strong><?php esc_html_e( 'Youtube Link:', 'cream-blog' ); ?></strong>
+				<strong><?php esc_html_e( 'YouTube Link:', 'cream-blog' ); ?></strong>
 			</label>
 			<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'youtube' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'youtube' ) ); ?>" value="<?php echo esc_attr( $instance['youtube'] ); ?>">
 		</p>

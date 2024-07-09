@@ -64,7 +64,6 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 			'cream_blog_enable_search_button'            => false,
 			'cream_blog_select_header_layout'            => 'header_1',
 			'cream_blog_enable_footer_social_links'      => true,
-			'cream_blog_copyright_credit'                => '',
 			'cream_blog_enable_scroll_top_button'        => true,
 			'cream_blog_select_archive_sidebar_position' => 'right',
 			'cream_blog_select_search_sidebar_position'  => 'right',
@@ -114,13 +113,14 @@ if ( ! function_exists( 'cream_blog_get_default_theme_options' ) ) {
 			),
 		);
 
+		$defaults['cream_blog_copyright_credit'] = esc_html__( 'Copyright {copy} {year} {site_title}. All rights reserved.', 'cream-blog' );
+
 		if ( class_exists( 'WooCommerce' ) ) {
 
 			$defaults['cream_blog_select_woocommerce_sidebar_position'] = 'right';
 		}
 
 		return $defaults;
-
 	}
 }
 

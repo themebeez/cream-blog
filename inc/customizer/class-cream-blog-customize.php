@@ -940,9 +940,10 @@ class Cream_Blog_Customize {
 		$wp_customize->add_control(
 			'cream_blog_copyright_credit',
 			array(
-				'label'   => esc_html__( 'Copyright & Credit Text', 'cream-blog' ),
-				'section' => 'cream_blog_footer_options',
-				'type'    => 'text',
+				'label'       => esc_html__( 'Copyright & Credit Text', 'cream-blog' ),
+				'description' => esc_html__( 'You can use {copy}, {year}, {site_title}, and {theme_author} placeholders to display copyright icon, current year, site title,and theme author respectively in the copyright text.', 'cream-blog' ),
+				'section'     => 'cream_blog_footer_options',
+				'type'        => 'textarea',
 			)
 		);
 

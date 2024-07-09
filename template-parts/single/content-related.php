@@ -8,7 +8,7 @@
  */
 
 $cream_blog_enable_related_posts = cream_blog_get_option( 'cream_blog_enable_related_section' );
-$cream_blog_section_title        = cream_blog_get_option( 'cream_blog_related_cream_blog_section_title' );
+$cream_blog_section_title        = cream_blog_get_option( 'cream_blog_related_section_title' );
 $cream_blog_related_posts_no     = (int) cream_blog_get_option( 'cream_blog_related_section_posts_number' );
 $cream_blog_related_posts_by     = cream_blog_get_option( 'cream_blog_related_posts_by' );
 

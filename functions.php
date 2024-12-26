@@ -28,3 +28,16 @@ function cream_blog_run() {
 }
 
 cream_blog_run();
+
+add_action(
+	'init',
+	function () {
+		new Cream_Blog_Theme_Welcome_Notice(
+			'Cream Blog',
+			admin_url( 'admin.php?page=cream-blog' ),
+			array(
+				'themebeez-toolkit/themebeez-toolkit.php' => 'https://downloads.wordpress.org/plugin/themebeez-toolkit.zip',
+			)
+		);
+	}
+);

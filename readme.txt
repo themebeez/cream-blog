@@ -3,7 +3,7 @@
 Contributors: themebeez
 Requires PHP: 7.0
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Stable tag: 2.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -75,9 +75,11 @@ Source: 1. https://pxhere.com/en/photo/1594162
 Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
-==== Change logs ====
-== 2.1.6 - ?, 2024 ==
-- Tested upto PHP 8.3.0 and WordPress 6.6
+=== Changelog ==
+== 2.1.6 - 25 December, 2024 ==
+- Added: Theme welcome notice.
+- Added: Udp agent.
+- Tested upto PHP 8.3.11 and WordPress 6.7
 
 == 2.1.5 - 25 April, 2024 ==
 - Tested upto PHP 8.3.0 and WordPress 6.5.2

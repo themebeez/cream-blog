@@ -336,10 +336,19 @@ class Cream_Blog {
 	public function load_dependencies() {
 		// Load theme functions.
 		require get_template_directory() . '/inc/theme-functions.php';
+
+		/**
+		 * Load theme welcome notice.
+		 *
+		 * @since 1.1.7.
+		 * */
+		require get_template_directory() . '/admin/welcome-notice/class-cream-blog-theme-welcome-notice.php';
 		// Load custom hook functions.
 		require get_template_directory() . '/inc/custom-hooks.php';
 		// Load theme hook functions.
 		require get_template_directory() . '/inc/theme-hooks.php';
+		// Load UDP files.
+		require get_template_directory() . '/inc/udp/init.php'; // Added since 2.1.6.
 		// Load helper functions.
 		require get_template_directory() . '/inc/helper-functions.php';
 		// Load customizer dependency.

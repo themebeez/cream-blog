@@ -75,8 +75,9 @@ Source: 1. https://pxhere.com/en/photo/1594162
 Cream Blog includes support for Contact Form 7, MailChimp and Woocommerce.
 
 
-=== Changelog ==
-== 2.1.6 - 25 December, 2024 ==
+== Changelog ==
+
+== 2.1.6 - 27 December, 2024 ==
 - Added: Theme welcome notice.
 - Added: Udp agent.
 - Tested upto PHP 8.3.11 and WordPress 6.7

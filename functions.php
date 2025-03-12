@@ -11,9 +11,10 @@
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-$cream_blog_theme = wp_get_theme( 'cream-blog' );
+if ( ! defined( 'CREAM_BLOG_VERSION' ) ) {
+	define( 'CREAM_BLOG_VERSION', '2.1.7' );
+}
 
-define( 'CREAM_BLOG_VERSION', $cream_blog_theme->get( 'Version' ) );
 
 require get_template_directory() . '/inc/class-cream-blog.php';
 

@@ -90,6 +90,12 @@ class Udp_Agent {
 
 		// Process user tracking actions.
 		if ( isset( $_GET['udp-agent-allow-access'] ) ) { //phpcs:ignore
+
+			if ( ! is_user_logged_in() || ! current_user_can( 'manage_options' ) ) {
+				wp_safe_redirect( home_url() );
+				exit;
+			}
+			
 			$this->process_user_tracking_choice();
 		}
 	}

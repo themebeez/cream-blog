@@ -237,7 +237,7 @@ class Cream_Blog {
 				'cream-blog-google-fonts',
 				cream_blog_get_google_fonts_url(),
 				array(),
-				CREAM_BLOG_VERSION,
+				null,
 				'all'
 			);
 		}
